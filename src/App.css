@@ -92,3 +92,33 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.quickActionsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  padding: 10 0px;
+  margin: 10px 0px;
+}
+.quickActionChild {
+  /* flex: 1 0 25%; explanation below */
+  margin: 5px;
+  height: 100px;
+  /* background-color: blue; */
+  height: 80px;
+  width: 120px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  padding: 5px;
+}
+.quickActionContainer {
+  padding: 10 0px;
+  height: 200px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}

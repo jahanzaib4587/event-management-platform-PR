@@ -30,26 +30,26 @@ const SwiperComponent = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div>
+    <div style={{ height: "300px", width: "400px" }}>
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
           "--swiper-pagination-color": "#fff",
         }}
         spaceBetween={10}
-        navigation={true}
+        // navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper2"
       >
         <SwiperSlide>
           <img
-            height={"100px"}
+            height={"20px"}
             src="https://swiperjs.com/demos/images/nature-1.jpg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            height={"100px"}
+            height={"20px"}
             src="https://swiperjs.com/demos/images/nature-2.jpg"
           />
         </SwiperSlide>
@@ -106,7 +106,7 @@ const SwiperComponent = () => {
       <Swiper
         onSwiper={setThumbsSwiper}
         spaceBetween={10}
-        slidesPerView={4}
+        slidesPerView={3}
         freeMode={true}
         watchSlidesProgress={true}
         className="mySwiper"
@@ -142,30 +142,6 @@ const SwiperComponent = () => {
           <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
         </SwiperSlide>
       </Swiper>
-      {/* <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={20}
-        slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        ...
-      </Swiper>
-      <Swiper>
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <span slot="container-start">Container Start</span>
-        <span slot="container-end">Container End</span>
-        <span slot="wrapper-start">Wrapper Start</span>
-        <span slot="wrapper-end">Wrapper End</span>
-      </Swiper> */}
     </div>
   );
 };
