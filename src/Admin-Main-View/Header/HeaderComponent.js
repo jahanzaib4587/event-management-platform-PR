@@ -14,9 +14,9 @@ const HeaderComponent = (props) => {
       }}
     >
       {props.Icon}
-      <p style={{ backgroundColor: "white", marginLeft: "5px" }}>
+      <span style={{ backgroundColor: "white", marginLeft: "5px" }}>
         {props.title}
-      </p>
+      </span>
     </div>
   );
 };

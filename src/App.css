@@ -102,8 +102,8 @@ body {
 }
 .quickActionChild {
   /* flex: 1 0 25%; explanation below */
-  margin: 5px;
-  height: 100px;
+  margin-right: 10px;
+  /* height: 100px; */
   /* background-color: blue; */
   height: 80px;
   width: 120px;
@@ -112,7 +112,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   /* align-items: flex-start; */
-  padding: 5px;
+  padding: 5px 10px;
 }
 .quickActionContainer {
   padding: 10 0px;

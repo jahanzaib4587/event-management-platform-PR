@@ -60,7 +60,6 @@ const CounterGraph = () => {
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" interval="preserveStartEnd" />
       <YAxis interval="preserveStartEnd" />
-
       <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
     </LineChart>
   );

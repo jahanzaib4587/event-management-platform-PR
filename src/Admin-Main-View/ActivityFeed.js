@@ -10,6 +10,11 @@ const ActivityFeed = () => {
     "Australian walk crash.",
     "Man charged ovg girl.",
     "Los Angeles battles es.",
+    "Racing car sprays b",
+    "Japanese princessto wer.",
+    "Australian walk crash.",
+    "Man charged ovg girl.",
+    "Los Angeles battles es.",
   ];
 
   return (
@@ -19,17 +24,14 @@ const ActivityFeed = () => {
         height: 200,
         display: "flex",
         justifyContent: "start",
-        overflow: "auto",
-        // padding: "0 16px",
+        overflowY: "scroll",
+        padding: "0 16px",
         backgroundColor: "",
         // border: "1px solid rgba(140, 140, 140, 0.35)",
       }}
     >
       <List
         size="small"
-        header={<div>Header</div>}
-        footer={<div>Footer</div>}
-        bordered
         dataSource={data}
         renderItem={(item) => (
           <List.Item>
