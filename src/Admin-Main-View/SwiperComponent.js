@@ -30,7 +30,7 @@ const SwiperComponent = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div style={{ height: "300px", width: "400px" }}>
+    <div style={{ height: "400px", width: "600px" }}>
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -44,19 +44,21 @@ const SwiperComponent = () => {
         <SwiperSlide>
           <img
             height={"20px"}
+            width="200px"
             src="https://swiperjs.com/demos/images/nature-1.jpg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             height={"20px"}
+            width="200px"
             src="https://swiperjs.com/demos/images/nature-2.jpg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             height={"100px"}
-            width="100px"
+            width="200px"
             src="https://swiperjs.com/demos/images/nature-3.jpg"
           />
         </SwiperSlide>

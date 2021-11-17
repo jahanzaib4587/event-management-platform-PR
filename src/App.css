@@ -103,21 +103,26 @@ body {
 .quickActionChild {
   /* flex: 1 0 25%; explanation below */
   margin-right: 10px;
+  margin-bottom: 10px;
   /* height: 100px; */
   /* background-color: blue; */
-  height: 80px;
-  width: 120px;
-  background-color: red;
+  height: 120px;
+  width: 160px;
+  background-color: #74acec;
   display: flex;
+  border: 5px solid #568997;
   flex-direction: column;
   justify-content: space-between;
   /* align-items: flex-start; */
   padding: 5px 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
 }
 .quickActionContainer {
   padding: 10 0px;
-  height: 200px;
-  width: 400px;
+  height: 250px;
+  width: 650px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

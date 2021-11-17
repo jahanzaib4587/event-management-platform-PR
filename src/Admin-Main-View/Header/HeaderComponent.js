@@ -1,6 +1,6 @@
 import React from "react";
 import { EyeOutlined } from "@ant-design/icons";
-
+import { Card } from "antd";
 const HeaderComponent = (props) => {
   return (
     <div
@@ -8,15 +8,14 @@ const HeaderComponent = (props) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "#fff",
-        borderRadius: "20px",
-        padding: "5px",
+        backgroundColor: "#424040",
+        borderRadius: "30px",
+        padding: "12px",
+        margin: "10px",
       }}
     >
       {props.Icon}
-      <span style={{ backgroundColor: "white", marginLeft: "5px" }}>
-        {props.title}
-      </span>
+      <span style={{ marginLeft: "5px" }}>{props.title}</span>
     </div>
   );
 };
