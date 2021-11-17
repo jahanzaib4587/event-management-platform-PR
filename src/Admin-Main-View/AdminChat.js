@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Card, Form, Input } from "antd";
+import InputEmoji from "react-input-emoji";
 import "../App.css";
 const AdminChat = () => {
   const [inputValue, setInputValue] = useState("");
@@ -51,17 +52,19 @@ const AdminChat = () => {
         onFinish={onFinish}
       >
         <Form.Item name="message">
+          <InputEmoji
+            // value={inputValue}
+            placeholder="Enter Values Here"
+            cleanOnEnter
+            onChange={(e) => setInputValue(e)}
+          />
+        </Form.Item>
+        {/* <Form.Item name="sender">
           <Input
             placeholder="Enter Values Here"
             onChange={(e) => setInputValue(e.target.value)}
           />
-        </Form.Item>
-        <Form.Item name="sender">
-          <Input
-            placeholder="Enter Values Here"
-            onChange={(e) => setInputValue(e.target.value)}
-          />
-        </Form.Item>
+        </Form.Item> */}
         <Form.Item name="sender">
           <Button htmlType="submit"> click me</Button>
         </Form.Item>

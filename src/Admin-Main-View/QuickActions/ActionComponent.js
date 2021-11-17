@@ -3,12 +3,13 @@ import { Switch } from "antd";
 const ActionComponent = (props) => {
   return (
     <div className="quickActionChild">
-      <input
+      <Switch
         style={{
           alignSelf: "flex-end",
           visibility: !props.isSwitch && "hidden",
         }}
-        type="checkbox"
+        size="small"
+        // type="checkbox"
       />
 
       <p style={{ alignSelf: "flex-start" }}>{props.text}</p>
