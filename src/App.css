@@ -122,3 +122,19 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+.messageUi {
+  -webkit-border-top-left-radius: 123px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 123px;
+  -webkit-border-bottom-right-radius: 114px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 123px;
+  -moz-border-radius-bottomright: 114px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 123px;
+  border-bottom-right-radius: 114px;
+  background-color: red;
+  width: fit-content;
+  padding: 5px;
+  margin-bottom: 10px;
+}

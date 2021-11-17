@@ -5,6 +5,7 @@ import QuickAction from "./Admin-Main-View/QuickActions/QuickActions";
 import CounterGraph from "./Admin-Main-View/Audience Engagement/CounterGraph";
 import ActionComponent from "./Admin-Main-View/QuickActions/ActionComponent";
 import ActivityFeed from "./Admin-Main-View/ActivityFeed";
+import AdminChat from "./Admin-Main-View/AdminChat";
 import { Collapse, Badge, Avatar } from "antd";
 import { useState } from "react";
 function App() {
@@ -83,7 +84,7 @@ function App() {
               justifyContent: "center",
             }}
           >
-            <ActivityFeed />
+            <AdminChat />
           </Panel>
         </Collapse>
       </div>
