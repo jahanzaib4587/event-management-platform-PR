@@ -21,11 +21,12 @@ const ActivityFeed = () => {
     <div
       id="scrollableDiv"
       style={{
+        width: "100%",
         height: 200,
-        display: "flex",
-        justifyContent: "start",
+        // display: "flex",
+        // justifyContent: "start",
         overflowY: "scroll",
-        padding: "0 16px",
+        // padding: "0 16px",
         backgroundColor: "",
         // border: "1px solid rgba(140, 140, 140, 0.35)",
       }}

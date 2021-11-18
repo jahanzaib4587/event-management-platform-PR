@@ -2,92 +2,39 @@ import "./App.css";
 import Header from "./Admin-Main-View/Header/Header";
 import Swiper from "./Admin-Main-View/SwiperComponent";
 import QuickAction from "./Admin-Main-View/QuickActions/QuickActions";
-import CounterGraph from "./Admin-Main-View/Audience Engagement/CounterGraph";
-import ActionComponent from "./Admin-Main-View/QuickActions/ActionComponent";
-import ActivityFeed from "./Admin-Main-View/ActivityFeed";
-import AdminChat from "./Admin-Main-View/AdminChat";
+
 import { Collapse, Badge, Avatar } from "antd";
 import { useState } from "react";
+import ParentComponent from "./Admin-Main-View/Audience Engagement/ParentComponent";
 function App() {
-  const { Panel } = Collapse;
-  const [activePanel, setActivePanel] = useState(1);
   return (
     <div
       style={{
-        backgroundColor: "#fff",
-        width: "100vw",
+        backgroundColor: "black",
+        width: "100%",
         height: "100vh",
         display: "flex",
+        padding: "10px",
+        justifyContent: "space-evenly",
       }}
     >
-      <div>
+      <div style={{ width: "30%", height: "100%" }}>
         <Header />
         <Swiper />
         <QuickAction />
       </div>
       <div
         style={{
-          display: "flex",
           flexDirection: "column",
-          // justifyContent: "center",
-          // alignItems: "center",
-          // padding: "10px",
+          width: "25%",
+          height: "97%",
+          background: "#4E5054",
+          borderRadius: " 15px",
         }}
       >
-        <CounterGraph />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginBottom: "10px",
-          }}
-        >
-          <ActionComponent text="Ask the Audience" />
-          <ActionComponent text="Heart Bubbles" />
-        </div>
-        <Collapse
-          accordion
-          destroyInactivePanel={true}
-          style={{}}
-          activeKey={activePanel}
-          onChange={(e) => {
-            console.log(e);
-            setActivePanel(e);
-          }}
-        >
-          <Panel
-            header="Activity Feed"
-            key="1"
-            style={{
-              backgroundColor: "red",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <ActivityFeed />
-          </Panel>
-          <br />
-          <Panel
-            header={
-              <Badge offset={[10, 1]} count={5}>
-                Admin Chat
-              </Badge>
-            }
-            key="2"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <AdminChat />
-          </Panel>
-        </Collapse>
+        <ParentComponent />
       </div>
+      <div style={{ width: "31%" }}></div>
     </div>
   );
 }

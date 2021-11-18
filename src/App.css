@@ -93,40 +93,38 @@ body {
   object-fit: cover;
 }
 .quickActionsWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  border-radius: 10px;
-  padding: 10 0px;
   margin: 10px 0px;
-}
-.quickActionChild {
-  /* flex: 1 0 25%; explanation below */
-  margin-right: 10px;
-  margin-bottom: 10px;
-  /* height: 100px; */
-  /* background-color: blue; */
-  height: 120px;
-  width: 160px;
-  background-color: #74acec;
-  display: flex;
-  border: 5px solid #568997;
-  flex-direction: column;
-  justify-content: space-between;
-  /* align-items: flex-start; */
-  padding: 5px 10px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  width: 100%;
+  height: 33%;
+  left: 20px;
+  top: 21px;
+  background: #4e5054;
+  border-radius: 15px;
+  padding: 10px;
 }
 .quickActionContainer {
-  padding: 10 0px;
-  height: 250px;
-  width: 650px;
+  padding: 10 10px;
+  height: 70%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+.quickActionChild {
+  width: 30%;
+  height: 100px;
+  left: 404px;
+  top: 31px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: #74acec;
+  border-radius: 15px;
+}
+
 .messageUi {
   -webkit-border-top-left-radius: 123px;
   -webkit-border-top-left-radius: 10px;
@@ -138,8 +136,11 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 123px;
   border-bottom-right-radius: 114px;
-  background-color: red;
   width: fit-content;
   padding: 5px;
   margin-bottom: 10px;
+  color: #fff;
+}
+.ant-collapse-content > .ant-collapse-content-box {
+  padding: 0 !important;
 }

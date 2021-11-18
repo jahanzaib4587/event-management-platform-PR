@@ -20,7 +20,6 @@ const AdminChat = () => {
     },
   ]);
   const onFinish = (value) => {
-    debugger;
     setMessagesArray((e) => [...e, value]);
     form.resetFields();
   };
@@ -29,16 +28,21 @@ const AdminChat = () => {
     <Card
       title="Admin Chat"
       style={{
-        width: 300,
+        width: "100%",
         border: "none",
         display: "flex",
         flexDirection: "column",
         overflow: "auto",
+        background: "#4E5054",
       }}
     >
       {messagesArray.map((e) => (
-        <div className="messageUi">
-          // console.log(e.message);
+        <div
+          className="messageUi"
+          style={{
+            backgroundColor: e.sender === "junaid" ? "#3B3C40" : "#7DE6D0",
+          }}
+        >
           <span>{e.message}</span>
         </div>
       ))}
@@ -46,8 +50,8 @@ const AdminChat = () => {
       <Form
         form={form}
         name="basic"
-        labelCol={{ span: 8 }}
-        wrapperCol={{ span: 16 }}
+        // labelCol={{ span: 8 }}
+        // wrapperCol={{ span: 16 }}
         initialValues={{ remember: true }}
         onFinish={onFinish}
       >
@@ -59,12 +63,6 @@ const AdminChat = () => {
             onChange={(e) => setInputValue(e)}
           />
         </Form.Item>
-        {/* <Form.Item name="sender">
-          <Input
-            placeholder="Enter Values Here"
-            onChange={(e) => setInputValue(e.target.value)}
-          />
-        </Form.Item> */}
         <Form.Item name="sender">
           <Button htmlType="submit"> click me</Button>
         </Form.Item>

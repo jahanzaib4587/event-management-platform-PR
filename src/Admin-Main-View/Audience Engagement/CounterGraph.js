@@ -56,12 +56,24 @@ const data = [
 ];
 const CounterGraph = () => {
   return (
-    <LineChart width={300} height={200} data={data}>
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" interval="preserveStartEnd" />
-      <YAxis interval="preserveStartEnd" />
-      <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-    </LineChart>
+    <div
+      style={{
+        width: "90%",
+        height: "33%",
+        background: "#3B3C40",
+        borderRadius: "15px",
+        marginBottom: "20px",
+        margin: "20px",
+        padding: "10%",
+      }}
+    >
+      <LineChart width={300} height={200} data={data}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" interval="preserveStartEnd" />
+        <YAxis interval="preserveStartEnd" />
+        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+      </LineChart>
+    </div>
   );
 };
 

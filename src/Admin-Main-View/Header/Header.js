@@ -13,30 +13,39 @@ const AdminChat = () => {
       style={{
         display: "flex",
         borderRadius: "20px",
-        width: "600px",
-        backgroundColor: "#b2aeae",
+        width: "100%",
+        background: "#4E5054",
         justifyContent: "flex-start",
         paddingInline: "20px",
         alignItems: "center",
+        marginBottom: "15px",
       }}
     >
       <div
         style={{
-          backgroundColor: "red",
-          width: "80px",
-          height: "40px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-
-          borderRadius: "3px",
+          width: "15%",
+          height: "33px",
+          left: "40px",
+          top: "32px",
+          background: "#DD4B4E",
+          borderRadius: "5px",
+          textAlign: "center",
+          paddingTop: "5px",
         }}
       >
         <h4 style={{ color: "#fff", alignSelf: "centers" }}>Live</h4>
       </div>
-      <HeaderComponent Icon={<EyeOutlined />} title={"2.4k"} />
-      <HeaderComponent Icon={<EyeOutlined />} title={"Stop Broadcast"} />
-      <HeaderComponent Icon={<InfoCircleOutlined />} title={"Stop Recording"} />
+      <HeaderComponent Icon={<EyeOutlined />} title={"2.4k"} colorType="#fff" />
+      <HeaderComponent
+        Icon={<EyeOutlined />}
+        title={"Stop Broadcast"}
+        colorType="#DD4B4E"
+      />
+      <HeaderComponent
+        Icon={<InfoCircleOutlined />}
+        title={"Stop Recording"}
+        colorType="#7DE6D0"
+      />
     </div>
   );
 };
