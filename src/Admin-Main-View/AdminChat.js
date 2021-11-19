@@ -25,7 +25,7 @@ const AdminChat = () => {
   };
   console.log(messagesArray);
   return (
-    <Card
+    <div
       title="Admin Chat"
       style={{
         width: "100%",
@@ -34,8 +34,10 @@ const AdminChat = () => {
         flexDirection: "column",
         overflow: "auto",
         background: "#4E5054",
+        borderBottom: "none",
       }}
     >
+      <h2>Admin Chat</h2>
       {messagesArray.map((e) => (
         <div
           className="messageUi"
@@ -67,7 +69,7 @@ const AdminChat = () => {
           <Button htmlType="submit"> click me</Button>
         </Form.Item>
       </Form>
-    </Card>
+    </div>
   );
 };
 

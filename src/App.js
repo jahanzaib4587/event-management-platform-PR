@@ -29,6 +29,7 @@ function App() {
           width: "25%",
           height: "97%",
           background: "#4E5054",
+
           borderRadius: " 15px",
         }}
       >

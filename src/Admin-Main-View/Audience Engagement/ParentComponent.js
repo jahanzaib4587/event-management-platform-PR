@@ -4,7 +4,7 @@ import ActionComponent from "../QuickActions/ActionComponent";
 import ActivityFeed from "../ActivityFeed";
 import AdminChat from "../AdminChat";
 import { Collapse, Badge, Avatar } from "antd";
-
+import "../../App.css";
 const ParentComponent = () => {
   const { Panel } = Collapse;
   const [activePanel, setActivePanel] = useState(1);
