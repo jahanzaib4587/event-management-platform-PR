@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button, Card, Form, Input } from "antd";
 import InputEmoji from "react-input-emoji";
+import { SendOutlined, SmileOutlined } from "@ant-design/icons";
+
 import "../App.css";
 const AdminChat = () => {
   const [inputValue, setInputValue] = useState("");
@@ -24,6 +26,12 @@ const AdminChat = () => {
     form.resetFields();
   };
   console.log(messagesArray);
+  const suffix = (
+    <SendOutlined
+      style={{ transform: "rotate(310deg)", fontSize: "20px", color: "#fff" }}
+    />
+  );
+  const prefix = <SmileOutlined style={{ fontSize: "20px", color: "#fff" }} />;
   return (
     <div
       title="Admin Chat"
@@ -32,22 +40,25 @@ const AdminChat = () => {
         border: "none",
         display: "flex",
         flexDirection: "column",
+        paddingInline: "10px",
         overflow: "auto",
-        background: "#4E5054",
+        backgroundColor: "#4E5054",
         borderBottom: "none",
       }}
     >
-      <h2>Admin Chat</h2>
-      {messagesArray.map((e) => (
-        <div
-          className="messageUi"
-          style={{
-            backgroundColor: e.sender === "junaid" ? "#3B3C40" : "#7DE6D0",
-          }}
-        >
-          <span>{e.message}</span>
-        </div>
-      ))}
+      <h2 style={{ color: "#fff", fontWeight: "bold" }}>Admin Chat</h2>
+      <span style={{ paddingInline: "20px" }}>
+        {messagesArray.map((e) => (
+          <div
+            className="messageUi"
+            style={{
+              backgroundColor: e.sender === "junaid" ? "#3B3C40" : "#7DE6D0",
+            }}
+          >
+            <span>{e.message}</span>
+          </div>
+        ))}
+      </span>
 
       <Form
         form={form}
@@ -57,15 +68,33 @@ const AdminChat = () => {
         initialValues={{ remember: true }}
         onFinish={onFinish}
       >
-        <Form.Item name="message">
-          <InputEmoji
-            // value={inputValue}
-            placeholder="Enter Values Here"
-            cleanOnEnter
-            onChange={(e) => setInputValue(e)}
-          />
+        <Form.Item name="message" htmlType="submit">
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Input
+              className="chatInput"
+              style={{
+                borderRadius: "50px",
+                border: "none",
+                padding: "10px",
+              }}
+              backgroundColor="red"
+              value={inputValue}
+              placeholder="Enter Values Here"
+              // cleanOnEnter
+              onChange={(e) => setInputValue(e)}
+              onPressEnter={onFinish}
+              prefix={prefix}
+              suffix={suffix}
+            ></Input>
+          </div>
         </Form.Item>
-        <Form.Item name="sender">
+        <Form.Item name="sender" value="i am sender">
           <Button htmlType="submit"> click me</Button>
         </Form.Item>
       </Form>

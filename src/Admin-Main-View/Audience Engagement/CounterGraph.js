@@ -64,10 +64,23 @@ const CounterGraph = () => {
         borderRadius: "15px",
         marginBottom: "20px",
         // margin: "20px",
-        // padding: "10%",
+        display: "flex",
+        flexDirection: "column",
+        paddingTop: "20px",
       }}
     >
-      <LineChart width={300} height={200} data={data}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          paddingInline: "30px",
+        }}
+      >
+        <h3 style={{ color: "#E5E5E5" }}>View Count</h3>
+        <p style={{ color: "#E5E5E5" }}>2378 watching</p>
+      </div>
+      <LineChart width={400} height={200} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" interval="preserveStartEnd" />
         <YAxis interval="preserveStartEnd" />

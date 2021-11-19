@@ -15,6 +15,7 @@ const ParentComponent = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        marginTop: "10px",
       }}
     >
       <CounterGraph />
@@ -61,8 +62,17 @@ const ParentComponent = () => {
           <br />
           <Panel
             header={
-              <Badge offset={[10, 1]} count={5}>
-                Admin Chat
+              <Badge offset={[10, 1]} count={5} style={{ fontWeight: "bold" }}>
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "20px",
+                    alignSelf: "center",
+                    color: "#fff",
+                  }}
+                >
+                  Admin Chat
+                </span>
               </Badge>
             }
             key="2"

@@ -161,7 +161,18 @@ body {
 .ant-collapse-content > .ant-collapse-content-box {
   padding: 0 !important;
 }
-
 .ant-collapse > .ant-collapse-item > .ant-collapse-header {
   align-self: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff !important;
+}
+.ant-input {
+  background-color: #3b3c40 !important;
+}
+.ant-input-affix-wrapper {
+  background-color: #3b3c40 !important;
 }
