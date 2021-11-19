@@ -111,7 +111,6 @@ body {
   justify-content: flex-start;
 }
 .quickActionChild {
-  width: 30%;
   height: 100px;
   left: 404px;
   top: 31px;
@@ -136,6 +135,24 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 123px;
   border-bottom-right-radius: 114px;
+  width: fit-content;
+  padding: 5px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.messageUiSender {
+  -webkit-border-top-left-radius: 114px;
+  -webkit-border-top-right-radius: 123px;
+  -webkit-border-bottom-right-radius: 123px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-topleft: 114px;
+  -moz-border-radius-topright: 123px;
+  -moz-border-radius-bottomright: 123px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 114px;
+  border-top-right-radius: 123px;
+  border-bottom-right-radius: 123px;
+  border-bottom-left-radius: 10px;
   width: fit-content;
   padding: 5px;
   margin-bottom: 10px;

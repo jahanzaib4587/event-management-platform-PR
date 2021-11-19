@@ -35,11 +35,11 @@ const ActivityFeed = () => {
         size="small"
         dataSource={data}
         renderItem={(item) => (
-          <List.Item>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <span>{item} </span>
-              <span>Content</span>
-            </div>
+          <List.Item
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <span style={{ color: "#fff" }}>{item} </span>
+            <span style={{ color: "#fff" }}>11:42 AM</span>
           </List.Item>
         )}
       />

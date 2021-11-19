@@ -6,7 +6,10 @@ const ActionComponent = (props) => {
     setSwitchValue(true);
   }, []);
   return (
-    <div className="quickActionChild">
+    <div
+      className="quickActionChild"
+      style={{ width: props.isAudienceComp ? "50%" : "30%" }}
+    >
       <Switch
         defaultChecked={switchValue}
         onChange={(e) => setSwitchValue(e)}

@@ -63,8 +63,8 @@ const CounterGraph = () => {
         background: "#3B3C40",
         borderRadius: "15px",
         marginBottom: "20px",
-        margin: "20px",
-        padding: "10%",
+        // margin: "20px",
+        // padding: "10%",
       }}
     >
       <LineChart width={300} height={200} data={data}>
