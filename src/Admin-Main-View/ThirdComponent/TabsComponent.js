@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs } from "antd";
 import { MainChat } from "./MainChat";
 import Attendees from "./Attendees";
+import "../../App.css";
 const TabsComponent = () => {
   const { TabPane } = Tabs;
   return (
