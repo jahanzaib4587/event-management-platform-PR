@@ -27,9 +27,11 @@ const AdminChat = () => {
   };
   console.log(messagesArray);
   const suffix = (
-    <SendOutlined
-      style={{ transform: "rotate(310deg)", fontSize: "20px", color: "#fff" }}
-    />
+    <button htmlType="submit" style={{ all: "unset ", cursor: "pointer" }}>
+      <SendOutlined
+        style={{ transform: "rotate(310deg)", fontSize: "20px", color: "#fff" }}
+      />
+    </button>
   );
   const prefix = <SmileOutlined style={{ fontSize: "20px", color: "#fff" }} />;
   return (
@@ -47,7 +49,7 @@ const AdminChat = () => {
       }}
     >
       <h2 style={{ color: "#fff", fontWeight: "bold" }}>Admin Chat</h2>
-      <span style={{ paddingInline: "20px" }}>
+      <span style={{ paddingInline: "20px", margin: "10px" }}>
         {messagesArray.map((e) => (
           <div
             className="messageUi"
@@ -63,12 +65,10 @@ const AdminChat = () => {
       <Form
         form={form}
         name="basic"
-        // labelCol={{ span: 8 }}
-        // wrapperCol={{ span: 16 }}
         initialValues={{ remember: true }}
         onFinish={onFinish}
       >
-        <Form.Item name="message" htmlType="submit">
+        <Form.Item name="message">
           <div
             style={{
               display: "flex",
@@ -82,11 +82,9 @@ const AdminChat = () => {
                 borderRadius: "50px",
                 border: "none",
                 padding: "10px",
+                paddingInline: "15px",
               }}
-              backgroundColor="red"
-              value={inputValue}
               placeholder="Enter Values Here"
-              // cleanOnEnter
               onChange={(e) => setInputValue(e)}
               onPressEnter={onFinish}
               prefix={prefix}
