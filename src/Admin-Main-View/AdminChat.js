@@ -14,10 +14,11 @@ const AdminChat = () => {
     "4th message",
   ]);
   const onFinish = (value) => {
-    debugger;
-    setMessagesArray([...messagesArray, inputValue]);
-    form.resetFields();
-    setInputValue("");
+    if (inputValue) {
+      setMessagesArray([...messagesArray, inputValue]);
+      form.resetFields();
+      setInputValue("");
+    }
   };
   const suffix = (
     <button htmlType="submit" style={{ all: "unset ", cursor: "pointer" }}>

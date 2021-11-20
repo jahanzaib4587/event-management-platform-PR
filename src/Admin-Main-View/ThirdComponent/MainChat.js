@@ -14,10 +14,11 @@ export const MainChat = () => {
     "4th message",
   ]);
   const onFinish = (value) => {
-    debugger;
-    setMessagesArray([...messagesArray, inputValue]);
-    form.resetFields();
-    setInputValue("");
+    if (inputValue) {
+      setMessagesArray([...messagesArray, inputValue]);
+      form.resetFields();
+      setInputValue("");
+    }
   };
   const suffix = (
     <button htmlType="submit" style={{ all: "unset ", cursor: "pointer" }}>
@@ -33,7 +34,6 @@ export const MainChat = () => {
   );
   return (
     <div
-      title="Admin Chat"
       style={{
         width: "100%",
         border: "none",
@@ -50,7 +50,6 @@ export const MainChat = () => {
       }}
     >
       <div>
-        <h2 style={{ color: "#fff", fontWeight: "bold" }}>Admin Chat</h2>
         <span
           style={{ paddingInline: "20px", margin: "10px", overflowX: "auto" }}
         >

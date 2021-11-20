@@ -18,6 +18,9 @@ const ParentComponent = () => {
         marginTop: "10px",
       }}
     >
+      <h1 style={{ width: "90%", fontWeight: "bold", color: "#fff" }}>
+        Audience Engagement
+      </h1>
       <CounterGraph />
       <div
         style={{

@@ -27,7 +27,7 @@ function App() {
       <div
         style={{
           flexDirection: "column",
-          width: "25%",
+          width: "32%",
           height: "97%",
           background: "#4E5054",
 
@@ -36,7 +36,7 @@ function App() {
       >
         <ParentComponent />
       </div>
-      <div style={{ width: "31%" }}>
+      <div style={{ width: "32%" }}>
         <TabsComponent />
       </div>
     </div>
