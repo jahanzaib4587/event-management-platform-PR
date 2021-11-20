@@ -3,9 +3,10 @@ import Header from "./Admin-Main-View/Header/Header";
 import Swiper from "./Admin-Main-View/SwiperComponent";
 import QuickAction from "./Admin-Main-View/QuickActions/QuickActions";
 
-import { Collapse, Badge, Avatar } from "antd";
+import { Collapse, Badge, Avatar, Tabs } from "antd";
 import { useState } from "react";
 import ParentComponent from "./Admin-Main-View/Audience Engagement/ParentComponent";
+import TabsComponent from "./Admin-Main-View/ThirdComponent/TabsComponent";
 function App() {
   return (
     <div
@@ -35,7 +36,9 @@ function App() {
       >
         <ParentComponent />
       </div>
-      <div style={{ width: "31%" }}></div>
+      <div style={{ width: "31%" }}>
+        <TabsComponent />
+      </div>
     </div>
   );
 }

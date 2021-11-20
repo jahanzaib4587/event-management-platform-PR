@@ -3,8 +3,8 @@ import { Button, Card, Form, Input } from "antd";
 import InputEmoji from "react-input-emoji";
 import { SendOutlined, SmileOutlined } from "@ant-design/icons";
 
-import "../App.css";
-const AdminChat = () => {
+import "../../App.css";
+export const MainChat = () => {
   const [inputValue, setInputValue] = useState("");
   const [form] = Form.useForm();
   const [messagesArray, setMessagesArray] = useState([
@@ -37,7 +37,7 @@ const AdminChat = () => {
       style={{
         width: "100%",
         border: "none",
-        height: "40vh",
+        height: "88vh",
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",
@@ -52,12 +52,7 @@ const AdminChat = () => {
       <div>
         <h2 style={{ color: "#fff", fontWeight: "bold" }}>Admin Chat</h2>
         <span
-          style={{
-            paddingInline: "20px",
-            margin: "10px",
-            overflowX: "scroll",
-            height: "20vh",
-          }}
+          style={{ paddingInline: "20px", margin: "10px", overflowX: "auto" }}
         >
           {messagesArray.map((e) => (
             <div
@@ -106,5 +101,3 @@ const AdminChat = () => {
     </div>
   );
 };
-
-export default AdminChat;
