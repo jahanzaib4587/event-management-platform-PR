@@ -13,7 +13,8 @@ const AdminChat = () => {
       style={{
         display: "flex",
         borderRadius: "20px",
-        width: "100%",
+        width: "568px",
+        height: "54px",
         background: "#4E5054",
         justifyContent: "flex-start",
         paddingInline: "20px",
@@ -23,7 +24,7 @@ const AdminChat = () => {
     >
       <div
         style={{
-          width: "15%",
+          width: "76px",
           height: "33px",
           left: "40px",
           top: "32px",

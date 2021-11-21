@@ -30,7 +30,14 @@ const SwiperComponent = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div style={{ height: "55%", width: "100%" }}>
+    <div
+      style={{
+        height: "424px",
+        width: "100%",
+        borderRadius: "50%",
+        marginBottom: "10px",
+      }}
+    >
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",

@@ -16,10 +16,10 @@ function App() {
         height: "100vh",
         display: "flex",
         padding: "10px",
-        justifyContent: "space-evenly",
+        justifyContent: "space-around",
       }}
     >
-      <div style={{ width: "30%", height: "100%" }}>
+      <div style={{ width: "32%", marginTop: "20px" }}>
         <Header />
         <Swiper />
         <QuickAction />
@@ -27,16 +27,15 @@ function App() {
       <div
         style={{
           flexDirection: "column",
-          width: "32%",
-          height: "97%",
+          width: "393px",
+          marginTop: "20px",
           background: "#4E5054",
-
           borderRadius: " 15px",
         }}
       >
         <ParentComponent />
       </div>
-      <div style={{ width: "32%", height: "97vh" }}>
+      <div style={{ width: "32%", marginTop: "20px" }}>
         <TabsComponent />
       </div>
     </div>

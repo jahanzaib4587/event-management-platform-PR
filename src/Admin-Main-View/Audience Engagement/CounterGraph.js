@@ -12,45 +12,45 @@ import {
 
 const data = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
+    name: "A",
+    uv: 400,
+    pv: 240,
     amt: 2400,
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
+    name: "B",
+    uv: 300,
+    pv: 138,
     amt: 2210,
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
+    name: "C",
+    uv: 200,
+    pv: 980,
     amt: 2290,
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
+    name: "D",
+    uv: 270,
+    pv: 308,
     amt: 2000,
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
+    name: "E",
+    uv: 190,
+    pv: 480,
     amt: 2181,
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
+    name: "F",
+    uv: 230,
+    pv: 380,
     amt: 2500,
   },
   {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
+    name: "G",
+    uv: 340,
+    pv: 430,
     amt: 2100,
   },
 ];
@@ -58,15 +58,15 @@ const CounterGraph = () => {
   return (
     <div
       style={{
-        width: "90%",
-        height: "33%",
+        width: "354px",
+        height: "167px",
         background: "#3B3C40",
         borderRadius: "15px",
         marginBottom: "20px",
-        // margin: "20px",
         display: "flex",
         flexDirection: "column",
-        paddingTop: "20px",
+        paddingTop: "10px",
+        paddingBottom: "5px",
       }}
     >
       <div
@@ -80,8 +80,8 @@ const CounterGraph = () => {
         <h3 style={{ color: "#E5E5E5" }}>View Count</h3>
         <p style={{ color: "#E5E5E5" }}>2378 watching</p>
       </div>
-      <LineChart width={400} height={200} data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
+      <LineChart width={317} height={105} data={data}>
+        <CartesianGrid strokeDasharray="2 2" />
         <XAxis dataKey="name" interval="preserveStartEnd" />
         <YAxis interval="preserveStartEnd" />
         <Line type="monotone" dataKey="uv" stroke="#82ca9d" />

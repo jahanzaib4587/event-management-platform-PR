@@ -6,7 +6,9 @@ const HeaderComponent = (props) => {
     <div
       style={{
         padding: "10px",
-        width: props.title == "2.4k" ? "15%" : "25%",
+        width: props.title == "2.4k" ? "15%" : "175px",
+
+        height: "33px",
         margin: "10px",
         background: "#3B3C40",
         borderRadius: "15px",
@@ -15,15 +17,10 @@ const HeaderComponent = (props) => {
         alignItems: "center",
       }}
     >
-      <span style={{ color: props.colorType }}>{props.Icon}</span>
-      <span
-        style={{
-          marginLeft: "5px",
-          color: "#fff",
-          fontSize: "9px",
-          fontWeight: "bold",
-        }}
-      >
+      <span style={{ color: props.colorType, fontSize: "24px" }}>
+        {props.Icon}
+      </span>
+      <span className="headerComponentText" style={{}}>
         {props.title}
       </span>
     </div>

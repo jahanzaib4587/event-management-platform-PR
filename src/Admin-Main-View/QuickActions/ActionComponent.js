@@ -8,7 +8,10 @@ const ActionComponent = (props) => {
   return (
     <div
       className="quickActionChild"
-      style={{ width: props.isAudienceComp ? "50%" : "30%" }}
+      style={{
+        width: "171px",
+        height: "120px",
+      }}
     >
       <Switch
         defaultChecked={switchValue}
@@ -23,7 +26,7 @@ const ActionComponent = (props) => {
         // type="checkbox"
       />
 
-      <p style={{ alignSelf: "flex-start" }}>{props.text}</p>
+      <p className="actionComponentText">{props.text}</p>
     </div>
   );
 };

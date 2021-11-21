@@ -18,15 +18,12 @@ const ParentComponent = () => {
         marginTop: "10px",
       }}
     >
-      <h1 style={{ width: "90%", fontWeight: "bold", color: "#fff" }}>
-        Audience Engagement
-      </h1>
+      <h1 className="audienceEngagementHeading">Audience Engagement</h1>
       <CounterGraph />
       <div
         style={{
           display: "flex",
-          justifyContent: "space-evenly",
-          width: "90%",
+
           alignItems: "center",
           marginBottom: "10px",
         }}
