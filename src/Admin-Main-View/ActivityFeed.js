@@ -22,7 +22,7 @@ const ActivityFeed = () => {
       id="scrollableDiv"
       style={{
         width: "100%",
-        height: 200,
+        height: "300px",
         // display: "flex",
         // justifyContent: "start",
         overflowY: "scroll",

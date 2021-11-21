@@ -36,7 +36,7 @@ function App() {
       >
         <ParentComponent />
       </div>
-      <div style={{ width: "32%" }}>
+      <div style={{ width: "32%", height: "97vh" }}>
         <TabsComponent />
       </div>
     </div>

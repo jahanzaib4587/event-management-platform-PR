@@ -44,9 +44,6 @@ export const MainChat = () => {
         flexDirection: "column",
         paddingInline: "10px",
         overflow: "auto",
-        backgroundColor: "#4E5054",
-        borderBottom: "none",
-        borderRadius: "20px",
       }}
     >
       <div>
