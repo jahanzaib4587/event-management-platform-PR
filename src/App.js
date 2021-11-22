@@ -16,10 +16,11 @@ function App() {
         height: "100vh",
         display: "flex",
         padding: "10px",
+        alignItems: "center",
         justifyContent: "space-around",
       }}
     >
-      <div style={{ width: "32%", marginTop: "20px" }}>
+      <div style={{ width: "32%" }}>
         <Header />
         <Swiper />
         <QuickAction />
