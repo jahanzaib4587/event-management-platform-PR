@@ -116,7 +116,7 @@ const Attendees = () => {
       style={{
         width: "100%",
         height: "87vh",
-        paddingInline: "20px",
+
         overflowY: "auto",
       }}
     >
@@ -136,7 +136,7 @@ const Attendees = () => {
         }
         placeholder="Search Usernames"
         style={{
-          width: "50%",
+          width: "200px",
           borderRadius: "8px",
           marginBottom: "20px",
           marginLeft: "5%",

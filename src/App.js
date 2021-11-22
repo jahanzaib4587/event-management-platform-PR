@@ -17,23 +17,24 @@ function App() {
         display: "flex",
         padding: "10px",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "space-evenly",
+        overflow: "hidden",
       }}
     >
-      <div style={{ width: "32%" }}>
+      <div style={{ width: "450px", marginRight: "10%" }}>
         <Header />
         <Swiper />
         <QuickAction />
       </div>
       <div
         style={{
-          flexDirection: "column",
           width: "393px",
+          marginRight: "30px",
         }}
       >
         <ParentComponent />
       </div>
-      <div style={{ width: "32%", marginTop: "20px" }}>
+      <div style={{ width: "393px" }}>
         <TabsComponent />
       </div>
     </div>

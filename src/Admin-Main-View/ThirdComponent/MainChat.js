@@ -37,38 +37,16 @@ export const MainChat = () => {
       style={{
         width: "100%",
         border: "none",
-        height: "88vh",
+        height: "82vh",
         display: "flex",
         justifyContent: "space-between",
-        flexDirection: "column",
         flexDirection: "column",
         paddingInline: "10px",
         overflow: "auto",
       }}
     >
-      {/* <div>
-        <span
-          style={{ paddingInline: "20px", margin: "10px", overflowX: "auto" }}
-        >
-          {messagesArray.map((e) => (
-            <div
-              className="messageUi"
-              style={{
-                backgroundColor: "#7DE6D0",
-                color: " #000000",
-                borderRadius: "30px 15px 5px 30px",
-              }}
-            >
-              <span>{e}</span>
-            </div>
-          ))}
-        </span>
-
-      </div> */}
       <div
         style={{
-          // paddingInline: "20px",
-          // margin: "10px",
           overflow: "auto",
           height: "100%",
         }}
@@ -77,7 +55,6 @@ export const MainChat = () => {
           <div
             style={{
               display: "flex",
-              // justifyContent: "center",
               alignItems: "flex-start",
             }}
           >

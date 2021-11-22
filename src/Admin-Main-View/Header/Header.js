@@ -38,7 +38,7 @@ const AdminChat = () => {
       </div>
       <HeaderComponent Icon={<EyeOutlined />} title={"2.4k"} colorType="#fff" />
       <HeaderComponent
-        Icon={<EyeOutlined />}
+        Icon={<StopOutlined />}
         title={"Stop Broadcast"}
         colorType="#DD4B4E"
       />

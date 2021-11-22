@@ -17,8 +17,8 @@ const ActionComponent = (props) => {
         defaultChecked={switchValue}
         onChange={(e) => setSwitchValue(e)}
         style={{
-          background: switchValue ? "#568997" : "#edeaea",
-          borderColor: switchValue ? "#568997" : "white",
+          background: switchValue ? "#7DE6D0" : "#edeaea",
+          borderColor: switchValue ? "#7DE6D0" : "white",
           alignSelf: "flex-end",
           visibility: !props.isSwitch && "hidden",
         }}

@@ -16,7 +16,6 @@ const ParentComponent = () => {
         flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
-        marginTop: "10px",
       }}
     >
       <div
@@ -37,7 +36,6 @@ const ParentComponent = () => {
         <div
           style={{
             display: "flex",
-
             alignItems: "center",
             marginBottom: "10px",
           }}

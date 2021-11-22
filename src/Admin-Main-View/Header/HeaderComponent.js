@@ -20,7 +20,19 @@ const HeaderComponent = (props) => {
       <span style={{ color: props.colorType, fontSize: "24px" }}>
         {props.Icon}
       </span>
-      <span className="headerComponentText" style={{}}>
+      <span
+        className="headerComponentText"
+        style={{
+          fontFamily: "Lato",
+          fontStyle: "normal",
+          fontWeight: "300",
+          fontSize: "18px",
+          lineHeight: "22px",
+          /* identical to box height */
+
+          color: "#FFFFFF",
+        }}
+      >
         {props.title}
       </span>
     </div>
