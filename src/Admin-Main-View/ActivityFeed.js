@@ -19,16 +19,11 @@ const ActivityFeed = () => {
 
   return (
     <div
-      id="scrollableDiv"
       style={{
         width: "100%",
         height: "300px",
-        // display: "flex",
-        // justifyContent: "start",
         overflowY: "scroll",
-        // padding: "0 16px",
         backgroundColor: "#3B3C40",
-        // border: "1px solid rgba(140, 140, 140, 0.35)",
       }}
     >
       <List
@@ -38,12 +33,26 @@ const ActivityFeed = () => {
           <List.Item
             style={{
               display: "flex",
+              flexDirection: "column",
               justifyContent: "space-between",
               borderBottom: "1px solid #4E5054",
             }}
           >
-            <span style={{ color: "#fff" }}>{item} </span>
-            <span style={{ color: "#fff" }}>11:42 AM</span>
+            <span
+              style={{
+                color: "#fff",
+                justifySelf: "center",
+                alignSelf: "flex-start",
+                fontSize: "14px",
+              }}
+            >
+              {item}{" "}
+            </span>
+            <span
+              style={{ color: "#fff", alignSelf: "flex-end", fontSize: "9px" }}
+            >
+              11:42 AM
+            </span>
           </List.Item>
         )}
       />

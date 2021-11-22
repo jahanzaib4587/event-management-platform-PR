@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Button, Card, Form, Input } from "antd";
+import { Button, Card, Form, Input, Avatar } from "antd";
 import InputEmoji from "react-input-emoji";
-import { SendOutlined, SmileOutlined } from "@ant-design/icons";
+import { SendOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
 
 import "../App.css";
 const AdminChat = () => {
@@ -21,7 +21,11 @@ const AdminChat = () => {
     }
   };
   const suffix = (
-    <button htmlType="submit" style={{ all: "unset ", cursor: "pointer" }}>
+    <button
+      htmlType="submit"
+      onClick={() => onFinish()}
+      style={{ all: "unset ", cursor: "pointer" }}
+    >
       <SendOutlined
         style={{ transform: "rotate(310deg)", fontSize: "20px", color: "#fff" }}
       />
@@ -38,7 +42,7 @@ const AdminChat = () => {
       style={{
         width: "100%",
         border: "none",
-        height: "200px",
+
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",
@@ -50,27 +54,67 @@ const AdminChat = () => {
         borderRadius: "20px",
       }}
     >
-      <div>
-        <h2 style={{ color: "#fff", fontWeight: "bold" }}>Admin Chat</h2>
-        <span
+      <div style={{ padding: "10px" }}>
+        <h2
           style={{
-            paddingInline: "20px",
-            margin: "10px",
-            overflowX: "scroll",
+            fontFamily: "Poppins",
+            fontStyle: "normal",
+            fontWeight: "600",
+            fontSize: "24px",
+            lineHeight: "36px",
+
+            color: "#FFFFFF",
+          }}
+        >
+          Admin Chat
+        </h2>
+        <div
+          style={{
+            // paddingInline: "20px",
+            // margin: "10px",
+            overflow: "auto",
             height: "20vh",
           }}
         >
           {messagesArray.map((e) => (
             <div
-              className="messageUi"
               style={{
-                backgroundColor: "#7DE6D0",
+                display: "flex",
+                // justifyContent: "center",
+                alignItems: "flex-start",
               }}
             >
-              <span>{e}</span>
+              <Avatar
+                size="large"
+                icon={<UserOutlined />}
+                style={{ marginRight: "10px" }}
+              />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                <div className="messageUi">
+                  <span>{e}</span>
+                </div>
+                <p
+                  style={{
+                    color: "#fff",
+                    fontFamily: "Lato",
+                    fontStyle: "normal",
+                    fontWeight: "300",
+                    fontSize: "8px",
+                    lineHeight: "10px",
+                  }}
+                >
+                  Teddy Tereson
+                </p>
+              </div>
             </div>
           ))}
-        </span>
+        </div>
       </div>
 
       <Form

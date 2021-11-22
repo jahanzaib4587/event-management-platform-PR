@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Button, Card, Form, Input } from "antd";
+import { Button, Card, Form, Input, Avatar } from "antd";
 import InputEmoji from "react-input-emoji";
-import { SendOutlined, SmileOutlined } from "@ant-design/icons";
+import { SendOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
 
 import "../../App.css";
 export const MainChat = () => {
@@ -46,7 +46,7 @@ export const MainChat = () => {
         overflow: "auto",
       }}
     >
-      <div>
+      {/* <div>
         <span
           style={{ paddingInline: "20px", margin: "10px", overflowX: "auto" }}
         >
@@ -55,12 +55,62 @@ export const MainChat = () => {
               className="messageUi"
               style={{
                 backgroundColor: "#7DE6D0",
+                color: " #000000",
+                borderRadius: "30px 15px 5px 30px",
               }}
             >
               <span>{e}</span>
             </div>
           ))}
         </span>
+
+      </div> */}
+      <div
+        style={{
+          // paddingInline: "20px",
+          // margin: "10px",
+          overflow: "auto",
+          height: "100%",
+        }}
+      >
+        {messagesArray.map((e) => (
+          <div
+            style={{
+              display: "flex",
+              // justifyContent: "center",
+              alignItems: "flex-start",
+            }}
+          >
+            <Avatar
+              size="large"
+              icon={<UserOutlined />}
+              style={{ marginRight: "10px" }}
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
+              <div className="messageUiMainChat">
+                <span>{e}</span>
+              </div>
+              <p
+                style={{
+                  color: "#fff",
+                  fontFamily: "Lato",
+                  fontStyle: "normal",
+                  fontWeight: "300",
+                  fontSize: "8px",
+                  lineHeight: "10px",
+                }}
+              >
+                Teddy Tereson
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
 
       <Form

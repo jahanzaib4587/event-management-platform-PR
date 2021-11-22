@@ -29,9 +29,6 @@ function App() {
         style={{
           flexDirection: "column",
           width: "393px",
-          marginTop: "20px",
-          background: "#4E5054",
-          borderRadius: " 15px",
         }}
       >
         <ParentComponent />

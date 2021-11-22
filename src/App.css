@@ -74,7 +74,6 @@ body {
 .mySwiper {
   height: 80%;
   box-sizing: border-box;
-  padding: 10px 0;
 }
 
 .mySwiper .swiper-slide {
@@ -129,20 +128,31 @@ body {
   border-radius: 15px;
 }
 .messageUi {
-  -webkit-border-top-left-radius: 123px;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 123px;
-  -webkit-border-bottom-right-radius: 114px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-topright: 123px;
-  -moz-border-radius-bottomright: 114px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 123px;
-  border-bottom-right-radius: 114px;
+  background: #3b3c40;
+  border-radius: 15px 30px 30px 5px;
   width: fit-content;
-  padding: 5px;
+  padding: 10px;
   margin-bottom: 10px;
-  color: #fff;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+}
+.messageUiMainChat {
+  width: fit-content;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: #7de6d0;
+  color: #000000;
+  border-radius: 30px 15px 5px 30px;
 }
 .messageUiSender {
   -webkit-border-top-left-radius: 114px;
@@ -249,4 +259,12 @@ body {
   line-height: 22px;
   align-self: flex-start;
   color: #ffffff;
+}
+.adminChat > .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  text-align: center !important;
+  width: 393px !important;
+  height: 58px !important;
+
+  background: #4e5054 !important;
+  border-radius: 15px !important;
 }

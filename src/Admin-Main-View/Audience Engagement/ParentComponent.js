@@ -11,31 +11,72 @@ const ParentComponent = () => {
   return (
     <div
       style={{
+        height: "88vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
         marginTop: "10px",
       }}
     >
-      <h1 className="audienceEngagementHeading">Audience Engagement</h1>
-      <CounterGraph />
       <div
         style={{
+          width: "393px",
+          height: "90vh",
           display: "flex",
-
+          flexDirection: "column",
+          justifyContent: "flex-start",
           alignItems: "center",
-          marginBottom: "10px",
+          background: "#4E5054",
+          borderRadius: " 15px",
+          paddingTop: "20px",
         }}
       >
-        <ActionComponent text="Ask the Audience" isAudienceComp={true} />
-        <ActionComponent text="Heart Bubbles" isAudienceComp={true} />
+        <h1 className="audienceEngagementHeading">Audience Engagement</h1>
+        <CounterGraph />
+        <div
+          style={{
+            display: "flex",
+
+            alignItems: "center",
+            marginBottom: "10px",
+          }}
+        >
+          <ActionComponent text="Ask the Audience" isAudienceComp={true} />
+          <ActionComponent text="Heart Bubbles" isAudienceComp={true} />
+        </div>
+        <div
+          style={{
+            width: "100%",
+          }}
+        >
+          <Collapse
+            accordion
+            style={{ color: "white" }}
+            destroyInactivePanel={true}
+            activeKey={activePanel}
+            ghost={true}
+            onChange={(e) => {
+              setActivePanel(e);
+            }}
+          >
+            <Panel
+              header="Activity Feed"
+              key="1"
+              style={{
+                backgroundColor: "#4E5054",
+                border: "none",
+                display: "flex",
+                flexDirection: "column",
+                padding: 0,
+              }}
+            >
+              <ActivityFeed />
+            </Panel>
+          </Collapse>
+        </div>
       </div>
-      <div
-        style={{
-          width: "100%",
-        }}
-      >
+      <div style={{ width: "393px", marginTop: "10px" }} className="adminChat">
         <Collapse
           accordion
           style={{ color: "white" }}
@@ -46,20 +87,6 @@ const ParentComponent = () => {
             setActivePanel(e);
           }}
         >
-          <Panel
-            header="Activity Feed"
-            key="1"
-            style={{
-              backgroundColor: "#4E5054",
-              border: "none",
-              display: "flex",
-              flexDirection: "column",
-              padding: 0,
-            }}
-          >
-            <ActivityFeed />
-          </Panel>
-          <br />
           <Panel
             header={
               <Badge offset={[10, 1]} count={5} style={{ fontWeight: "bold" }}>
