@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CounterGraph from "./CounterGraph";
 import ActionComponent from "../QuickActions/ActionComponent";
 import ActivityFeed from "../ActivityFeed";
@@ -55,7 +55,7 @@ const ParentComponent = () => {
             header={
               <Badge
                 offset={[10, 1]}
-                count={5}
+                count={50}
                 style={componentStyles.fontBold}
               >
                 <span style={componentStyles.adminChatHeading}>Admin Chat</span>

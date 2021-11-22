@@ -11,6 +11,7 @@ const ActionComponent = (props) => {
       style={{
         width: "171px",
         height: "120px",
+        border: props.isSwitch && "5px solid #7de6d0",
       }}
     >
       <Switch
