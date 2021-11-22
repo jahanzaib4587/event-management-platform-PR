@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-
+import { componentStyles } from "../styles";
 const data = [
   {
     name: "A",
@@ -56,29 +56,10 @@ const data = [
 ];
 const CounterGraph = () => {
   return (
-    <div
-      style={{
-        width: "354px",
-        height: "167px",
-        background: "#3B3C40",
-        borderRadius: "15px",
-        marginBottom: "20px",
-        display: "flex",
-        flexDirection: "column",
-        paddingTop: "10px",
-        paddingBottom: "5px",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingInline: "30px",
-        }}
-      >
-        <h3 style={{ color: "#E5E5E5" }}>View Count</h3>
-        <p style={{ color: "#E5E5E5" }}>2378 watching</p>
+    <div style={componentStyles.graphContainer}>
+      <div style={componentStyles.graphHeadings}>
+        <h3 style={componentStyles.lightWhiteColor}>View Count</h3>
+        <p style={componentStyles.lightWhiteColor}>2378 watching</p>
       </div>
       <LineChart width={317} height={105} data={data}>
         <CartesianGrid strokeDasharray="2 2" />
