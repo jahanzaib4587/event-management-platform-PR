@@ -21,7 +21,7 @@ function App() {
         overflow: "hidden",
       }}
     >
-      <div style={{ width: "450px", marginRight: "10%" }}>
+      <div style={{ width: "600px" }}>
         <Header />
         <Swiper />
         <QuickAction />
@@ -29,7 +29,6 @@ function App() {
       <div
         style={{
           width: "393px",
-          marginRight: "30px",
         }}
       >
         <ParentComponent />

@@ -51,7 +51,9 @@ body {
   height: 319px;
   border-radius: 50px !important;
 }
-
+.swiper-container {
+  margin-left: 0px !important;
+}
 .mySwiper {
   width: 130%;
   height: 30%;
