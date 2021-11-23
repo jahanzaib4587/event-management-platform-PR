@@ -11,7 +11,6 @@ const ParentComponent = () => {
   const { Panel } = Collapse;
   const [activePanel, setActivePanel] = useState(1);
   console.log(activePanel);
-  debugger;
   return (
     <div
       style={componentStyles.secondColumnContainer}

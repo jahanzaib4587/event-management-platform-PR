@@ -1,7 +1,7 @@
 export const componentStyles = {
   graphContainer: {
     width: "354px",
-    height: "167px",
+    height: "16vh",
     background: "#3B3C40",
     borderRadius: "15px",
     marginBottom: "20px",
@@ -230,8 +230,9 @@ export const componentStyles = {
     height: "100%",
   },
   activityFeedListContainer: {
+    marginBottom: "10px",
     width: "100%",
-    height: "350px",
+    height: "37vh",
     overflowY: "auto",
     backgroundColor: "#3B3C40",
   },
