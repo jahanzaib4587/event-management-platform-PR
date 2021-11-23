@@ -37,7 +37,7 @@ export const MainChat = () => {
       style={{
         width: "100%",
         border: "none",
-        height: "70vh",
+        height: "100%",
         display: "flex",
         // justifyContent: "space-between",
         flexDirection: "column",

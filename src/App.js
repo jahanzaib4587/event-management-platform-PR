@@ -21,7 +21,7 @@ function App() {
         overflow: "hidden",
       }}
     >
-      <div style={{ width: "600px" }}>
+      <div style={{ width: "600px", height: "90vh" }}>
         <Header />
         <Swiper />
         <QuickAction />
@@ -29,11 +29,12 @@ function App() {
       <div
         style={{
           width: "393px",
+          height: "90vh",
         }}
       >
         <ParentComponent />
       </div>
-      <div style={{ width: "393px" }}>
+      <div style={{ width: "393px", height: "90vh" }}>
         <TabsComponent />
       </div>
     </div>

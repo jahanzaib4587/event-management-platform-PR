@@ -28,7 +28,7 @@ export const componentStyles = {
   },
   activityFeedsContainer: {
     width: "393px",
-    height: "70vh",
+    height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",

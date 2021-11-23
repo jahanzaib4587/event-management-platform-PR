@@ -42,7 +42,6 @@ const AdminChat = () => {
       style={{
         width: "100%",
         border: "none",
-
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",

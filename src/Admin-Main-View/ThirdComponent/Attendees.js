@@ -70,7 +70,6 @@ const Attendees = () => {
     "Los Angeles battles es.",
   ];
   useEffect(() => {
-    debugger;
     array1 = data.filter((e) => e.includes(searchValue));
   }, [searchValue]);
   const content = (
@@ -115,7 +114,7 @@ const Attendees = () => {
       id="scrollableDiv"
       style={{
         width: "100%",
-        height: "87vh",
+        height: "82vh",
 
         overflowY: "auto",
       }}
