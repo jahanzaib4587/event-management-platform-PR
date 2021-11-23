@@ -10,8 +10,13 @@ import { componentStyles } from "../styles";
 const ParentComponent = () => {
   const { Panel } = Collapse;
   const [activePanel, setActivePanel] = useState(1);
+  console.log(activePanel);
+  debugger;
   return (
-    <div style={componentStyles.secondColumnContainer}>
+    <div
+      style={componentStyles.secondColumnContainer}
+      className={activePanel == 2 && "displayNone"}
+    >
       <div style={componentStyles.activityFeedsContainer}>
         <h1 className="audienceEngagementHeading">Audience Engagement</h1>
         <CounterGraph />

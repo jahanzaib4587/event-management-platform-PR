@@ -251,3 +251,11 @@ body {
   background: #4e5054 !important;
   border-radius: 15px !important;
 }
+
+.displayNone
+  > .adminChat
+  > .ant-collapse
+  > .ant-collapse-item
+  > .ant-collapse-header {
+  display: none !important;
+}
