@@ -23,6 +23,7 @@ import "../App.css";
 
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Thumbs } from "swiper";
+import { componentStyles } from "./styles";
 
 // install Swiper modules
 SwiperCore.use([Navigation, Thumbs]);
@@ -30,14 +31,7 @@ const SwiperComponent = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div
-      style={{
-        height: "50%",
-        width: "100%",
-        borderRadius: "50%",
-        marginBottom: "10px",
-      }}
-    >
+    <div style={componentStyles.swiperContainer}>
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",

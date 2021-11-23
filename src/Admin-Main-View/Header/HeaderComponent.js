@@ -1,6 +1,7 @@
 import React from "react";
 import { EyeOutlined } from "@ant-design/icons";
 import { Card } from "antd";
+import { componentStyles } from "../styles";
 const HeaderComponent = (props) => {
   return (
     <div
@@ -22,16 +23,7 @@ const HeaderComponent = (props) => {
       </span>
       <span
         className="headerComponentText"
-        style={{
-          fontFamily: "Lato",
-          fontStyle: "normal",
-          fontWeight: "300",
-          fontSize: "18px",
-          lineHeight: "22px",
-          /* identical to box height */
-
-          color: "#FFFFFF",
-        }}
+        style={componentStyles.headerComponentText}
       >
         {props.title}
       </span>

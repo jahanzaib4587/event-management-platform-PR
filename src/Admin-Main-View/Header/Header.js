@@ -6,35 +6,12 @@ import {
   InfoCircleOutlined,
 } from "@ant-design/icons";
 import HeaderComponent from "./HeaderComponent";
-
+import { componentStyles } from "../styles";
 const AdminChat = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        borderRadius: "20px",
-        width: "568px",
-        height: "7%",
-        background: "#4E5054",
-        justifyContent: "flex-start",
-        paddingInline: "20px",
-        alignItems: "center",
-        marginBottom: "15px",
-      }}
-    >
-      <div
-        style={{
-          width: "76px",
-          height: "33px",
-          left: "40px",
-          top: "32px",
-          background: "#DD4B4E",
-          borderRadius: "5px",
-          textAlign: "center",
-          paddingTop: "5px",
-        }}
-      >
-        <h4 style={{ color: "#fff", alignSelf: "centers" }}>Live</h4>
+    <div style={componentStyles.headerContainer}>
+      <div style={componentStyles.liveButton}>
+        <h4 style={componentStyles.headerText}>Live</h4>
       </div>
       <HeaderComponent Icon={<EyeOutlined />} title={"2.4k"} colorType="#fff" />
       <HeaderComponent

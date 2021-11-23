@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Button, Card, Form, Input, Avatar } from "antd";
 import InputEmoji from "react-input-emoji";
 import { SendOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
-
 import "../../App.css";
+import { componentStyles } from "../styles";
 export const MainChat = () => {
   const [inputValue, setInputValue] = useState("");
   const [form] = Form.useForm();
@@ -21,71 +21,26 @@ export const MainChat = () => {
     }
   };
   const suffix = (
-    <button htmlType="submit" style={{ all: "unset ", cursor: "pointer" }}>
-      <SendOutlined
-        style={{ transform: "rotate(310deg)", fontSize: "20px", color: "#fff" }}
-      />
+    <button htmlType="submit" style={componentStyles.sendChatIcon}>
+      <SendOutlined style={componentStyles.sendIconHolder} />
     </button>
   );
-  const prefix = (
-    <SmileOutlined
-      style={{ fontSize: "20px", color: "#fff", marginRight: "10px" }}
-    />
-  );
+  const prefix = <SmileOutlined style={componentStyles.emojiIcon} />;
   return (
-    <div
-      style={{
-        width: "100%",
-        border: "none",
-        height: "100%",
-        display: "flex",
-        // justifyContent: "space-between",
-        flexDirection: "column",
-        paddingInline: "10px",
-        overflow: "auto",
-      }}
-    >
-      <div
-        style={{
-          overflow: "auto",
-          // height: "100%",
-          flex: "1",
-        }}
-      >
+    <div style={componentStyles.mainChatContainer}>
+      <div style={componentStyles.messageArrayList}>
         {messagesArray.map((e) => (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-            }}
-          >
+          <div style={componentStyles.messageRow}>
             <Avatar
               size="large"
               icon={<UserOutlined />}
-              style={{ marginRight: "10px" }}
+              style={componentStyles.mr10}
             />
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
+            <div style={componentStyles.messageContainer}>
               <div className="messageUiMainChat">
                 <span>{e}</span>
               </div>
-              <p
-                style={{
-                  color: "#fff",
-                  fontFamily: "Lato",
-                  fontStyle: "normal",
-                  fontWeight: "300",
-                  fontSize: "8px",
-                  lineHeight: "10px",
-                }}
-              >
-                Teddy Tereson
-              </p>
+              <p style={componentStyles.senderName}>Teddy Tereson</p>
             </div>
           </div>
         ))}
@@ -98,21 +53,10 @@ export const MainChat = () => {
         onFinish={onFinish}
       >
         <Form.Item>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div style={componentStyles.sendMessageContainer}>
             <Input
               className="chatInput"
-              style={{
-                borderRadius: "50px",
-                border: "none",
-                padding: "10px",
-                paddingInline: "15px",
-              }}
+              style={componentStyles.mainChatMessageInput}
               placeholder="Enter Values Here"
               onChange={(e) => setInputValue(e.target.value)}
               value={inputValue}

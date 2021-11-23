@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { List, message, Avatar, Skeleton, Divider } from "antd";
 // import InfiniteScroll from "react-infinite-scroll-component";
 import "../App.css";
+import { componentStyles } from "./styles";
 const ActivityFeed = () => {
   const [loading, setLoading] = useState(false);
   const data = [
@@ -18,41 +19,14 @@ const ActivityFeed = () => {
   ];
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "300px",
-        overflowY: "scroll",
-        backgroundColor: "#3B3C40",
-      }}
-    >
+    <div style={componentStyles.activityFeedListContainer}>
       <List
         size="small"
         dataSource={data}
         renderItem={(item) => (
-          <List.Item
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              borderBottom: "1px solid #4E5054",
-            }}
-          >
-            <span
-              style={{
-                color: "#fff",
-                justifySelf: "center",
-                alignSelf: "flex-start",
-                fontSize: "14px",
-              }}
-            >
-              {item}{" "}
-            </span>
-            <span
-              style={{ color: "#fff", alignSelf: "flex-end", fontSize: "9px" }}
-            >
-              11:42 AM
-            </span>
+          <List.Item style={componentStyles.listItem}>
+            <span style={componentStyles.listFeedData}>{item} </span>
+            <span style={componentStyles.messageTime}>11:42 AM</span>
           </List.Item>
         )}
       />

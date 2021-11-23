@@ -20,6 +20,7 @@ import {
 
 // import InfiniteScroll from "react-infinite-scroll-component";
 import "../../App.css";
+import { componentStyles } from "../styles";
 const Attendees = () => {
   const [loading, setLoading] = useState(false);
   const [searchValue, setSearchValue] = useState("");
@@ -73,14 +74,7 @@ const Attendees = () => {
     array1 = data.filter((e) => e.includes(searchValue));
   }, [searchValue]);
   const content = (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-        width: "100%",
-      }}
-    >
+    <div style={componentStyles.popoverContentContainer}>
       <Button type="primary" danger className="modalButtonDesign">
         Send Warning
       </Button>
@@ -96,73 +90,41 @@ const Attendees = () => {
     </div>
   );
   const title = (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        width: "100%",
-      }}
-    >
+    <div style={componentStyles.popoverHeader}>
       <span>{currentName}</span>
-      <span style={{ width: "25px", height: "25px" }}>
+      <span style={componentStyles.closeIcon}>
         <CloseOutlined />
       </span>
     </div>
   );
   return (
-    <div
-      id="scrollableDiv"
-      style={{
-        width: "100%",
-        height: "82vh",
-
-        overflowY: "auto",
-      }}
-    >
+    <div id="scrollableDiv" style={componentStyles.attendeesContainer}>
       <Input
         onChange={(value) => setSearchValue(value.target.value)}
         prefix={
-          <span
-            style={{
-              marginRight: "10px",
-              color: "#fff",
-              fontWeight: "bold",
-              fontSize: "18px",
-            }}
-          >
+          <span style={componentStyles.searchIcon}>
             <SearchOutlined />
           </span>
         }
         placeholder="Search Usernames"
-        style={{
-          width: "200px",
-          borderRadius: "8px",
-          marginBottom: "20px",
-          marginLeft: "5%",
-        }}
+        style={componentStyles.searchInput}
       />
 
       <List
         size="small"
         dataSource={data}
         renderItem={(item) => (
-          <List.Item
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              borderBottom: "1px solid #4E5054",
-            }}
-          >
+          <List.Item style={componentStyles.listItemContainer}>
             <div>
               <Avatar
                 size="large"
                 icon={<UserOutlined />}
-                style={{ marginRight: "10px" }}
+                style={componentStyles.mr10}
               />
-              <span style={{ color: "#fff" }}>{item} </span>
+              <span style={componentStyles.colorWhite}>{item} </span>
             </div>
             <span
-              style={{ color: "#fff", fontSize: "18px" }}
+              style={componentStyles.infoIcon}
               onClick={() => (showModal(), setCurrentName(item))}
             >
               <Popover
