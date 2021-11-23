@@ -16,25 +16,27 @@ function App() {
         height: "100vh",
         display: "flex",
         padding: "10px",
+        paddingLeft: "3%",
         alignItems: "center",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
         overflow: "hidden",
       }}
     >
-      <div style={{ width: "600px", height: "90vh" }}>
+      <div style={{ width: "35%", height: "90vh", marginRight: "25px" }}>
         <Header />
         <Swiper />
         <QuickAction />
       </div>
       <div
         style={{
-          width: "393px",
+          width: "28%",
           height: "90vh",
+          marginRight: "25px",
         }}
       >
         <ParentComponent />
       </div>
-      <div style={{ width: "393px", height: "90vh" }}>
+      <div style={{ width: "23%", height: "90vh", marginRight: "25px" }}>
         <TabsComponent />
       </div>
     </div>

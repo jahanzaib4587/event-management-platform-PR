@@ -41,7 +41,10 @@ export const componentStyles = {
   actionComponentContainer: {
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     marginBottom: "10px",
+    marginLeft: "10px",
+    width: "100%",
   },
   wd100: {
     width: "100%",
@@ -76,10 +79,10 @@ export const componentStyles = {
   headerContainer: {
     display: "flex",
     borderRadius: "20px",
-    width: "568px",
+    width: "100%",
     height: "7%",
     background: "#4E5054",
-    justifyContent: "flex-start",
+    justifyContent: "space-evenly",
     paddingInline: "20px",
     alignItems: "center",
     marginBottom: "15px",
@@ -170,7 +173,7 @@ export const componentStyles = {
   mainChatContainer: {
     width: "100%",
     border: "none",
-    height: "100%",
+    height: "80vh",
     display: "flex",
     flexDirection: "column",
     paddingInline: "10px",
@@ -209,12 +212,12 @@ export const componentStyles = {
     paddingInline: "15px",
   },
   tabsHolder: {
-    width: "393px",
+    width: "100%",
     height: "100%",
   },
   tabPaneHolder: {
     height: "100%",
-    width: "390px",
+    width: "460px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -254,5 +257,20 @@ export const componentStyles = {
     width: "100%",
     borderRadius: "50%",
     marginBottom: "10px",
+  },
+  actionComponentText: {
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: "18px",
+    lineHeight: "22px",
+    alignSelf: "flex-start",
+    color: "#ffffff",
+  },
+  quickActionTextHolder: {
+    display: "flex",
+    justifyContent: "flex-end",
+    width: "44%",
+    height: "120px",
   },
 };

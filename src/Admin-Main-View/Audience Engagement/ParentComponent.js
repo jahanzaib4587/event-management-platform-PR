@@ -21,8 +21,18 @@ const ParentComponent = () => {
         <h1 className="audienceEngagementHeading">Audience Engagement</h1>
         <CounterGraph />
         <div style={componentStyles.actionComponentContainer}>
-          <ActionComponent text="Ask the Audience" isAudienceComp={true} />
-          <ActionComponent text="Heart Bubbles" isAudienceComp={true} />
+          <div
+            className="quickActionChild"
+            style={componentStyles.quickActionTextHolder}
+          >
+            <p style={componentStyles.actionComponentText}>Ask the Audience</p>
+          </div>
+          <div
+            className="quickActionChild"
+            style={componentStyles.quickActionTextHolder}
+          >
+            <p style={componentStyles.actionComponentText}>Heart Bubbles</p>
+          </div>
         </div>
         <div style={componentStyles.wd100}>
           <Collapse

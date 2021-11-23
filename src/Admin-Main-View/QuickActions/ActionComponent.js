@@ -9,7 +9,7 @@ const ActionComponent = (props) => {
     <div
       className="quickActionChild"
       style={{
-        width: "171px",
+        width: "30%",
         height: "120px",
         border: props.isSwitch && "5px solid #7de6d0",
       }}
