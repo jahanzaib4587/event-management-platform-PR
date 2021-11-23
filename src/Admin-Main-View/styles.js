@@ -50,7 +50,7 @@ export const componentStyles = {
     color: "white",
   },
   activityFeedPanel: {
-    backgroundColor: "#4E5054",
+    // backgroundColor: "#4E5054",
     border: "none",
     display: "flex",
     flexDirection: "column",
