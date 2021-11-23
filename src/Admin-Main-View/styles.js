@@ -20,7 +20,7 @@ export const componentStyles = {
     color: "#E5E5E5",
   },
   secondColumnContainer: {
-    height: "100%",
+    // height: "",
     display: "flex",
     flexDirection: "column",
     // justifyContent: "space-evenly",
@@ -36,6 +36,7 @@ export const componentStyles = {
     background: "#4E5054",
     borderRadius: " 15px",
     paddingTop: "20px",
+    marginBottom: "10px",
   },
   actionComponentContainer: {
     display: "flex",
@@ -227,8 +228,8 @@ export const componentStyles = {
   },
   activityFeedListContainer: {
     width: "100%",
-    height: "300px",
-    overflowY: "scroll",
+    height: "350px",
+    overflowY: "auto",
     backgroundColor: "#3B3C40",
   },
   listItem: {

@@ -49,7 +49,7 @@ const ParentComponent = () => {
         <Collapse
           accordion
           style={componentStyles.colorWhite}
-          destroyInactivePanel={true}
+          // destroyInactivePanel={true}
           activeKey={activePanel}
           ghost={true}
           onChange={(e) => {

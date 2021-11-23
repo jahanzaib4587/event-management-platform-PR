@@ -41,13 +41,14 @@ const AdminChat = () => {
       title="Admin Chat"
       style={{
         width: "100%",
+        height: "420px",
         border: "none",
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",
         flexDirection: "column",
         paddingInline: "10px",
-        overflow: "auto",
+        // overflow: "auto",
         backgroundColor: "#4E5054",
         borderBottom: "none",
         borderRadius: "20px",
@@ -72,7 +73,7 @@ const AdminChat = () => {
             // paddingInline: "20px",
             // margin: "10px",
             overflow: "auto",
-            height: "20vh",
+            height: "30vh",
           }}
         >
           {messagesArray.map((e) => (
