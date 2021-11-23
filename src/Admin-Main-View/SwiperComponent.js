@@ -32,7 +32,7 @@ const SwiperComponent = () => {
   return (
     <div
       style={{
-        height: "424px",
+        height: "50%",
         width: "100%",
         borderRadius: "50%",
         marginBottom: "10px",

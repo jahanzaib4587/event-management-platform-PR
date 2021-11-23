@@ -48,7 +48,7 @@ body {
 
 .mySwiper2 {
   width: 568px;
-  height: 319px;
+  height: 75%;
   border-radius: 50px !important;
 }
 .swiper-container {
@@ -85,7 +85,7 @@ body {
 .quickActionsWrapper {
   margin-top: 30px !important;
   width: 575px;
-  height: 350px;
+  height: 40%;
   background: #4e5054;
   border-radius: 15px;
   padding: 10px;

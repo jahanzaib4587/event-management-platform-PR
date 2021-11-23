@@ -14,7 +14,7 @@ const AdminChat = () => {
         display: "flex",
         borderRadius: "20px",
         width: "568px",
-        height: "54px",
+        height: "7%",
         background: "#4E5054",
         justifyContent: "flex-start",
         paddingInline: "20px",
