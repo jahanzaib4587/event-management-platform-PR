@@ -20,15 +20,15 @@ export const componentStyles = {
     color: "#E5E5E5",
   },
   secondColumnContainer: {
-    height: "88vh",
+    height: "100%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
+    // justifyContent: "space-evenly",
     alignItems: "center",
   },
   activityFeedsContainer: {
     width: "393px",
-    height: "90vh",
+    height: "70vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",

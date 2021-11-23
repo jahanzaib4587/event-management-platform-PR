@@ -8,12 +8,15 @@ import { SettingOutlined } from "@ant-design/icons";
 const TabsComponent = () => {
   const { TabPane } = Tabs;
   return (
-    <div style={{ width: "393px", height: "90vh" }}>
+    <div style={{ width: "393px", height: "100%" }}>
       <Tabs
         defaultActiveKey="1"
         style={{
           height: "100%",
           width: "390px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
           backgroundColor: "#4E5054",
           borderBottom: "none",
           borderRadius: "20px",

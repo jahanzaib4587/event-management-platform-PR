@@ -37,9 +37,9 @@ export const MainChat = () => {
       style={{
         width: "100%",
         border: "none",
-        height: "82vh",
+        height: "70vh",
         display: "flex",
-        justifyContent: "space-between",
+        // justifyContent: "space-between",
         flexDirection: "column",
         paddingInline: "10px",
         overflow: "auto",
@@ -48,7 +48,8 @@ export const MainChat = () => {
       <div
         style={{
           overflow: "auto",
-          height: "100%",
+          // height: "100%",
+          flex: "1",
         }}
       >
         {messagesArray.map((e) => (
