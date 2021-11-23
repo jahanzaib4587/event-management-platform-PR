@@ -289,3 +289,18 @@ body {
 .ant-tabs-top > .ant-tabs-nav::before {
   border-bottom: none !important;
 }
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4e5054;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #e2dddd;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #e2dddd;
+}
