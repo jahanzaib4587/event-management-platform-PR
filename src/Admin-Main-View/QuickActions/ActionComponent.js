@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Switch } from "antd";
 import { componentStyles } from "../styles";
 const ActionComponent = (props) => {
-  const [switchValue, setSwitchValue] = useState(true);
+  const [switchValue, setSwitchValue] = useState(false);
   const [isBorder, setIsBorder] = useState(false);
-  useEffect(() => {
-    setSwitchValue(true);
-  }, []);
+
   return (
     <div
       onClick={() => setIsBorder(true)}
@@ -14,7 +12,7 @@ const ActionComponent = (props) => {
       style={{
         width: "30%",
         height: "120px",
-        border: isBorder ? "5px solid #7de6d0" : "unset",
+        border: switchValue ? "5px solid #7de6d0" : "unset",
       }}
     >
       <Switch
