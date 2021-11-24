@@ -274,4 +274,16 @@ export const componentStyles = {
     width: "44%",
     height: "120px",
   },
+  imageHolder: {
+    height: "120px",
+    width: "44%",
+    marginBottom: "10px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    padding: "5px 10px",
+    backgroundImage:
+      "url('https://influence.digital/wp-content/uploads/2021/09/giphy-4-1.gif')",
+    borderRadius: "15px",
+  },
 };

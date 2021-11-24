@@ -3,7 +3,7 @@ import CounterGraph from "./CounterGraph";
 import ActionComponent from "../QuickActions/ActionComponent";
 import ActivityFeed from "../ActivityFeed";
 import AdminChat from "../AdminChat";
-import { Collapse, Badge, Avatar } from "antd";
+import { Collapse, Badge, Avatar, Image } from "antd";
 import "../../App.css";
 import { componentStyles } from "../styles";
 
@@ -26,11 +26,12 @@ const ParentComponent = () => {
           >
             <p style={componentStyles.actionComponentText}>Ask the Audience</p>
           </div>
-          <div
-            className="quickActionChild"
-            style={componentStyles.quickActionTextHolder}
-          >
-            <p style={componentStyles.actionComponentText}>Heart Bubbles</p>
+          <div style={componentStyles.imageHolder}>
+            {/* <Image
+              src="https://influence.digital/wp-content/uploads/2021/09/giphy-4-1.gif"
+              width={200}
+              height={200}
+            ></Image> */}
           </div>
         </div>
         <div style={componentStyles.wd100}>
