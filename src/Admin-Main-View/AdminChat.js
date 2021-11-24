@@ -4,6 +4,7 @@ import InputEmoji from "react-input-emoji";
 import { SendOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
 
 import "../App.css";
+import { componentStyles } from "./styles";
 const AdminChat = () => {
   const [inputValue, setInputValue] = useState("");
   const [form] = Form.useForm();
@@ -26,95 +27,28 @@ const AdminChat = () => {
       onClick={() => onFinish()}
       style={{ all: "unset ", cursor: "pointer" }}
     >
-      <SendOutlined
-        style={{ transform: "rotate(310deg)", fontSize: "20px", color: "#fff" }}
-      />
+      <SendOutlined style={componentStyles.sendMessageIcon} />
     </button>
   );
-  const prefix = (
-    <SmileOutlined
-      style={{ fontSize: "20px", color: "#fff", marginRight: "10px" }}
-    />
-  );
+  const prefix = <SmileOutlined style={componentStyles.smileIcon} />;
   return (
-    <div
-      title="Admin Chat"
-      style={{
-        width: "100%",
-        height: "45vh",
-        border: "none",
-        display: "flex",
-        justifyContent: "space-between",
-        flexDirection: "column",
-        paddingInline: "10px",
-        // overflow: "auto",
-        backgroundColor: "#4E5054",
-        borderBottom: "none",
-        borderRadius: "20px",
-        padding: "10px",
-        paddingInline: "20px",
-      }}
-    >
+    <div title="Admin Chat" style={componentStyles.adminChatInnerContainer}>
       <div style={{}}>
-        <h2
-          style={{
-            fontFamily: "Poppins",
-            fontStyle: "normal",
-            fontWeight: "600",
-            fontSize: "24px",
-            lineHeight: "36px",
-            marginBottom: "30px",
-            color: "#FFFFFF",
-          }}
-        >
-          Admin Chat
-        </h2>
+        <h2 style={componentStyles.adminChatHeadingInner}>Admin Chat</h2>
       </div>
-      <div
-        style={{
-          // paddingInline: "20px",
-          // margin: "10px",
-          overflowX: "auto",
-          height: "50vh",
-          height: "100%",
-          marginBottom: "10px",
-        }}
-      >
+      <div style={componentStyles.adminChatList}>
         {messagesArray.map((e) => (
-          <div
-            style={{
-              display: "flex",
-              // justifyContent: "center",
-              alignItems: "flex-start",
-            }}
-          >
+          <div style={componentStyles.messageRow}>
             <Avatar
               size="large"
               icon={<UserOutlined />}
-              style={{ marginRight: "10px" }}
+              style={componentStyles.mr10}
             />
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
+            <div style={componentStyles.messageArray}>
               <div className="messageUi">
                 <span>{e}</span>
               </div>
-              <p
-                style={{
-                  color: "#fff",
-                  fontFamily: "Lato",
-                  fontStyle: "normal",
-                  fontWeight: "300",
-                  fontSize: "8px",
-                  lineHeight: "10px",
-                }}
-              >
-                Teddy Tereson
-              </p>
+              <p style={componentStyles.senderName}>Teddy Tereson</p>
             </div>
           </div>
         ))}
