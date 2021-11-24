@@ -187,6 +187,11 @@ export const componentStyles = {
     display: "flex",
     alignItems: "flex-start",
   },
+  messageRowRevert: {
+    display: "flex",
+    alignItems: "flex-start",
+    flexDirection: "row-reverse",
+  },
   messageContainer: {
     display: "flex",
     flexDirection: "column",
@@ -199,6 +204,15 @@ export const componentStyles = {
     fontWeight: "300",
     fontSize: "8px",
     lineHeight: "10px",
+  },
+  receiverName: {
+    color: "#fff",
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: "8px",
+    lineHeight: "10px",
+    alignSelf: "flex-end",
   },
   sendMessageContainer: {
     display: "flex",
@@ -337,5 +351,9 @@ export const componentStyles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
+  },
+  m10: {
+    marginRight: "10px",
+    marginLeft: "10px",
   },
 };

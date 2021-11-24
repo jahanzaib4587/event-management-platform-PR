@@ -37,18 +37,36 @@ const AdminChat = () => {
         <h2 style={componentStyles.adminChatHeadingInner}>Admin Chat</h2>
       </div>
       <div style={componentStyles.adminChatList}>
-        {messagesArray.map((e) => (
-          <div style={componentStyles.messageRow}>
+        {messagesArray.map((e, index) => (
+          <div
+            style={
+              index % 2 == 0
+                ? componentStyles.messageRowRevert
+                : componentStyles.messageRow
+            }
+          >
             <Avatar
               size="large"
               icon={<UserOutlined />}
-              style={componentStyles.mr10}
+              style={
+                index % 2 == 0 ? componentStyles.m10 : componentStyles.mr10
+              }
             />
             <div style={componentStyles.messageArray}>
-              <div className="messageUi">
+              <div
+                className={index % 2 == 0 ? "messageUiMainChat" : "messageUi"}
+              >
                 <span>{e}</span>
               </div>
-              <p style={componentStyles.senderName}>Teddy Tereson</p>
+              <p
+                style={
+                  index % 2 == 0
+                    ? componentStyles.receiverName
+                    : componentStyles.senderName
+                }
+              >
+                Teddy Tereson
+              </p>
             </div>
           </div>
         ))}

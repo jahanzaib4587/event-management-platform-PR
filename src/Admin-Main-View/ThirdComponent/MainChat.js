@@ -37,7 +37,7 @@ export const MainChat = () => {
               style={componentStyles.mr10}
             />
             <div style={componentStyles.messageContainer}>
-              <div className="messageUiMainChat">
+              <div className=" messageUi">
                 <span>{e}</span>
               </div>
               <p style={componentStyles.senderName}>Teddy Tereson</p>

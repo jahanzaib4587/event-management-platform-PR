@@ -115,7 +115,6 @@ body {
 .messageUi {
   background: #3b3c40;
   border-radius: 15px 30px 30px 5px;
-  width: fit-content;
   padding: 10px;
   margin-bottom: 10px;
   font-family: Lato;
@@ -123,6 +122,7 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
+  width: fit-content;
 
   color: #ffffff;
 }
