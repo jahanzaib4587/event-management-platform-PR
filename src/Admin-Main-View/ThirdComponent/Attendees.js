@@ -22,22 +22,13 @@ import {
 import "../../App.css";
 import { componentStyles } from "../styles";
 const Attendees = () => {
-  const [loading, setLoading] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
   const [currentName, setCurrentName] = useState("");
-  var array1 = [];
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [name, setName] = useState("");
   const showModal = () => {
     setIsModalVisible(true);
   };
 
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
   const data = [
     "Racing car sprays b",
     "Japanese princessto wer.",
@@ -70,9 +61,24 @@ const Attendees = () => {
     "Man charged ovg girl.",
     "Los Angeles battles es.",
   ];
-  useEffect(() => {
-    array1 = data.filter((e) => e.includes(searchValue));
-  }, [searchValue]);
+  const [foundUsers, setFoundUsers] = useState(data);
+  const filter = (e) => {
+    const keyword = e.target.value;
+
+    if (keyword !== "") {
+      const results = data.filter((user) => {
+        return user.toLowerCase().startsWith(keyword.toLowerCase());
+        // Use the toLowerCase() method to make it case-insensitive
+      });
+      setFoundUsers(results);
+    } else {
+      setFoundUsers(data);
+      // If the text field is empty, show all users
+    }
+
+    setName(keyword);
+  };
+
   const content = (
     <div style={componentStyles.popoverContentContainer}>
       <Button type="primary" danger className="modalButtonDesign">
@@ -100,7 +106,8 @@ const Attendees = () => {
   return (
     <div id="scrollableDiv" style={componentStyles.attendeesContainer}>
       <Input
-        onChange={(value) => setSearchValue(value.target.value)}
+        value={name}
+        onChange={(e) => filter(e)}
         prefix={
           <span style={componentStyles.searchIcon}>
             <SearchOutlined />
@@ -112,7 +119,7 @@ const Attendees = () => {
 
       <List
         size="small"
-        dataSource={data}
+        dataSource={foundUsers}
         renderItem={(item) => (
           <List.Item style={componentStyles.listItemContainer}>
             <div>

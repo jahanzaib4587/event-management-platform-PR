@@ -25,7 +25,7 @@ const AdminChat = () => {
     <button
       htmlType="submit"
       onClick={() => onFinish()}
-      style={{ all: "unset ", cursor: "pointer" }}
+      style={componentStyles.sendChatIcon}
     >
       <SendOutlined style={componentStyles.sendMessageIcon} />
     </button>
@@ -33,7 +33,7 @@ const AdminChat = () => {
   const prefix = <SmileOutlined style={componentStyles.smileIcon} />;
   return (
     <div title="Admin Chat" style={componentStyles.adminChatInnerContainer}>
-      <div style={{}}>
+      <div>
         <h2 style={componentStyles.adminChatHeadingInner}>Admin Chat</h2>
       </div>
       <div style={componentStyles.adminChatList}>
