@@ -24,7 +24,7 @@ const ParentComponent = () => {
             className="quickActionChild"
             style={componentStyles.quickActionTextHolder}
           >
-            <p style={componentStyles.actionComponentText}>Ask the Audience</p>
+            <p style={componentStyles.askTheAudienceText}>Ask the Audience!</p>
           </div>
           <div style={componentStyles.imageHolder}>
             {/* <Image

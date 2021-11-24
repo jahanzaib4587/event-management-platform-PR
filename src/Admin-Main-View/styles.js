@@ -268,12 +268,23 @@ export const componentStyles = {
     alignSelf: "flex-start",
     color: "#ffffff",
   },
+  askTheAudienceText: {
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    width: "50%",
+    fontSize: "18px",
+    lineHeight: "22px",
+    alignSelf: "flex-start",
+    color: "#ffffff",
+  },
   quickActionTextHolder: {
     display: "flex",
     justifyContent: "flex-end",
     width: "44%",
     height: "120px",
   },
+
   imageHolder: {
     height: "120px",
     width: "44%",
