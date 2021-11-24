@@ -41,20 +41,21 @@ const AdminChat = () => {
       title="Admin Chat"
       style={{
         width: "100%",
-        height: "40vh",
+        height: "45vh",
         border: "none",
         display: "flex",
         justifyContent: "space-between",
-        flexDirection: "column",
         flexDirection: "column",
         paddingInline: "10px",
         // overflow: "auto",
         backgroundColor: "#4E5054",
         borderBottom: "none",
         borderRadius: "20px",
+        padding: "10px",
+        paddingInline: "20px",
       }}
     >
-      <div style={{ padding: "10px" }}>
+      <div style={{}}>
         <h2
           style={{
             fontFamily: "Poppins",
@@ -68,53 +69,55 @@ const AdminChat = () => {
         >
           Admin Chat
         </h2>
-        <div
-          style={{
-            // paddingInline: "20px",
-            // margin: "10px",
-            overflow: "auto",
-            height: "100%",
-          }}
-        >
-          {messagesArray.map((e) => (
+      </div>
+      <div
+        style={{
+          // paddingInline: "20px",
+          // margin: "10px",
+          overflowX: "auto",
+          height: "50vh",
+          height: "100%",
+          marginBottom: "10px",
+        }}
+      >
+        {messagesArray.map((e) => (
+          <div
+            style={{
+              display: "flex",
+              // justifyContent: "center",
+              alignItems: "flex-start",
+            }}
+          >
+            <Avatar
+              size="large"
+              icon={<UserOutlined />}
+              style={{ marginRight: "10px" }}
+            />
             <div
               style={{
                 display: "flex",
-                // justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "flex-start",
               }}
             >
-              <Avatar
-                size="large"
-                icon={<UserOutlined />}
-                style={{ marginRight: "10px" }}
-              />
-              <div
+              <div className="messageUi">
+                <span>{e}</span>
+              </div>
+              <p
                 style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
+                  color: "#fff",
+                  fontFamily: "Lato",
+                  fontStyle: "normal",
+                  fontWeight: "300",
+                  fontSize: "8px",
+                  lineHeight: "10px",
                 }}
               >
-                <div className="messageUi">
-                  <span>{e}</span>
-                </div>
-                <p
-                  style={{
-                    color: "#fff",
-                    fontFamily: "Lato",
-                    fontStyle: "normal",
-                    fontWeight: "300",
-                    fontSize: "8px",
-                    lineHeight: "10px",
-                  }}
-                >
-                  Teddy Tereson
-                </p>
-              </div>
+                Teddy Tereson
+              </p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
       <Form
