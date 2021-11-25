@@ -61,7 +61,7 @@ const CounterGraph = () => {
         <h3 style={componentStyles.lightWhiteColor}>View Count</h3>
         <p style={componentStyles.lightWhiteColor}>2378 watching</p>
       </div>
-      <LineChart width={317} height={105} data={data}>
+      <LineChart width={345} height={105} data={data}>
         <CartesianGrid strokeDasharray="2 2" />
         <XAxis dataKey="name" interval="preserveStartEnd" />
         <YAxis interval="preserveStartEnd" />

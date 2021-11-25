@@ -47,7 +47,7 @@ body {
 }
 
 .mySwiper2 {
-  width: 100%;
+  /* width: 100%; */
   height: 75%;
   border-radius: 50px !important;
 }
@@ -55,12 +55,12 @@ body {
   margin-left: 0px !important;
 }
 .mySwiper {
-  width: 130%;
+  /* width: 130%; */
   height: 30%;
 }
 
 .mySwiper .swiper-slide {
-  width: 25% !important;
+  width: 32% !important;
   height: 105px !important;
   opacity: 0.4;
   border: 5px solid #7de6d0;
@@ -83,18 +83,18 @@ body {
   border-radius: 10px;
 }
 .quickActionsWrapper {
-  margin-top: 30px !important;
-  width: 100%;
-  height: 40%;
+  /* margin-top: 30px !important; */
+  /* width: 100%;
+  height: 40%; */
   background: #4e5054;
   border-radius: 15px;
   padding: 10px;
   padding-inline-start: 20px;
 }
 .quickActionContainer {
-  padding: 10 10px;
-  height: 70%;
-  width: 100%;
+  /* padding: 10 10px; */
+  /* height: 70%; */
+  /* width: 100%; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

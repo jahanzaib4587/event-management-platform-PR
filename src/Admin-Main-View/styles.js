@@ -1,7 +1,7 @@
 export const componentStyles = {
   graphContainer: {
-    width: "354px",
-    height: "16vh",
+    // width: "354px",
+    // height: "16vh",
     background: "#3B3C40",
     borderRadius: "15px",
     marginBottom: "20px",
@@ -23,13 +23,14 @@ export const componentStyles = {
     // height: "",
     display: "flex",
     flexDirection: "column",
+    padding: "10px",
     // justifyContent: "space-evenly",
     alignItems: "center",
-    height: "-webkit-fill-available",
+    // height: "-webkit-fill-available",
   },
   activityFeedsContainer: {
-    width: "393px",
-    height: "100%",
+    width: "100%",
+    // height: "80%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -37,14 +38,14 @@ export const componentStyles = {
     background: "#4E5054",
     borderRadius: " 15px",
     paddingTop: "20px",
-    marginBottom: "10px",
+    // marginBottom: "10px",
   },
   actionComponentContainer: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: "10px",
-    marginLeft: "10px",
+    // marginBottom: "10px",
+    // marginLeft: "10px",
     width: "100%",
   },
   wd100: {
@@ -61,8 +62,9 @@ export const componentStyles = {
     padding: 0,
   },
   adminChatContainer: {
-    width: "393px",
+    // width: "393px",
     marginTop: "10px",
+    width: "100%",
   },
   fontBold: {
     fontWeight: "bold",
@@ -80,23 +82,22 @@ export const componentStyles = {
   headerContainer: {
     display: "flex",
     borderRadius: "20px",
-    width: "100%",
-    height: "7%",
+    // width: "100%",
+    // height: "7%",
+    // paddingInline: "20px",
     background: "#4E5054",
     justifyContent: "space-evenly",
-    paddingInline: "20px",
     alignItems: "center",
     marginBottom: "15px",
   },
   liveButton: {
     width: "76px",
     height: "33px",
-    left: "40px",
-    top: "32px",
     background: "#DD4B4E",
     borderRadius: "5px",
     textAlign: "center",
     paddingTop: "5px",
+    marginLeft: "10px",
   },
   headerText: {
     color: "#fff",
@@ -128,9 +129,9 @@ export const componentStyles = {
     height: "25px",
   },
   attendeesContainer: {
-    width: "100%",
+    // width: "100%",
     height: "82vh",
-
+    padding: "0px 20px",
     overflowY: "auto",
   },
   searchIcon: {
@@ -231,8 +232,8 @@ export const componentStyles = {
     height: "-webkit-fill-available",
   },
   tabPaneHolder: {
-    height: "100%",
-    width: "460px",
+    // height: "100%",
+    // width: "460px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -246,7 +247,7 @@ export const componentStyles = {
   },
   activityFeedListContainer: {
     marginBottom: "10px",
-    width: "100%",
+    // width: "100%",
     height: "37vh",
     overflowY: "auto",
     backgroundColor: "#3B3C40",
@@ -269,8 +270,8 @@ export const componentStyles = {
     fontSize: "9px",
   },
   swiperContainer: {
-    height: "50%",
-    width: "100%",
+    // height: "50%",
+    // width: "100%",
     borderRadius: "50%",
     marginBottom: "10px",
   },
@@ -296,13 +297,13 @@ export const componentStyles = {
   quickActionTextHolder: {
     display: "flex",
     justifyContent: "flex-end",
-    width: "44%",
-    height: "120px",
+    // width: "44%",
+    // height: "120px",
   },
 
   imageHolder: {
-    height: "120px",
-    width: "44%",
+    height: "95px",
+    width: "40%",
     marginBottom: "10px",
     display: "flex",
     flexDirection: "column",
@@ -319,8 +320,8 @@ export const componentStyles = {
   },
   smileIcon: { fontSize: "20px", color: "#fff", marginRight: "10px" },
   adminChatInnerContainer: {
-    width: "100%",
-    height: "45vh",
+    // width: "100%",
+    // height: "45vh",
     border: "none",
     display: "flex",
     justifyContent: "space-between",

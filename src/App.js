@@ -3,43 +3,50 @@ import Header from "./Admin-Main-View/Header/Header";
 import Swiper from "./Admin-Main-View/SwiperComponent";
 import QuickAction from "./Admin-Main-View/QuickActions/QuickActions";
 
-import { Collapse, Badge, Avatar, Tabs } from "antd";
+import { Collapse, Badge, Avatar, Tabs, Row, Col } from "antd";
 import { useState } from "react";
 import ParentComponent from "./Admin-Main-View/Audience Engagement/ParentComponent";
 import TabsComponent from "./Admin-Main-View/ThirdComponent/TabsComponent";
 function App() {
   return (
-    <div
+    <Row
+      justify="center"
+      align="center"
       style={{
         backgroundColor: "black",
-        width: "100%",
+        // width: "100%",
         height: "100vh",
-        display: "flex",
-        padding: "10px",
-        paddingLeft: "3%",
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
+        // display: "flex",
+        // padding: "10px",
+        padding: "2%",
+        // alignItems: "center",
+        justifyContent: "space-evenly",
+        overflow: "auto",
       }}
     >
-      <div style={{ width: "35%", height: "90vh", marginRight: "25px" }}>
+      {/* style={{ width: "35%", height: "90vh", marginRight: "25px" }} */}
+      <Col sm={20} md={16} lg={8}>
         <Header />
         <Swiper />
         <QuickAction />
-      </div>
-      <div
+      </Col>
+      <Col
+        sm={24}
+        md={16}
+        lg={5}
         style={{
-          width: "28%",
-          height: "90vh",
-          marginRight: "25px",
+          // width: "28%",
+          // height: "90vh",
+          // marginRight: "25px",
+          margin: "10px 0px",
         }}
       >
         <ParentComponent />
-      </div>
-      <div style={{ width: "23%", height: "90vh", marginRight: "25px" }}>
+      </Col>
+      <Col sm={10} md={16} lg={6}>
         <TabsComponent />
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 }
 

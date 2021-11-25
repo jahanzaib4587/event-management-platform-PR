@@ -42,24 +42,24 @@ const SwiperComponent = () => {
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper2"
       >
-        <SwiperSlide>
+        <SwiperSlide style={{ height: "350px", width: "100%" }}>
           <img
-            height={"20px"}
-            width="100%"
+            // height="20px"
+            // width="50px"
             src="https://swiperjs.com/demos/images/nature-1.jpg"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ height: "350px", width: "50px" }}>
           <img
-            height={"20px"}
-            width="100%"
+            // height={"20px"}
+            // width="100%"
             src="https://swiperjs.com/demos/images/nature-2.jpg"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ height: "350px", width: "50px" }}>
           <img
-            height={"100px"}
-            width="100%"
+            // height={"100px"}
+            // width="100%"
             src="https://swiperjs.com/demos/images/nature-3.jpg"
           />
         </SwiperSlide>

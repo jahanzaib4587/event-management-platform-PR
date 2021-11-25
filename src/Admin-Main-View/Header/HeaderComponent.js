@@ -8,7 +8,6 @@ const HeaderComponent = (props) => {
       style={{
         padding: "10px",
         width: props.title == "2.4k" ? "15%" : "175px",
-
         height: "33px",
         margin: "10px",
         background: "#3B3C40",
