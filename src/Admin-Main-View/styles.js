@@ -25,6 +25,7 @@ export const componentStyles = {
     flexDirection: "column",
     // justifyContent: "space-evenly",
     alignItems: "center",
+    height: "-webkit-fill-available",
   },
   activityFeedsContainer: {
     width: "393px",
@@ -227,7 +228,7 @@ export const componentStyles = {
   },
   tabsHolder: {
     width: "100%",
-    height: "100%",
+    height: "-webkit-fill-available",
   },
   tabPaneHolder: {
     height: "100%",
