@@ -124,11 +124,17 @@ const Attendees = () => {
           <List.Item style={componentStyles.listItemContainer}>
             <div>
               <Avatar
+                className="avatarSize"
                 size="large"
                 icon={<UserOutlined />}
                 style={componentStyles.mr10}
               />
-              <span style={componentStyles.colorWhite}>{item} </span>
+              <span
+                style={componentStyles.colorWhite}
+                className="attendeesListItem"
+              >
+                {item}
+              </span>
             </div>
             <span
               style={componentStyles.infoIcon}

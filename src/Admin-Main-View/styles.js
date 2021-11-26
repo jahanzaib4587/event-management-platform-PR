@@ -154,7 +154,7 @@ export const componentStyles = {
   },
   attendeesContainer: {
     // width: "100%",
-    height: "70vh",
+    height: "80vh",
     padding: "0px 5px",
     overflowY: "auto",
   },
@@ -199,7 +199,7 @@ export const componentStyles = {
   mainChatContainer: {
     width: "100%",
     border: "none",
-    height: "75vh",
+    height: "80vh",
     display: "flex",
     flexDirection: "column",
     paddingInline: "10px",
@@ -253,7 +253,7 @@ export const componentStyles = {
   },
   tabsHolder: {
     width: "100%",
-    height: "-webkit-fill-available",
+    // height: "-webkit-fill-available",
   },
   tabPaneHolder: {
     // height: "100%",
@@ -343,6 +343,7 @@ export const componentStyles = {
   imageHolder: {
     height: "6rem",
     width: "100%",
+    marginTop: "5px",
     marginBottom: "10px",
     display: "flex",
     flexDirection: "column",

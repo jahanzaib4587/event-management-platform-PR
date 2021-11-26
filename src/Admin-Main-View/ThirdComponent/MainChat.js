@@ -32,6 +32,7 @@ export const MainChat = () => {
         {messagesArray.map((e) => (
           <div style={componentStyles.messageRow}>
             <Avatar
+              className="avatarSize"
               size="large"
               icon={<UserOutlined />}
               style={componentStyles.mr10}

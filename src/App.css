@@ -339,6 +339,9 @@ body {
   .quickActionChild {
     width: 40% !important;
   }
+  .attendeesListItem {
+    font-size: 10px !important;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
@@ -348,9 +351,19 @@ body {
   .headerComponentText {
     font-size: 18px;
   }
+  .attendeesListItem {
+    font-size: 10px !important;
+  }
+  .avatarSize {
+    width: 30px !important;
+    height: 30px !important;
+  }
 }
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
+  /* .attendeesListItem {
+    font-size: 10px !important;
+  } */
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
