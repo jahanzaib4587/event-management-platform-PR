@@ -47,20 +47,20 @@ body {
 }
 
 .mySwiper2 {
-  width: 100%;
-  height: 75%;
+  /* width: 100%; */
+  /* height: 75%; */
   border-radius: 50px !important;
 }
 .swiper-container {
   margin-left: 0px !important;
 }
 .mySwiper {
-  width: 130%;
-  height: 30%;
+  /* width: 130%; */
+  height: 20%;
 }
 
 .mySwiper .swiper-slide {
-  width: 25% !important;
+  /* width: 32% !important; */
   height: 105px !important;
   opacity: 0.4;
   border: 5px solid #7de6d0;
@@ -83,24 +83,24 @@ body {
   border-radius: 10px;
 }
 .quickActionsWrapper {
-  margin-top: 30px !important;
-  width: 100%;
-  height: 40%;
+  /* margin-top: 30px !important; */
+  /* width: 100%;
+  height: 40%; */
   background: #4e5054;
   border-radius: 15px;
   padding: 10px;
   padding-inline-start: 20px;
 }
 .quickActionContainer {
-  padding: 10 10px;
-  height: 70%;
-  width: 100%;
+  /* padding: 10 10px; */
+  /* height: 70%; */
+  /* width: 100%; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 .quickActionChild {
-  height: 100px;
+  /* height: 100px; */
 
   margin-right: 10px;
   margin-bottom: 10px;
@@ -223,9 +223,10 @@ body {
   font-style: normal !important;
   font-weight: 300 !important;
   font-size: 13px !important;
-  line-height: 22px !important;
+  /* line-height: 22px !important; */
   color: #ffffff !important;
   margin-left: 10px;
+  /* width: auto; */
 }
 .audienceEngagementHeading {
   font-family: Poppins !important;
@@ -304,4 +305,103 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #e2dddd;
+}
+/* .swiperImage {
+  height: 350px;
+  width: 10px;
+} */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .actionComponentText {
+    font-size: 16px;
+  }
+  .headerComponentText {
+    font-size: 0px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .actionComponentText {
+    font-size: 13px;
+  }
+  .headerComponentText {
+    font-size: 8px !important;
+  }
+  .headerIcons {
+    font-size: 15px !important;
+  }
+  .middleColumn {
+    margin: 10px 0px;
+  }
+  .liveBtn {
+    /* height: 25px !important; */
+  }
+  .quickActionChild {
+    width: 40% !important;
+  }
+  .attendeesListItem {
+    font-size: 10px !important;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .actionComponentText {
+    /* font-size: 10px; */
+  }
+  .headerComponentText {
+    font-size: 18px;
+  }
+  .attendeesListItem {
+    font-size: 10px !important;
+  }
+  .avatarSize {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* .attendeesListItem {
+    font-size: 10px !important;
+  } */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  .mainChatCont {
+    height: 67vh !important;
+  }
+  .attendeesHeight {
+    height: 67vh !important;
+  }
+  .quickActionChild {
+    width: 45% !important;
+  }
+  .headerComponentText {
+    font-size: 10px !important;
+  }
+  .headerIcons {
+    font-size: 10px !important;
+  }
+  .liveBtn {
+    width: 20% !important;
+    height: 10% !important;
+    margin-right: 10px !important;
+  }
+  .audienceEngagementHeading {
+    font-size: 20px !important;
+  }
+  .ant-tabs-tab .ant-tabs-tab-btn {
+    font-size: 14px !important;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    font-size: 14px !important;
+  }
+  .headerParentContainer {
+    padding: 6px !important;
+    width: fit-content !important;
+    margin: 0px !important;
+  }
 }

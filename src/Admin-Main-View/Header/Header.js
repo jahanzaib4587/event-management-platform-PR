@@ -5,12 +5,14 @@ import {
   PlayCircleOutlined,
   InfoCircleOutlined,
 } from "@ant-design/icons";
+import { Collapse, Badge, Avatar, Tabs, Row, Col } from "antd";
+
 import HeaderComponent from "./HeaderComponent";
 import { componentStyles } from "../styles";
 const AdminChat = () => {
   return (
     <div style={componentStyles.headerContainer}>
-      <div style={componentStyles.liveButton}>
+      <div style={componentStyles.liveButton} className="liveBtn">
         <h4 style={componentStyles.headerText}>Live</h4>
       </div>
       <HeaderComponent Icon={<EyeOutlined />} title={"2.4k"} colorType="#fff" />

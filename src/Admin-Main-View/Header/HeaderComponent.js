@@ -5,20 +5,13 @@ import { componentStyles } from "../styles";
 const HeaderComponent = (props) => {
   return (
     <div
-      style={{
-        padding: "10px",
-        width: props.title == "2.4k" ? "15%" : "175px",
-
-        height: "33px",
-        margin: "10px",
-        background: "#3B3C40",
-        borderRadius: "15px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      style={componentStyles.headerParentContainer}
+      className="headerParentContainer"
     >
-      <span style={{ color: props.colorType, fontSize: "24px" }}>
+      <span
+        style={{ color: props.colorType, fontSize: "20px" }}
+        className="headerIcons"
+      >
         {props.Icon}
       </span>
       <span

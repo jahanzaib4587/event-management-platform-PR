@@ -1,7 +1,7 @@
 export const componentStyles = {
   graphContainer: {
-    width: "354px",
-    height: "16vh",
+    width: "90%",
+    height: "20%",
     background: "#3B3C40",
     borderRadius: "15px",
     marginBottom: "20px",
@@ -23,13 +23,14 @@ export const componentStyles = {
     // height: "",
     display: "flex",
     flexDirection: "column",
+    padding: "10px",
     // justifyContent: "space-evenly",
     alignItems: "center",
-    height: "-webkit-fill-available",
+    // height: "-webkit-fill-available",
   },
   activityFeedsContainer: {
-    width: "393px",
-    height: "100%",
+    width: "100%",
+    // height: "80%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -37,15 +38,16 @@ export const componentStyles = {
     background: "#4E5054",
     borderRadius: " 15px",
     paddingTop: "20px",
-    marginBottom: "10px",
+    // marginBottom: "10px",
   },
   actionComponentContainer: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: "10px",
-    marginLeft: "10px",
+    // marginBottom: "10px",
+    // marginLeft: "10px",
     width: "100%",
+    padding: "10px",
   },
   wd100: {
     width: "100%",
@@ -61,8 +63,9 @@ export const componentStyles = {
     padding: 0,
   },
   adminChatContainer: {
-    width: "393px",
+    // width: "393px",
     marginTop: "10px",
+    width: "100%",
   },
   fontBold: {
     fontWeight: "bold",
@@ -78,39 +81,65 @@ export const componentStyles = {
     flexDirection: "column",
   },
   headerContainer: {
-    display: "flex",
+    padding: "5px",
     borderRadius: "20px",
-    width: "100%",
-    height: "7%",
     background: "#4E5054",
-    justifyContent: "space-evenly",
-    paddingInline: "20px",
-    alignItems: "center",
     marginBottom: "15px",
+    display: "flex",
+    justifyContent: "space-evenly",
+    flexWrap: "nowrap",
+    alignItems: "center",
+  },
+  headerParentContainer: {
+    // padding: "8px",
+    marginTop: "5px",
+    marginBottom: "5px",
+    width: "20%",
+    height: "33px",
+    // margin: "10px",
+    background: "#3B3C40",
+    borderRadius: "15px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    whiteSpace: "nowrap",
+  },
+  headerParentContainer1: {
+    padding: "10px",
+    // width: "fit-content",
+    // height: "33px",
+    margin: "10px",
+    background: "#3B3C40",
+    borderRadius: "15px",
+    // display: "flex",
+    // justifyContent: "center",
+    // alignItems: "center",
   },
   liveButton: {
-    width: "76px",
-    height: "33px",
-    left: "40px",
-    top: "32px",
+    // alignSelf: "center",
+    // justifySelf: "center",
+    // width: "fit-content",
+    padding: "5px",
+    // height: "fit-content",
     background: "#DD4B4E",
     borderRadius: "5px",
     textAlign: "center",
-    paddingTop: "5px",
+    // paddingTop: "5px",
+    marginLeft: "5px",
+    width: "10%",
   },
   headerText: {
     color: "#fff",
     alignSelf: "centers",
   },
   headerComponentText: {
-    fontFamily: "Lato",
-    fontStyle: "normal",
-    fontWeight: "300",
-    fontSize: "18px",
-    lineHeight: "22px",
-    /* identical to box height */
-
-    color: "#FFFFFF",
+    // fontFamily: "Lato",
+    // fontStyle: "normal",
+    // fontWeight: "300",
+    // fontSize: "18px",
+    // lineHeight: "22px",
+    // /* identical to box height */
+    // color: "#FFFFFF",
   },
   popoverContentContainer: {
     display: "flex",
@@ -128,9 +157,9 @@ export const componentStyles = {
     height: "25px",
   },
   attendeesContainer: {
-    width: "100%",
-    height: "82vh",
-
+    // width: "100%",
+    height: "80vh",
+    padding: "0px 5px",
     overflowY: "auto",
   },
   searchIcon: {
@@ -174,7 +203,7 @@ export const componentStyles = {
   mainChatContainer: {
     width: "100%",
     border: "none",
-    height: "80vh",
+    height: "80vh ",
     display: "flex",
     flexDirection: "column",
     paddingInline: "10px",
@@ -228,11 +257,11 @@ export const componentStyles = {
   },
   tabsHolder: {
     width: "100%",
-    height: "-webkit-fill-available",
+    // height: "-webkit-fill-available",
   },
   tabPaneHolder: {
-    height: "100%",
-    width: "460px",
+    // height: "100%",
+    // width: "460px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -246,9 +275,9 @@ export const componentStyles = {
   },
   activityFeedListContainer: {
     marginBottom: "10px",
-    width: "100%",
-    height: "37vh",
-    overflowY: "auto",
+    // width: "100%",
+    maxHeight: "31vh",
+    overflowY: "scroll",
     backgroundColor: "#3B3C40",
   },
   listItem: {
@@ -269,8 +298,8 @@ export const componentStyles = {
     fontSize: "9px",
   },
   swiperContainer: {
-    height: "50%",
-    width: "100%",
+    // height: "50%",
+    // width: "100%",
     borderRadius: "50%",
     marginBottom: "10px",
   },
@@ -287,7 +316,8 @@ export const componentStyles = {
     fontFamily: "Lato",
     fontStyle: "normal",
     fontWeight: "normal",
-    width: "50%",
+    // height: "6rem",
+    width: "100%",
     fontSize: "18px",
     lineHeight: "22px",
     alignSelf: "flex-start",
@@ -296,13 +326,28 @@ export const componentStyles = {
   quickActionTextHolder: {
     display: "flex",
     justifyContent: "flex-end",
-    width: "44%",
-    height: "120px",
+    flexDirection: "column",
+
+    width: "100%",
+    height: "6rem",
+    // height: 100px;
+    padding: "5px 10px",
+    alignSelf: "center",
+    justifySelf: "center",
+    marginRight: "10px",
+    // margin-bottom: 10px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // padding: 5px 10px;
+    background: "#74acec",
+    borderRadius: "15px",
   },
 
   imageHolder: {
-    height: "120px",
-    width: "44%",
+    height: "6rem",
+    width: "100%",
+    marginTop: "5px",
     marginBottom: "10px",
     display: "flex",
     flexDirection: "column",
@@ -319,8 +364,9 @@ export const componentStyles = {
   },
   smileIcon: { fontSize: "20px", color: "#fff", marginRight: "10px" },
   adminChatInnerContainer: {
-    width: "100%",
-    height: "45vh",
+    // width: "100%",
+    // height: "45vh",
+    maxHeight: "39vh",
     border: "none",
     display: "flex",
     justifyContent: "space-between",
@@ -356,5 +402,11 @@ export const componentStyles = {
   m10: {
     marginRight: "10px",
     marginLeft: "10px",
+  },
+  swiperImageContainer: {
+    "--swiper-navigation-color": "#fff",
+    "--swiper-pagination-color": "#fff",
+    width: "100%",
+    height: "20rem",
   },
 };

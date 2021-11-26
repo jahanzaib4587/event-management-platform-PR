@@ -33,33 +33,30 @@ const SwiperComponent = () => {
   return (
     <div style={componentStyles.swiperContainer}>
       <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
+        style={componentStyles.swiperImageContainer}
         spaceBetween={10}
         // navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper2"
       >
-        <SwiperSlide>
+        <SwiperSlide className="swiperImage">
           <img
-            height={"20px"}
-            width="100%"
+            // height="20px"
+            // width="50px"
             src="https://swiperjs.com/demos/images/nature-1.jpg"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperImage">
           <img
-            height={"20px"}
-            width="100%"
+            // height={"20px"}
+            // width="100%"
             src="https://swiperjs.com/demos/images/nature-2.jpg"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperImage">
           <img
-            height={"100px"}
-            width="100%"
+            // height={"100px"}
+            // width="100%"
             src="https://swiperjs.com/demos/images/nature-3.jpg"
           />
         </SwiperSlide>

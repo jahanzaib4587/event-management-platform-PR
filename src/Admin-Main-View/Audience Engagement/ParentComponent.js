@@ -20,19 +20,10 @@ const ParentComponent = () => {
         <h1 className="audienceEngagementHeading">Audience Engagement</h1>
         <CounterGraph />
         <div style={componentStyles.actionComponentContainer}>
-          <div
-            className="quickActionChild"
-            style={componentStyles.quickActionTextHolder}
-          >
+          <div style={componentStyles.quickActionTextHolder}>
             <p style={componentStyles.askTheAudienceText}>Ask the Audience!</p>
           </div>
-          <div style={componentStyles.imageHolder}>
-            {/* <Image
-              src="https://influence.digital/wp-content/uploads/2021/09/giphy-4-1.gif"
-              width={200}
-              height={200}
-            ></Image> */}
-          </div>
+          <div style={componentStyles.imageHolder}></div>
         </div>
         <div style={componentStyles.wd100}>
           <Collapse
