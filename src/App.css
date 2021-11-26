@@ -48,7 +48,7 @@ body {
 
 .mySwiper2 {
   /* width: 100%; */
-  height: 75%;
+  /* height: 75%; */
   border-radius: 50px !important;
 }
 .swiper-container {
@@ -56,11 +56,11 @@ body {
 }
 .mySwiper {
   /* width: 130%; */
-  height: 30%;
+  height: 20%;
 }
 
 .mySwiper .swiper-slide {
-  width: 32% !important;
+  /* width: 32% !important; */
   height: 105px !important;
   opacity: 0.4;
   border: 5px solid #7de6d0;
@@ -100,7 +100,7 @@ body {
   justify-content: flex-start;
 }
 .quickActionChild {
-  height: 100px;
+  /* height: 100px; */
 
   margin-right: 10px;
   margin-bottom: 10px;
@@ -226,6 +226,7 @@ body {
   line-height: 22px !important;
   color: #ffffff !important;
   margin-left: 10px;
+  width: auto;
 }
 .audienceEngagementHeading {
   font-family: Poppins !important;
@@ -304,4 +305,53 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #e2dddd;
+}
+/* .swiperImage {
+  height: 350px;
+  width: 10px;
+} */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .actionComponentText {
+    font-size: 16px;
+  }
+  .headerComponentText {
+    font-size: 0px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .actionComponentText {
+    font-size: 13px;
+  }
+  .headerComponentText {
+    font-size: 8px !important;
+  }
+  .headerIcons {
+    font-size: 15px !important;
+  }
+  .middleColumn {
+    margin: 10px 0px;
+  }
+  .liveBtn {
+    /* height: 25px !important; */
+  }
+  .quickActionChild {
+    width: 40% !important;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .actionComponentText {
+    /* font-size: 10px; */
+  }
+  .headerComponentText {
+    font-size: 18px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

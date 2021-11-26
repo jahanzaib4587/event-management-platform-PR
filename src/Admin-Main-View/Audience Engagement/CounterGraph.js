@@ -1,74 +1,123 @@
-import React from "react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import React, { useState, useEffect } from "react";
+
+import { Line } from "@ant-design/charts";
 import { componentStyles } from "../styles";
-const data = [
-  {
-    name: "A",
-    uv: 400,
-    pv: 240,
-    amt: 2400,
-  },
-  {
-    name: "B",
-    uv: 300,
-    pv: 138,
-    amt: 2210,
-  },
-  {
-    name: "C",
-    uv: 200,
-    pv: 980,
-    amt: 2290,
-  },
-  {
-    name: "D",
-    uv: 270,
-    pv: 308,
-    amt: 2000,
-  },
-  {
-    name: "E",
-    uv: 190,
-    pv: 480,
-    amt: 2181,
-  },
-  {
-    name: "F",
-    uv: 230,
-    pv: 380,
-    amt: 2500,
-  },
-  {
-    name: "G",
-    uv: 340,
-    pv: 430,
-    amt: 2100,
-  },
-];
+
 const CounterGraph = () => {
+  const [data, setData] = useState([]);
+  const config = {
+    data,
+    padding: "auto",
+    xField: "Date",
+    yField: "scales",
+    annotations: [
+      // {
+      //   type: "regionFilter",
+      //   start: ["min", "median"],
+      //   end: ["max", "0"],
+      //   color: "#F4664A",
+      // },
+      // {
+      //   type: "text",
+      //   position: ["min", "median"],
+      //   content: "video",
+      //   offsetY: -4,
+      //   style: {
+      //     textBaseline: "bottom",
+      //   },
+      // },
+      {
+        type: "line",
+        start: ["min", "median"],
+        end: ["max", "median"],
+        style: {
+          stroke: "#F4664A",
+          lineDash: [2, 2],
+        },
+      },
+    ],
+  };
+  useEffect(() => {
+    asyncFetch();
+  }, []);
+
+  const asyncFetch = () => {
+    fetch(
+      "https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json"
+    )
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => {
+        console.log("fetch data failed", error);
+      });
+  };
   return (
     <div style={componentStyles.graphContainer}>
       <div style={componentStyles.graphHeadings}>
         <h3 style={componentStyles.lightWhiteColor}>View Count</h3>
         <p style={componentStyles.lightWhiteColor}>2378 watching</p>
       </div>
-      <LineChart width={345} height={105} data={data}>
-        <CartesianGrid strokeDasharray="2 2" />
-        <XAxis dataKey="name" interval="preserveStartEnd" />
-        <YAxis interval="preserveStartEnd" />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-      </LineChart>
+      <Line {...config} style={{ height: "8rem" }} />
     </div>
   );
 };
 
 export default CounterGraph;
+// import React, { useState, useEffect } from "react";
+// import ReactDOM from "react-dom";
+// import { Line } from "@ant-design/charts";
+
+// const DemoLine = () => {
+//   const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     asyncFetch();
+//   }, []);
+
+//   const asyncFetch = () => {
+//     fetch(
+//       "https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json"
+//     )
+//       .then((response) => response.json())
+//       .then((json) => setData(json))
+//       .catch((error) => {
+//         console.log("fetch data failed", error);
+//       });
+//   };
+//   const config = {
+//     data,
+//     padding: "auto",
+//     xField: "Date",
+//     yField: "scales",
+//     annotations: [
+//       {
+//         type: "regionFilter",
+//         start: ["min", "median"],
+//         end: ["max", "0"],
+//         color: "#F4664A",
+//       },
+//       {
+//         type: "text",
+//         position: ["min", "median"],
+//         content: "中位数",
+//         offsetY: -4,
+//         style: {
+//           textBaseline: "bottom",
+//         },
+//       },
+//       {
+//         type: "line",
+//         start: ["min", "median"],
+//         end: ["max", "median"],
+//         style: {
+//           stroke: "#F4664A",
+//           lineDash: [2, 2],
+//         },
+//       },
+//     ],
+//   };
+
+//   return <Line {...config} />;
+// };
+
+// ReactDOM.render(<DemoLine />, document.getElementById("container"));

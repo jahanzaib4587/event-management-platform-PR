@@ -21,29 +21,20 @@ function App() {
         padding: "2%",
         // alignItems: "center",
         justifyContent: "space-evenly",
-        overflow: "auto",
+        overflowY: "auto",
+        overflowX: "hidden",
       }}
     >
       {/* style={{ width: "35%", height: "90vh", marginRight: "25px" }} */}
-      <Col sm={20} md={16} lg={8}>
+      <Col sm={20} md={20} lg={8}>
         <Header />
         <Swiper />
         <QuickAction />
       </Col>
-      <Col
-        sm={24}
-        md={16}
-        lg={5}
-        style={{
-          // width: "28%",
-          // height: "90vh",
-          // marginRight: "25px",
-          margin: "10px 0px",
-        }}
-      >
+      <Col xs={24} sm={24} md={20} lg={6} className="middleColumn">
         <ParentComponent />
       </Col>
-      <Col sm={10} md={16} lg={6}>
+      <Col xs={24} sm={10} md={20} lg={6}>
         <TabsComponent />
       </Col>
     </Row>
