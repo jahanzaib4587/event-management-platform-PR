@@ -104,7 +104,11 @@ const Attendees = () => {
     </div>
   );
   return (
-    <div id="scrollableDiv" style={componentStyles.attendeesContainer}>
+    <div
+      id="scrollableDiv"
+      style={componentStyles.attendeesContainer}
+      className="attendeesHeight"
+    >
       <Input
         value={name}
         onChange={(e) => filter(e)}

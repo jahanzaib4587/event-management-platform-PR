@@ -27,7 +27,7 @@ export const MainChat = () => {
   );
   const prefix = <SmileOutlined style={componentStyles.emojiIcon} />;
   return (
-    <div style={componentStyles.mainChatContainer}>
+    <div style={componentStyles.mainChatContainer} className="mainChatCont">
       <div style={componentStyles.messageArrayList}>
         {messagesArray.map((e) => (
           <div style={componentStyles.messageRow}>

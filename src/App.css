@@ -227,6 +227,7 @@ body {
   color: #ffffff !important;
   margin-left: 10px;
   width: auto;
+  font-size: 14px !important;
 }
 .audienceEngagementHeading {
   font-family: Poppins !important;
@@ -365,6 +366,37 @@ body {
     font-size: 10px !important;
   } */
 }
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  .mainChatCont {
+    height: 67vh !important;
+  }
+  .attendeesHeight {
+    height: 67vh !important;
+  }
+  .quickActionChild {
+    width: 45% !important;
+  }
+  .headerComponentText {
+    font-size: 10px !important;
+  }
+  .headerIcons {
+    font-size: 10px !important;
+  }
+  .liveBtn {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  .audienceEngagementHeading {
+    font-size: 20px !important;
+  }
+  .ant-tabs-tab .ant-tabs-tab-btn {
+    font-size: 14px !important;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    font-size: 14px !important;
+  }
 }

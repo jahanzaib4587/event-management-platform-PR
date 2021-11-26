@@ -31,10 +31,10 @@ function App() {
         <Swiper />
         <QuickAction />
       </Col>
-      <Col xs={23} sm={22} md={20} lg={5} className="middleColumn">
+      <Col xs={23} sm={22} md={20} lg={6} className="middleColumn">
         <ParentComponent />
       </Col>
-      <Col xs={22} sm={22} md={20} lg={6}>
+      <Col xs={22} sm={22} md={20} lg={7}>
         <TabsComponent />
       </Col>
     </Row>
