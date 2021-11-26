@@ -4,7 +4,10 @@ import { Card } from "antd";
 import { componentStyles } from "../styles";
 const HeaderComponent = (props) => {
   return (
-    <div style={componentStyles.headerParentContainer}>
+    <div
+      style={componentStyles.headerParentContainer}
+      className="headerParentContainer"
+    >
       <span
         style={{ color: props.colorType, fontSize: "20px" }}
         className="headerIcons"
