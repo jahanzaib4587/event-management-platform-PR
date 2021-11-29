@@ -218,35 +218,6 @@ body {
 .ant-popover-arrow-content {
   background-color: #63666b !important;
 }
-.headerComponentText {
-  font-family: Lato !important;
-  font-style: normal !important;
-  font-weight: 300 !important;
-  font-size: 13px !important;
-  /* line-height: 22px !important; */
-  color: #ffffff !important;
-  margin-left: 10px;
-  /* width: auto; */
-}
-.audienceEngagementHeading {
-  font-family: Poppins !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 24px !important;
-  line-height: 36px !important;
-  color: #fff;
-  width: 90%;
-}
-.actionComponentText {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  width: 70%;
-  line-height: 22px;
-  align-self: flex-start;
-  color: #ffffff;
-}
 .adminChat > .ant-collapse > .ant-collapse-item > .ant-collapse-header {
   text-align: center !important;
   width: 100% !important;

@@ -28,7 +28,12 @@ const ActionComponent = (props) => {
         // type="checkbox"
       />
 
-      <p className="actionComponentText">{props.text}</p>
+      <p
+        className="actionComponentText"
+        style={componentStyles.actionComponentText}
+      >
+        {props.text}
+      </p>
     </div>
   );
 };
