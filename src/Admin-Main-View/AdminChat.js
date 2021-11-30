@@ -108,7 +108,7 @@ const AdminChat = () => {
               prefix={prefix}
               suffix={suffix}
             ></Input>
-            <div className="picker-container">
+            {/* <div className="picker-container">
               <input
                 className="input-style"
                 value={inputStr}
@@ -125,7 +125,7 @@ const AdminChat = () => {
                   onEmojiClick={onEmojiClick}
                 />
               )}
-            </div>
+            </div> */}
           </div>
         </Form.Item>
       </Form>
