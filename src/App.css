@@ -80,23 +80,7 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
-.quickActionsWrapper {
-  /* margin-top: 30px !important; */
-  /* width: 100%;
-  height: 40%; */
-  background: #4e5054;
-  border-radius: 15px;
-  padding: 10px;
-  padding-inline-start: 20px;
-}
-.quickActionContainer {
-  /* padding: 10 10px; */
-  /* height: 70%; */
-  /* width: 100%; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
+
 .quickActionChild {
   /* height: 100px; */
 
@@ -155,6 +139,9 @@ body {
   margin-bottom: 10px;
   color: #fff;
 }
+.ant-btn-dangerous.ant-btn-primary {
+  margin-bottom: 5px;
+}
 .ant-collapse-content > .ant-collapse-content-box {
   padding: 0 !important;
 }
@@ -192,13 +179,7 @@ body {
   z-index: 1 !important;
   background: #fff !important;
 }
-.modalButtonDesign {
-  width: 194px !important;
-  height: 32px !important;
-  border-radius: 10px !important;
-  margin-bottom: 10px !important;
-  background: #dd4b4e !important;
-}
+
 .ant-popover-inner {
   background-color: #63666b !important;
   padding-top: 5px !important;

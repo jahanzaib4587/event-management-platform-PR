@@ -81,16 +81,36 @@ const Attendees = () => {
 
   const content = (
     <div style={componentStyles.popoverContentContainer}>
-      <Button type="primary" danger className="modalButtonDesign">
+      <Button
+        type="primary"
+        danger
+        className="modalButtonDesign"
+        style={componentStyles.modalButtonDesign}
+      >
         Send Warning
       </Button>
-      <Button type="primary" danger className="modalButtonDesign">
+      <Button
+        type="primary"
+        danger
+        className="modalButtonDesign"
+        style={componentStyles.modalButtonDesign}
+      >
         Issue Temporary Block
       </Button>
-      <Button type="primary" danger className="modalButtonDesign">
+      <Button
+        type="primary"
+        danger
+        className="modalButtonDesign"
+        style={componentStyles.modalButtonDesign}
+      >
         Mark as Bot
       </Button>
-      <Button type="primary" danger className="modalButtonDesign">
+      <Button
+        type="primary"
+        danger
+        className="modalButtonDesign"
+        style={componentStyles.modalButtonDesign}
+      >
         Block User From Stream
       </Button>
     </div>

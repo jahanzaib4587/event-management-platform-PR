@@ -423,4 +423,22 @@ export const componentStyles = {
     color: "#fff",
     width: "90%",
   },
+  quickActionWrapper: {
+    background: "#4e5054",
+    borderRadius: "15px",
+    padding: "10px",
+    paddingInlineStart: "20px",
+  },
+  quickActionContainer: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "flex-start",
+  },
+  modalButtonDesign: {
+    width: "194px !important",
+    height: " 32px !important",
+    borderRadius: "10px !important",
+    marginBottom: "10px !important",
+    background: "#dd4b4e !important",
+  },
 };

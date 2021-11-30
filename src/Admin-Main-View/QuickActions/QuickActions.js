@@ -4,9 +4,15 @@ import { Card, card } from "antd";
 import { componentStyles } from "../styles";
 const QuickAction = () => {
   return (
-    <div className="quickActionsWrapper">
+    <div
+      className="quickActionsWrapper"
+      style={componentStyles.quickActionWrapper}
+    >
       <h1 style={componentStyles.colorWhite}>Quick Actions</h1>
-      <div className="quickActionContainer">
+      <div
+        className="quickActionContainer"
+        style={componentStyles.quickActionContainer}
+      >
         <ActionComponent text="Run 30sec Ad" isSwitch={true} />
         <ActionComponent text="Play Waiting Screen" isSwitch={false} />
         <ActionComponent text="Add Text Overlay" isSwitch={false} />
