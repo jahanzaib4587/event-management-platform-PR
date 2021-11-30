@@ -133,13 +133,14 @@ export const componentStyles = {
     alignSelf: "centers",
   },
   headerComponentText: {
-    // fontFamily: "Lato",
-    // fontStyle: "normal",
-    // fontWeight: "300",
-    // fontSize: "18px",
-    // lineHeight: "22px",
-    // /* identical to box height */
-    // color: "#FFFFFF",
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: "13px",
+    lineHeight: "22px",
+    /* identical to box height */
+    color: "#FFFFFF",
+    marginLeft: "10px",
   },
   popoverContentContainer: {
     display: "flex",
@@ -311,6 +312,7 @@ export const componentStyles = {
     lineHeight: "22px",
     alignSelf: "flex-start",
     color: "#ffffff",
+    // width: 70%;
   },
   askTheAudienceText: {
     fontFamily: "Lato",
@@ -408,5 +410,14 @@ export const componentStyles = {
     "--swiper-pagination-color": "#fff",
     width: "100%",
     height: "20rem",
+  },
+  audienceEngagementHeading: {
+    fontFamily: "Poppins !important",
+    fontStyle: "normal !important",
+    fontWeight: "600 !important",
+    fontSize: "24px !important",
+    lineHeight: "36px !important",
+    color: "#fff",
+    width: "90%",
   },
 };

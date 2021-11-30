@@ -17,7 +17,12 @@ const ParentComponent = () => {
       className={activePanel == 2 && "displayNone"}
     >
       <div style={componentStyles.activityFeedsContainer}>
-        <h1 className="audienceEngagementHeading">Audience Engagement</h1>
+        <h1
+          className="audienceEngagementHeading"
+          style={componentStyles.audienceEngagementHeading}
+        >
+          Audience Engagement
+        </h1>
         <CounterGraph />
         <div style={componentStyles.actionComponentContainer}>
           <div style={componentStyles.quickActionTextHolder}>
