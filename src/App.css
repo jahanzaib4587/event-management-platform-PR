@@ -55,13 +55,12 @@ body {
   margin-left: 0px !important;
 }
 .mySwiper {
-  /* width: 130%; */
   height: 20%;
 }
 
 .mySwiper .swiper-slide {
   /* width: 32% !important; */
-  height: 105px !important;
+  /* height: 105px !important; */
   opacity: 0.4;
   border: 5px solid #7de6d0;
   box-sizing: border-box;
@@ -74,12 +73,11 @@ body {
   opacity: 1;
 }
 
-.swiper-slide img {
+.swiper-slide video {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   border-radius: 10px;
 }
 .quickActionsWrapper {
@@ -277,10 +275,10 @@ body {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #e2dddd;
 }
-/* .swiperImage {
+.swiperImage {
   height: 350px;
   width: 10px;
-} */
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .actionComponentText {

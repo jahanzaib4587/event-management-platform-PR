@@ -10,7 +10,7 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import "swiper/components/thumbs/thumbs.scss";
-
+import ReactPlayer from "react-player";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -39,26 +39,20 @@ const SwiperComponent = () => {
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper2"
       >
-        <SwiperSlide className="swiperImage">
-          <img
-            // height="20px"
-            // width="50px"
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-          />
+        <SwiperSlide>
+          <video controls muted>
+            <source src="./Videos/video.mp4" type="video/mp4" />
+          </video>
         </SwiperSlide>
-        <SwiperSlide className="swiperImage">
-          <img
-            // height={"20px"}
-            // width="100%"
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-          />
+        <SwiperSlide>
+          <video controls muted>
+            <source src="./Videos/video3.mp4" type="video/mp4" />
+          </video>
         </SwiperSlide>
-        <SwiperSlide className="swiperImage">
-          <img
-            // height={"100px"}
-            // width="100%"
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-          />
+        <SwiperSlide>
+          <video controls muted>
+            <source src="./Videos/video2.mp4" type="video/mp4" />
+          </video>
         </SwiperSlide>
       </Swiper>
       <Swiper
@@ -70,13 +64,19 @@ const SwiperComponent = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <video>
+            <source src="./Videos/video.mp4" type="video/mp4" />
+          </video>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <video>
+            <source src="./Videos/video3.mp4" type="video/mp4" />
+          </video>{" "}
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <video>
+            <source src="./Videos/video2.mp4" type="video/mp4" />
+          </video>{" "}
         </SwiperSlide>
       </Swiper>
     </div>
