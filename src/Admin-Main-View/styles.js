@@ -345,7 +345,10 @@ export const componentStyles = {
     background: "#74acec",
     borderRadius: "15px",
   },
-
+  videoSlider: {
+    width: "170px !important",
+    borderRadius: "15px !important",
+  },
   imageHolder: {
     height: "6rem",
     width: "100%",
