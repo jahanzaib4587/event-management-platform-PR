@@ -154,7 +154,7 @@ const Attendees = () => {
                 style={componentStyles.mr10}
               />
               <span
-                style={componentStyles.colorWhite}
+                style={componentStyles.attendeesListingText}
                 className="attendeesListItem"
               >
                 {item}

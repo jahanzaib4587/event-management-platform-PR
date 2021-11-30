@@ -16,24 +16,31 @@ const AdminChat = () => {
       justify="space-between"
       align="middle"
     >
-      <Col lg={3} style={componentStyles.liveButton} className="liveBtn">
+      <Col
+        xs={3}
+        sm={3}
+        md={2}
+        lg={3}
+        style={componentStyles.liveButton}
+        className="liveBtn"
+      >
         <h4 style={componentStyles.headerText}>Live</h4>
       </Col>
-      <Col lg={5}>
+      <Col xs={3} sm={4} md={5} lg={5}>
         <HeaderComponent
           Icon={<EyeOutlined />}
           title={"2.4k"}
           colorType="#fff"
         />
       </Col>
-      <Col lg={6}>
+      <Col xs={6} sm={6} md={7} lg={6}>
         <HeaderComponent
           Icon={<StopOutlined />}
           title={"Stop Broadcast"}
           colorType="#DD4B4E"
         />
       </Col>
-      <Col lg={6}>
+      <Col xs={6} sm={6} md={7} lg={6}>
         <HeaderComponent
           Icon={<InfoCircleOutlined />}
           title={"Stop Recording"}

@@ -8,7 +8,7 @@ const QuickAction = () => {
       className="quickActionsWrapper"
       style={componentStyles.quickActionWrapper}
     >
-      <h1 style={componentStyles.colorWhite}>Quick Actions</h1>
+      <h1 style={componentStyles.quickActionText}>Quick Actions</h1>
       <div
         className="quickActionContainer"
         style={componentStyles.quickActionContainer}

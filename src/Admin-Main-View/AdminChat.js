@@ -56,7 +56,7 @@ const AdminChat = () => {
               <div
                 className={index % 2 == 0 ? "messageUiMainChat" : "messageUi"}
               >
-                <span>{e}</span>
+                <span style={componentStyles.messageText}>{e}</span>
               </div>
               <p
                 style={

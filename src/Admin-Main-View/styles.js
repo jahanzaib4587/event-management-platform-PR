@@ -55,6 +55,22 @@ export const componentStyles = {
   colorWhite: {
     color: "white",
   },
+  attendeesListingText: {
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "300 !important",
+    fontSize: "18px",
+    color: "#fff",
+  },
+  quickActionText: {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: "24px",
+    lineHeight: "36px",
+    color: "white",
+    fontSize: "24px",
+  },
   activityFeedPanel: {
     // backgroundColor: "#4E5054",
     border: "none",
@@ -95,7 +111,7 @@ export const componentStyles = {
     marginTop: "5px",
     marginBottom: "5px",
     width: "100%",
-    height: "33px",
+    // height: "33px",
     // margin: "10px",
     background: "#3B3C40",
     borderRadius: "15px",
@@ -116,16 +132,13 @@ export const componentStyles = {
     // alignItems: "center",
   },
   liveButton: {
-    // alignSelf: "center",
-    // justifySelf: "center",
-    // width: "fit-content",
     padding: "5px",
-    // height: "fit-content",
+    height: "33px",
     background: "#DD4B4E",
     borderRadius: "5px",
     textAlign: "center",
-    // paddingTop: "5px",
     marginLeft: "5px",
+    // width: "100px",
   },
   headerText: {
     color: "#fff",
@@ -402,6 +415,12 @@ export const componentStyles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
+  },
+  messageText: {
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: "14px",
   },
   m10: {
     marginRight: "10px",
