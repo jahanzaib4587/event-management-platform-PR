@@ -10,7 +10,6 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import "swiper/components/thumbs/thumbs.scss";
-import ReactPlayer from "react-player";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
