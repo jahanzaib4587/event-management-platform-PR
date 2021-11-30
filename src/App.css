@@ -336,8 +336,8 @@ body {
     font-size: 10px !important;
   }
   .liveBtn {
-    width: 20% !important;
-    height: 10% !important;
+    width: 100% !important;
+    height: 90% !important;
     margin-right: 10px !important;
   }
   .audienceEngagementHeading {
@@ -354,4 +354,13 @@ body {
     width: fit-content !important;
     margin: 0px !important;
   }
+}
+/*--cover up mac , mac-book---*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+}
+
+/*--mac book pro , and mac-book retina display screen---*/
+
+@media only screen and (min-width: 1920px) and (max-width: 2560px) {
 }

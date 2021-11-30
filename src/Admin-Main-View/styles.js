@@ -94,7 +94,7 @@ export const componentStyles = {
     // padding: "8px",
     marginTop: "5px",
     marginBottom: "5px",
-    width: "20%",
+    width: "100%",
     height: "33px",
     // margin: "10px",
     background: "#3B3C40",
@@ -126,7 +126,6 @@ export const componentStyles = {
     textAlign: "center",
     // paddingTop: "5px",
     marginLeft: "5px",
-    width: "10%",
   },
   headerText: {
     color: "#fff",

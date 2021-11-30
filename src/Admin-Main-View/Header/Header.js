@@ -11,22 +11,36 @@ import HeaderComponent from "./HeaderComponent";
 import { componentStyles } from "../styles";
 const AdminChat = () => {
   return (
-    <div style={componentStyles.headerContainer}>
-      <div style={componentStyles.liveButton} className="liveBtn">
+    <Row
+      style={componentStyles.headerContainer}
+      justify="space-between"
+      align="middle"
+    >
+      <Col lg={3} style={componentStyles.liveButton} className="liveBtn">
         <h4 style={componentStyles.headerText}>Live</h4>
-      </div>
-      <HeaderComponent Icon={<EyeOutlined />} title={"2.4k"} colorType="#fff" />
-      <HeaderComponent
-        Icon={<StopOutlined />}
-        title={"Stop Broadcast"}
-        colorType="#DD4B4E"
-      />
-      <HeaderComponent
-        Icon={<InfoCircleOutlined />}
-        title={"Stop Recording"}
-        colorType="#7DE6D0"
-      />
-    </div>
+      </Col>
+      <Col lg={5}>
+        <HeaderComponent
+          Icon={<EyeOutlined />}
+          title={"2.4k"}
+          colorType="#fff"
+        />
+      </Col>
+      <Col lg={6}>
+        <HeaderComponent
+          Icon={<StopOutlined />}
+          title={"Stop Broadcast"}
+          colorType="#DD4B4E"
+        />
+      </Col>
+      <Col lg={6}>
+        <HeaderComponent
+          Icon={<InfoCircleOutlined />}
+          title={"Stop Recording"}
+          colorType="#7DE6D0"
+        />
+      </Col>
+    </Row>
   );
 };
 
