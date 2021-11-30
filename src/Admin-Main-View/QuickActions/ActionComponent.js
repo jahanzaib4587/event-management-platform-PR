@@ -12,7 +12,8 @@ const ActionComponent = (props) => {
       style={{
         width: "30%",
         height: "120px",
-        border: switchValue ? "5px solid #7de6d0" : "unset",
+        border: "5px solid transparent",
+        borderColor: switchValue ? "#7de6d0" : "transparent",
       }}
     >
       <Switch
