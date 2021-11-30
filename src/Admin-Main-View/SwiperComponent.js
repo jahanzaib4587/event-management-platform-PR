@@ -39,17 +39,17 @@ const SwiperComponent = () => {
         className="mySwiper2"
       >
         <SwiperSlide>
-          <video controls muted>
+          <video autoPlay loop muted>
             <source src="./Videos/video.mp4" type="video/mp4" />
           </video>
         </SwiperSlide>
         <SwiperSlide>
-          <video controls muted>
+          <video autoPlay loop muted>
             <source src="./Videos/video3.mp4" type="video/mp4" />
           </video>
         </SwiperSlide>
         <SwiperSlide>
-          <video controls muted>
+          <video autoPlay loop muted>
             <source src="./Videos/video2.mp4" type="video/mp4" />
           </video>
         </SwiperSlide>
@@ -70,12 +70,12 @@ const SwiperComponent = () => {
         <SwiperSlide>
           <video>
             <source src="./Videos/video3.mp4" type="video/mp4" />
-          </video>{" "}
+          </video>
         </SwiperSlide>
         <SwiperSlide>
           <video>
             <source src="./Videos/video2.mp4" type="video/mp4" />
-          </video>{" "}
+          </video>
         </SwiperSlide>
       </Swiper>
     </div>

@@ -9,7 +9,7 @@ const HeaderComponent = (props) => {
       className="headerParentContainer"
     >
       <span
-        style={{ color: props.colorType, fontSize: "18px" }}
+        style={{ color: props.colorType, fontSize: "15px" }}
         className="headerIcons"
       >
         {props.Icon}

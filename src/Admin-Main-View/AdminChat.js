@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Button, Card, Form, Input, Avatar } from "antd";
 import InputEmoji from "react-input-emoji";
+import Picker from "emoji-picker-react";
 import { SendOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
-
+import "emoji-mart/css/emoji-mart.css";
 import "../App.css";
 import { componentStyles } from "./styles";
 const AdminChat = () => {
@@ -31,6 +32,13 @@ const AdminChat = () => {
     </button>
   );
   const prefix = <SmileOutlined style={componentStyles.smileIcon} />;
+  const [inputStr, setInputStr] = useState("");
+  const [showPicker, setShowPicker] = useState(false);
+
+  const onEmojiClick = (event, emojiObject) => {
+    setInputStr((prevInput) => prevInput + emojiObject.emoji);
+    setShowPicker(false);
+  };
   return (
     <div title="Admin Chat" style={componentStyles.adminChatInnerContainer}>
       <div>
@@ -100,6 +108,24 @@ const AdminChat = () => {
               prefix={prefix}
               suffix={suffix}
             ></Input>
+            <div className="picker-container">
+              <input
+                className="input-style"
+                value={inputStr}
+                onChange={(e) => setInputStr(e.target.value)}
+              />
+              <img
+                className="emoji-icon"
+                src="https://icons.getbootstrap.com/assets/icons/emoji-smile.svg"
+                onClick={() => setShowPicker((val) => !val)}
+              />
+              {showPicker && (
+                <Picker
+                  pickerStyle={{ width: "100%" }}
+                  onEmojiClick={onEmojiClick}
+                />
+              )}
+            </div>
           </div>
         </Form.Item>
       </Form>

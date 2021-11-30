@@ -132,23 +132,26 @@ export const componentStyles = {
     // alignItems: "center",
   },
   liveButton: {
-    padding: "5px",
-    height: "33px",
+    // padding: "5px",
+    height: "25px",
     background: "#DD4B4E",
     borderRadius: "5px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     textAlign: "center",
     marginLeft: "5px",
     // width: "100px",
   },
   headerText: {
     color: "#fff",
-    alignSelf: "centers",
+    alignSelf: "baseline",
   },
   headerComponentText: {
     fontFamily: "Lato",
     fontStyle: "normal",
     fontWeight: "300",
-    fontSize: "13px",
+    fontSize: "10px",
     lineHeight: "22px",
     /* identical to box height */
     color: "#FFFFFF",
@@ -171,7 +174,7 @@ export const componentStyles = {
   },
   attendeesContainer: {
     // width: "100%",
-    height: "80vh",
+    height: "100vh",
     padding: "0px 5px",
     overflowY: "auto",
   },
@@ -216,7 +219,7 @@ export const componentStyles = {
   mainChatContainer: {
     width: "100%",
     border: "none",
-    height: "80vh ",
+    height: "100vh ",
     display: "flex",
     flexDirection: "column",
     paddingInline: "10px",
