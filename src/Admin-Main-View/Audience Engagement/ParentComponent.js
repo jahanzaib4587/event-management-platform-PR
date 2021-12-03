@@ -3,97 +3,29 @@ import CounterGraph from "./CounterGraph";
 import ActionComponent from "../QuickActions/ActionComponent";
 import ActivityFeed from "../ActivityFeed";
 import AdminChat from "../AdminChat";
-import { Collapse, Badge, Avatar, Image, Modal, Input } from "antd";
+import {
+  Collapse,
+  Badge,
+  Avatar,
+  Image,
+  Modal,
+  Input,
+  Radio,
+  Checkbox,
+} from "antd";
 import "../../App.css";
+import Modal_Component from "../Ask_the_Audience_Modal/Modal_Component";
 import { componentStyles } from "../styles";
-
 const ParentComponent = () => {
   const { Panel } = Collapse;
   const [activePanel, setActivePanel] = useState(1);
   const [openModal, setOpenModal] = useState(false);
-  const { TextArea } = Input;
-  const showModal = () => {
-    setOpenModal(true);
-  };
-
-  const handleOk = () => {
-    setOpenModal(false);
-  };
-
-  const handleCancel = () => {
-    setOpenModal(false);
-  };
   return (
     <div
       style={componentStyles.secondColumnContainer}
       className={activePanel == 2 && "displayNone"}
     >
-      <Modal
-        centered
-        title="Ask the Audience"
-        visible={openModal}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <div
-          style={{ background: "red", borderRadius: "50px", padding: "10px" }}
-        >
-          <p>What do you want to ask?</p>
-          <TextArea style={{ resize: "none", borderRadius: "10px" }} rows={3} />
-          <p>How should the audience respond?</p>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <div
-              style={{
-                width: "20%",
-                background: "yellow",
-                height: 70,
-                borderRadius: "10px",
-              }}
-            >
-              324234
-            </div>
-            <div
-              style={{
-                width: "20%",
-                background: "yellow",
-                height: 70,
-                borderRadius: "20",
-                borderRadius: "10px",
-              }}
-            >
-              234234
-            </div>
-            <div
-              style={{
-                width: "20%",
-                background: "yellow",
-                height: 70,
-                borderRadius: "20",
-                borderRadius: "10px",
-              }}
-            >
-              234234234
-            </div>
-            <div
-              style={{
-                width: "20%",
-                background: "yellow",
-                height: 70,
-                borderRadius: "20",
-                borderRadius: "10px",
-              }}
-            >
-              234234234
-            </div>
-          </div>
-        </div>
-      </Modal>
+      <Modal_Component modalValue={openModal} setOpenModal={setOpenModal} />
       <div style={componentStyles.activityFeedsContainer}>
         <h1
           className="audienceEngagementHeading"
