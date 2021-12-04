@@ -14,6 +14,8 @@ import {
 import { componentStyles } from "../styles";
 import { Modal_Styles } from "./modal_styles";
 import PanelQuestion from "./PanelQuestion";
+import "../../App.css";
+import "./style.css";
 const Modal_Component = (props) => {
   const [activePanel, setActivePanel] = useState(1);
 
@@ -34,7 +36,7 @@ const Modal_Component = (props) => {
     props.setOpenModal(false);
   };
   return (
-    <div>
+    <div className="modalStyling">
       <Modal
         centered
         title="Ask the Audience"
@@ -42,20 +44,21 @@ const Modal_Component = (props) => {
         // onOk={handleOk}
         onCancel={handleCancel}
         footer={null}
-        className="modalStyling"
       >
         <div
           style={{
-            background: "red",
+            background: "#4E5054",
             borderRadius: "20px",
             padding: "10px",
             display: "flex",
             flexDirection: "column",
           }}
         >
-          <p>What do you want to ask?</p>
-          <TextArea style={{ resize: "none", borderRadius: "10px" }} rows={3} />
-          <p>How should the audience respond?</p>
+          <p style={Modal_Styles.textStyling}>What do you want to ask?</p>
+          <TextArea style={Modal_Styles.textAreaStyle} rows={3} />
+          <p style={Modal_Styles.textStyling}>
+            How should the audience respond?
+          </p>
           <div
             style={{
               display: "flex",
@@ -63,16 +66,7 @@ const Modal_Component = (props) => {
               justifyContent: "space-evenly",
             }}
           >
-            <div
-              style={{
-                width: "20%",
-                background: "yellow",
-                // height: 70,
-                borderRadius: "10px",
-                paddingLeft: "10px",
-                paddingTop: "10px",
-              }}
-            >
+            <div style={Modal_Styles.respondBoxes}>
               <div
                 style={{
                   display: "flex",
@@ -89,22 +83,10 @@ const Modal_Component = (props) => {
                 <div style={{ paddingLeft: "10px" }}>
                   <Radio />
                 </div>
-                <p style={{ alignSelf: "self-start", fontSize: "10px" }}>
-                  Pick one
-                </p>
+                <p style={Modal_Styles.respondBoxesText}>Pick one</p>
               </div>
             </div>
-            <div
-              style={{
-                width: "20%",
-                background: "yellow",
-                // height: 70,
-                borderRadius: "20",
-                borderRadius: "10px",
-                paddingLeft: "10px",
-                paddingTop: "10px",
-              }}
-            >
+            <div style={Modal_Styles.respondBoxes}>
               <div
                 style={{
                   display: "flex",
@@ -120,22 +102,10 @@ const Modal_Component = (props) => {
                 <div style={{ paddingLeft: "10px" }}>
                   <Checkbox />
                 </div>
-                <p style={{ alignSelf: "self-start", fontSize: "10px" }}>
-                  Pick Multiple
-                </p>
+                <p style={Modal_Styles.respondBoxesText}>Pick Multiple</p>
               </div>
             </div>
-            <div
-              style={{
-                width: "20%",
-                background: "yellow",
-                // height: 70,
-                borderRadius: "20",
-                borderRadius: "10px",
-                paddingLeft: "10px",
-                paddingTop: "10px",
-              }}
-            >
+            <div style={Modal_Styles.respondBoxes}>
               <div
                 style={{
                   display: "flex",
@@ -145,24 +115,12 @@ const Modal_Component = (props) => {
                   paddingLeft: "10px",
                 }}
               >
-                <div style={{ paddingLeft: "10px" }}>1</div>
-                <div style={{ paddingLeft: "10px" }}>2</div>
-                <p style={{ alignSelf: "self-start", fontSize: "10px" }}>
-                  Rank Choices
-                </p>
+                <div style={Modal_Styles.respondBoxNumbering}>1</div>
+                <div style={Modal_Styles.respondBoxNumbering}>2</div>
+                <p style={Modal_Styles.respondBoxesText}>Rank Choices</p>
               </div>
             </div>
-            <div
-              style={{
-                width: "20%",
-                background: "yellow",
-                // height: 70,
-                borderRadius: "10px",
-                paddingTop: "10px",
-                borderColor: true ? "#7de6d0" : "transparent",
-                border: "5px solid",
-              }}
-            >
+            <div style={Modal_Styles.respondBoxes}>
               <div
                 style={{
                   display: "flex",
@@ -172,27 +130,21 @@ const Modal_Component = (props) => {
                   paddingLeft: "10px",
                 }}
               >
-                <div
-                  style={{
-                    height: "40px",
-                    width: "90%",
-                    borderRadius: "20px",
-                    border: "2px solid black",
-                  }}
-                ></div>
-                <p style={{ alignSelf: "self-start", fontSize: "10px" }}>
-                  Free Answer
-                </p>
+                <div style={Modal_Styles.respondBoxCircle}></div>
+                <p style={Modal_Styles.respondBoxesText}>Free Answer</p>
               </div>
             </div>
           </div>
-          <Input placeholder="option 1"></Input>
-          <Button style={{ width: "100%" }}>Add another option</Button>
-          <Button style={{ alignSelf: "center", justifySelf: "center" }}>
+          <Input placeholder="option 1" style={Modal_Styles.options}></Input>
+          <Button style={Modal_Styles.addOptions}>
+            <span style={Modal_Styles.addOptionsText}>Add another option</span>
+          </Button>
+
+          <Button size={"medium"} style={Modal_Styles.postBtn}>
             Post in Chat
           </Button>
-          <h2>Previous Questions:</h2>
-          <div style={{ height: 250, overflowY: "auto" }}>
+          <p style={Modal_Styles.previousQuestion}>Previous Questions:</p>
+          <div style={Modal_Styles.panelHeight}>
             <Collapse
               accordion
               style={componentStyles.colorWhite}
