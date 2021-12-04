@@ -7,12 +7,16 @@ import {
   Modal,
   Input,
   Radio,
+  Progress,
   Checkbox,
   Button,
 } from "antd";
 import { componentStyles } from "../styles";
 import { Modal_Styles } from "./modal_styles";
+import PanelQuestion from "./PanelQuestion";
 const Modal_Component = (props) => {
+  const [activePanel, setActivePanel] = useState(1);
+
   const [openModal, setOpenModal] = useState(props.modalValue);
   debugger;
   const { Panel } = Collapse;
@@ -35,13 +39,15 @@ const Modal_Component = (props) => {
         centered
         title="Ask the Audience"
         visible={props.modalValue}
-        onOk={handleOk}
+        // onOk={handleOk}
         onCancel={handleCancel}
+        footer={null}
+        className="modalStyling"
       >
         <div
           style={{
             background: "red",
-            borderRadius: "50px",
+            borderRadius: "20px",
             padding: "10px",
             display: "flex",
             flexDirection: "column",
@@ -186,22 +192,34 @@ const Modal_Component = (props) => {
             Post in Chat
           </Button>
           <h2>Previous Questions:</h2>
-          <Collapse
-            accordion
-            style={componentStyles.colorWhite}
-            destroyInactivePanel={true}
-            // activeKey={activePanel}
-            ghost={true}
-            // onChange={(e) => {
-            //   setActivePanel(e);
-            // }}
-          >
-            <Panel
-              // header="Activity Feed"
-              key="1"
-              style={componentStyles.activityFeedPanel}
-            ></Panel>
-          </Collapse>
+          <div style={{ height: 250, overflowY: "auto" }}>
+            <Collapse
+              accordion
+              style={componentStyles.colorWhite}
+              destroyInactivePanel={true}
+              style={componentStyles.colorWhite}
+              activeKey={activePanel}
+              ghost={true}
+              onChange={(e) => {
+                setActivePanel(e);
+              }}
+            >
+              <Panel
+                header="Is this your first livestream with our band?"
+                key="1"
+                style={componentStyles.activityFeedPanel}
+              >
+                <PanelQuestion />
+              </Panel>
+              <Panel
+                header="Is this your first livestream with our band?"
+                key="2"
+                style={componentStyles.activityFeedPanel}
+              >
+                <PanelQuestion />
+              </Panel>
+            </Collapse>
+          </div>
         </div>
       </Modal>
     </div>
