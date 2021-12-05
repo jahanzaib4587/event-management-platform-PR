@@ -14,7 +14,9 @@ import {
 import { Modal_Styles } from "./modal_styles";
 const PanelQuestion = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div
+      style={{ display: "flex", flexDirection: "column", marginTop: "-10px" }}
+    >
       <p style={Modal_Styles.timeStamp}>11:12am</p>
       <p style={Modal_Styles.attendeesSummery}>
         1452/2,285 attendess responded (63.6 %)
@@ -24,6 +26,7 @@ const PanelQuestion = () => {
           display: "flex",
           flexDirection: "column",
           background: "#3B3C40",
+          marginInline: "40px",
         }}
       >
         <div

@@ -350,6 +350,9 @@ body {
     width: 30px !important;
     height: 30px !important;
   }
+  .modalAskAudience {
+    width: 80% !important ;
+  }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {

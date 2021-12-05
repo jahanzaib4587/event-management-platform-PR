@@ -1,6 +1,6 @@
 export const Modal_Styles = {
-  redcolor: {
-    color: "red",
+  pl10: {
+    paddingLeft: "10px",
   },
   textStyling: {
     fontFamily: "Lato",
@@ -14,31 +14,67 @@ export const Modal_Styles = {
     borderRadius: "10px",
     background: "#3B3C40",
     borderRadius: "10px",
-    border: "0px",
+    border: "1px solid transparent ",
+    color: "#ffff",
+    overflow: "hidden",
+    marginBottom: "10px",
   },
   respondBoxes: {
+    background: "#3B3C40",
+    border: "1px solid transparent",
+    // boxSizing: "border-box",
+    width: "23%",
+    // height: 70,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    borderRadius: "10px",
+    paddingLeft: "10px",
+    paddingTop: "10px",
+    cursor: "pointer",
+  },
+  respondBoxesActive: {
     background: "#3B3C40",
     border: "1px solid #7DE6D0",
     boxSizing: "border-box",
     width: "23%",
     // height: 70,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
     borderRadius: "10px",
     paddingLeft: "10px",
     paddingTop: "10px",
+    cursor: "pointer",
   },
+
   respondBoxesText: {
     fontFamily: "Lato",
     fontstyle: "normal",
     fontHeight: "300",
-    fontSize: "10px",
+    fontSize: "14px",
     lineHeight: "17px",
     /* identical to box height */
     alignSelf: "start",
     color: "#FFFFFF",
   },
+  respondBoxesTextActive: {
+    fontFamily: "Lato",
+    fontstyle: "normal",
+    fontHeight: "300",
+    fontSize: "14px",
+    lineHeight: "17px",
+    /* identical to box height */
+    alignSelf: "start",
+    color: "#7DE6D0",
+  },
   respondBoxNumbering: {
     paddingLeft: "10px",
     color: "#FFFF",
+  },
+  respondBoxNumberingActive: {
+    paddingLeft: "10px",
+    color: "#7DE6D0",
   },
   respondBoxCircle: {
     height: "44px",
@@ -46,12 +82,21 @@ export const Modal_Styles = {
     borderRadius: "10px",
     border: "1px solid #FFFFFF",
   },
+  respondBoxCircleActive: {
+    height: "44px",
+    width: "90%",
+    borderRadius: "10px",
+    border: "1px solid #7DE6D0",
+  },
   options: {
     background: "#3B3C40",
     borderRadius: "10px",
     border: "none",
     marginTop: "20px",
+    border: "1px solid transparent ",
+    color: "#ffff",
   },
+
   addOptions: {
     background: "#3B3C40",
     borderRadius: "10px",
@@ -61,12 +106,13 @@ export const Modal_Styles = {
     display: "flex",
     // justifyContent: "center",
     alignItems: "center",
+    border: "1px solid transparent ",
   },
   addOptionsText: { color: "white", alignSelf: "flex-start" },
   postBtn: {
     alignSelf: "center",
     justifySelf: "center",
-    width: "50%",
+    width: "30%",
     marginTop: "10px",
     background: "#74ACEC",
     borderRadius: "10px",
@@ -80,7 +126,7 @@ export const Modal_Styles = {
     fontSize: "18px",
     lineHeight: "27px",
     /* identical to box height */
-    marginTop: "20px",
+    marginTop: "15px",
     color: "#FFFFFF",
   },
   panelHeight: {
