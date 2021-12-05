@@ -3,19 +3,29 @@ import CounterGraph from "./CounterGraph";
 import ActionComponent from "../QuickActions/ActionComponent";
 import ActivityFeed from "../ActivityFeed";
 import AdminChat from "../AdminChat";
-import { Collapse, Badge, Avatar, Image } from "antd";
+import {
+  Collapse,
+  Badge,
+  Avatar,
+  Image,
+  Modal,
+  Input,
+  Radio,
+  Checkbox,
+} from "antd";
 import "../../App.css";
+import Modal_Component from "../Ask_the_Audience_Modal/Modal_Component";
 import { componentStyles } from "../styles";
-
 const ParentComponent = () => {
   const { Panel } = Collapse;
   const [activePanel, setActivePanel] = useState(1);
-  console.log(activePanel);
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div
       style={componentStyles.secondColumnContainer}
       className={activePanel == 2 && "displayNone"}
     >
+      <Modal_Component modalValue={openModal} setOpenModal={setOpenModal} />
       <div style={componentStyles.activityFeedsContainer}>
         <h1
           className="audienceEngagementHeading"
@@ -25,7 +35,10 @@ const ParentComponent = () => {
         </h1>
         <CounterGraph />
         <div style={componentStyles.actionComponentContainer}>
-          <div style={componentStyles.quickActionTextHolder}>
+          <div
+            style={componentStyles.quickActionTextHolder}
+            onClick={() => setOpenModal(true)}
+          >
             <p style={componentStyles.askTheAudienceText}>Ask the Audience!</p>
           </div>
           <div style={componentStyles.imageHolder}></div>

@@ -344,7 +344,7 @@ export const componentStyles = {
     display: "flex",
     justifyContent: "flex-end",
     flexDirection: "column",
-
+    cursor: "pointer",
     width: "100%",
     height: "6rem",
     // height: 100px;
