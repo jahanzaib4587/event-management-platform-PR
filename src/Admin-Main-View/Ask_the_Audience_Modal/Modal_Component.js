@@ -274,6 +274,7 @@ const Modal_Component = (props) => {
           <p style={Modal_Styles.previousQuestion}>Previous Questions:</p>
           <div style={Modal_Styles.panelHeight}>
             <Collapse
+            className="modal_component"
               accordion
               style={componentStyles.colorWhite}
               destroyInactivePanel={true}
