@@ -7,6 +7,7 @@ import { Collapse, Badge, Avatar, Tabs, Row, Col } from "antd";
 import { useState } from "react";
 import ParentComponent from "./Admin-Main-View/Audience Engagement/ParentComponent";
 import TabsComponent from "./Admin-Main-View/ThirdComponent/TabsComponent";
+import ChatSettings from "./Admin-Main-View/Chat_Settings/ChatSettings";
 function App() {
   return (
     <Row
@@ -25,6 +26,7 @@ function App() {
         overflowX: "hidden",
       }}
     >
+      <ChatSettings></ChatSettings>
       {/* style={{ width: "35%", height: "90vh", marginRight: "25px" }} */}
       <Col sm={20} md={20} lg={8}>
         <Header />
