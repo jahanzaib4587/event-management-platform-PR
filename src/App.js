@@ -26,7 +26,6 @@ function App() {
         overflowX: "hidden",
       }}
     >
-      <ChatSettings></ChatSettings>
       {/* style={{ width: "35%", height: "90vh", marginRight: "25px" }} */}
       <Col sm={20} md={20} lg={8}>
         <Header />

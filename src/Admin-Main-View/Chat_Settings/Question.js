@@ -16,9 +16,23 @@ const Question = (props) => {
   return (
     <div style={{ display: "flex" }}>
       <span style={{ marginRight: "10px" }}>
-        <Checkbox />
+        <Checkbox className="value-checkbox " />
       </span>
-      <p>{text}</p>
+
+      <p
+        style={{
+          fontFamily: "Lato",
+          fontStyle: "normal",
+          fontWeight: "normal",
+          fontSize: "18px",
+          lineHeight: "22px",
+          /* identical to box height */
+
+          color: "#FFFFFF",
+        }}
+      >
+        {text}
+      </p>
     </div>
   );
 };
