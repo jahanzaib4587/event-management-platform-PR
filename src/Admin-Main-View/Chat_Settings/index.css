@@ -16,3 +16,11 @@
   background-color: transparent;
   border-color: #fff;
 }
+.ant-tag-close-icon {
+  color: #fff !important;
+  font-size: 14px !important;
+  margin-left: 10px !important;
+}
+.ant-tag-close-icon:hover {
+  color: #7de6d0 !important;
+}
