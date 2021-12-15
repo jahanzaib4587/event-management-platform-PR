@@ -273,11 +273,14 @@ export const componentStyles = {
   },
   tabsHolder: {
     width: "100%",
+    // display: "flex",
+    // flexDirection: "column",
+    // flexColumn: "column-reverse",
     // height: "-webkit-fill-available",
   },
   tabPaneHolder: {
     // height: "100%",
-    // width: "460px",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -285,6 +288,8 @@ export const componentStyles = {
     borderBottom: "none",
     borderRadius: "20px",
     paddingInline: "15px",
+    position: "absolute",
+    zIndex: "1",
   },
   h100: {
     height: "100%",
@@ -323,7 +328,7 @@ export const componentStyles = {
     fontFamily: "Lato",
     fontStyle: "normal",
     fontWeight: "normal",
-    fontSize: "18px",
+    fontSize: "16px",
     lineHeight: "22px",
     alignSelf: "flex-start",
     color: "#ffffff",

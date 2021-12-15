@@ -7,6 +7,7 @@ import { Collapse, Badge, Avatar, Tabs, Row, Col } from "antd";
 import { useState } from "react";
 import ParentComponent from "./Admin-Main-View/Audience Engagement/ParentComponent";
 import TabsComponent from "./Admin-Main-View/ThirdComponent/TabsComponent";
+import ChatSettings from "./Admin-Main-View/Chat_Settings/ChatSettings";
 function App() {
   return (
     <Row
