@@ -18,6 +18,7 @@ import {
 import { PlusOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
 import "../Chat_Settings/index.css";
 import "../../App.css";
+import { Component_Styles } from "./componet_styles";
 import TagsComponent from "../Chat_Settings/TagsComponent";
 import Question from "../Chat_Settings/Question";
 import Left_Menu from "./Left_Menu";
@@ -34,214 +35,111 @@ const Settings_Modal = (props) => {
     <div className="modalStyling">
       <Modal
         centered
-        title="Chat Settings"
+        title="Audio/Video Settings"
         visible={props.openModal}
         // onOk={handleOk}
         onCancel={handleCancel}
         footer={null}
-        width={"30%"}
+        width={"55%"}
         className="modalAskAudience"
       >
         <div
           style={{
             background: "#63666B",
             borderRadius: "20px",
-            // padding: "30px",
-
-            // display: "flex",
             flexDirection: "column",
           }}
         >
           <Row gutter={16}>
-            <Col md={10} lg={10}>
+            <Col md={7} lg={7}>
               <Left_Menu />
             </Col>
-            <Col md={14} lg={14}>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <h3>Single Video Stream</h3>
-                <div
-                  style={{
-                    width: "120px",
-                    height: "107px",
-                    padding: "10px",
-                    border: "3px solid #fff",
-                    borderRadius: "10px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      border: "2px solid #fff",
-                      borderRadius: "10px",
+            <Col md={17} lg={17} style={Component_Styles.dimensionParent}>
+              <div style={Component_Styles.flexColumn}>
+                <span style={Component_Styles.dimensionHeading}>
+                  Single Video Stream
+                </span>
+                <div style={Component_Styles.dimensionContainerColumn}>
+                  <div style={Component_Styles.layout1}></div>
+                </div>
 
-                      width: "100px",
-                      height: "90px",
-                    }}
-                  ></div>
-                </div>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <h3>Two Video Stream</h3>
-                <div style={{ display: "flex" }}>
-                  <div
-                    style={{
-                      width: "120px",
-                      height: "107px",
-                      padding: "10px",
-                      border: "3px solid #fff",
-                      borderRadius: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        border: "2px solid #fff",
-                        borderRadius: "10px",
-                        width: "50px",
-                        height: "90px",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        border: "2px solid #fff",
-                        borderRadius: "10px",
-                        width: "50px",
-                        height: "90px",
-                      }}
-                    ></div>
-                  </div>
-                  <div
-                    style={{
-                      width: "120px",
-                      height: "107px",
-                      padding: "10px",
-                      border: "3px solid #fff",
-                      borderRadius: "10px",
-                      display: "flex",
-                      flexDirection: "column",
-                      // justifyContent: "stretch",
-                      // alignItems: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        border: "2px solid #fff",
-                        borderRadius: "10px",
-                        width: "90%",
-                        height: "90px",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        border: "2px solid #fff",
-                        borderRadius: "10px",
-                        width: "90%",
-                        height: "90px",
-                      }}
-                    ></div>
+                <div style={Component_Styles.flexColumn}>
+                  <span style={Component_Styles.dimensionHeading}>
+                    Two Video Stream
+                  </span>
+                  <div style={{ display: "flex" }}>
+                    <div style={Component_Styles.dimensionContainerColumn}>
+                      <div style={Component_Styles.layout2}></div>
+                      <div style={Component_Styles.layout2}></div>
+                    </div>
+                    <div style={Component_Styles.dimensionContainerRow}>
+                      <div style={Component_Styles.layout3}></div>
+                      <div style={Component_Styles.layout3}></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <h3>3+ Video Stream</h3>
-                <div style={{ display: "flex" }}>
-                  <div
-                    style={{
-                      width: "120px",
-                      height: "107px",
-                      padding: "10px",
-                      border: "3px solid #fff",
-                      borderRadius: "10px",
-                      display: "flex",
-                      // justifyContent: "space-evenly",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        marginRight: "40px",
-                      }}
-                    >
-                      <div
-                        style={{
-                          border: "2px solid #fff",
-                          borderRadius: "10px",
-                          width: "80px",
-                          height: "70px",
-                        }}
-                      ></div>
-                      <div
-                        style={{ display: "flex", justifyContent: "center" }}
-                      >
-                        <div
-                          style={{
-                            border: "2px solid #fff",
-                            borderRadius: "8px",
-                            width: "33%",
-                            height: "25px",
-                          }}
-                        ></div>
-                        <div
-                          style={{
-                            border: "2px solid #fff",
-                            borderRadius: "8px",
-                            width: "33%",
-                            height: "25px",
-                          }}
-                        ></div>
-                        <div
-                          style={{
-                            border: "2px solid #fff",
-                            borderRadius: "8px",
-                            width: "33%",
-                            height: "25px",
-                          }}
-                        ></div>
+                <div style={Component_Styles.flexColumn}>
+                  <span style={Component_Styles.dimensionHeading}>
+                    3+ Video Stream
+                  </span>
+                  <div style={Component_Styles.wrapFlex}>
+                    <div style={Component_Styles.dimensionContainerColumn}>
+                      <div style={Component_Styles.flexColumn}>
+                        <div style={Component_Styles.layout4_1}></div>
+                        <div style={Component_Styles.flexContent}>
+                          <div style={Component_Styles.layout4}></div>
+                          <div style={Component_Styles.layout4}></div>
+                          <div style={Component_Styles.layout4}></div>
+                        </div>
                       </div>
                     </div>
-                    <div
-                      style={{
-                        width: "120px",
 
-                        height: "107px",
-                        padding: "10px",
-                        border: "3px solid #fff",
-                        borderRadius: "10px",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <div
-                        style={{
-                          border: "2px solid #fff",
-                          borderRadius: "10px",
-                          width: "50px",
-                          height: "90px",
-                        }}
-                      ></div>
-                      <div
-                        style={{
-                          border: "2px solid #fff",
-                          borderRadius: "10px",
-                          width: "50px",
-                          height: "90px",
-                        }}
-                      ></div>
-                      <div
-                        style={{
-                          border: "2px solid #fff",
-                          borderRadius: "10px",
-                          width: "50px",
-                          height: "90px",
-                        }}
-                      ></div>
+                    <div style={Component_Styles.dimensionContainerColumn}>
+                      <div style={Component_Styles.layout5}></div>
+                      <div style={Component_Styles.layout5}></div>
+                      <div style={Component_Styles.layout5}></div>
+                    </div>
+                    <div style={Component_Styles.dimensionContainerColumn}>
+                      <div style={Component_Styles.layout6_1}></div>
+                      <div style={Component_Styles.flexColumn}>
+                        <div style={Component_Styles.layout6}></div>
+                        <div style={Component_Styles.layout6}></div>
+                      </div>
+                    </div>
+                    <div style={Component_Styles.dimensionContainerColumn}>
+                      <div style={Component_Styles.flexColumn}>
+                        <div style={Component_Styles.layout7}></div>
+                        <div style={Component_Styles.layout7}></div>
+                      </div>
+                      <div style={Component_Styles.flexColumn}>
+                        <div style={Component_Styles.layout7}></div>
+                        <div style={Component_Styles.layout7}></div>
+                      </div>
+                    </div>
+
+                    <div style={Component_Styles.dimensionContainerColumn}>
+                      <div style={Component_Styles.flexColumn}>
+                        <div style={Component_Styles.layout8}></div>
+                        <div style={Component_Styles.layout8}></div>
+                      </div>
+                      <div style={Component_Styles.flexColumn}>
+                        <div style={Component_Styles.layout8}></div>
+                        <div style={Component_Styles.layout8}></div>
+                      </div>
+                      <div style={Component_Styles.flexColumn}>
+                        <div style={Component_Styles.layout8}></div>
+                        <div style={Component_Styles.layout8}></div>
+                      </div>
+                    </div>
+
+                    <div style={Component_Styles.dimensionContainerRow}>
+                      <div style={Component_Styles.layout9_1}></div>
+                      <div style={Component_Styles.flexContent}>
+                        <div style={Component_Styles.layout9}></div>
+                        <div style={Component_Styles.layout9}></div>
+                        <div style={Component_Styles.layout9}></div>
+                        <div style={Component_Styles.layout9}></div>
+                      </div>
                     </div>
                   </div>
                 </div>
