@@ -52,10 +52,16 @@ const Settings_Modal = (props) => {
           }}
         >
           <Row gutter={16}>
-            <Col md={7} lg={7}>
+            <Col xs={24} sm={24} md={7} lg={7}>
               <Left_Menu />
             </Col>
-            <Col md={17} lg={17} style={Component_Styles.dimensionParent}>
+            <Col
+              xs={24}
+              sm={24}
+              md={17}
+              lg={17}
+              style={Component_Styles.dimensionParent}
+            >
               <div style={Component_Styles.flexColumn}>
                 <span style={Component_Styles.dimensionHeading}>
                   Single Video Stream

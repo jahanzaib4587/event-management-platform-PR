@@ -171,6 +171,7 @@ export const componentStyles = {
   closeIcon: {
     width: "25px",
     height: "25px",
+    background: "transparent",
   },
   attendeesContainer: {
     // width: "100%",

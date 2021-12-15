@@ -9,6 +9,8 @@ import {
   Modal,
   Button,
   Popover,
+  notification,
+  Space,
 } from "antd";
 import {
   InfoCircleOutlined,
@@ -61,6 +63,12 @@ const Attendees = () => {
     "Man charged ovg girl.",
     "Los Angeles battles es.",
   ];
+  const openNotificationWithIcon = (text, type) => {
+    notification[type]({
+      message: "Alert",
+      description: [text],
+    });
+  };
   const [foundUsers, setFoundUsers] = useState(data);
   const filter = (e) => {
     const keyword = e.target.value;
@@ -86,6 +94,9 @@ const Attendees = () => {
         danger
         className="modalButtonDesign"
         style={componentStyles.modalButtonDesign}
+        onClick={() =>
+          openNotificationWithIcon("Warning has issued", "warning")
+        }
       >
         Send Warning
       </Button>
@@ -94,6 +105,9 @@ const Attendees = () => {
         danger
         className="modalButtonDesign"
         style={componentStyles.modalButtonDesign}
+        onClick={() =>
+          openNotificationWithIcon("User has temporary blocked", "error")
+        }
       >
         Issue Temporary Block
       </Button>
@@ -102,6 +116,9 @@ const Attendees = () => {
         danger
         className="modalButtonDesign"
         style={componentStyles.modalButtonDesign}
+        onClick={() =>
+          openNotificationWithIcon("User has marked as bot", "info")
+        }
       >
         Mark as Bot
       </Button>
@@ -110,6 +127,9 @@ const Attendees = () => {
         danger
         className="modalButtonDesign"
         style={componentStyles.modalButtonDesign}
+        onClick={() =>
+          openNotificationWithIcon("User has blocked from stream", "error")
+        }
       >
         Block User From Stream
       </Button>
@@ -118,9 +138,9 @@ const Attendees = () => {
   const title = (
     <div style={componentStyles.popoverHeader}>
       <span>{currentName}</span>
-      <span style={componentStyles.closeIcon}>
+      {/* <span style={componentStyles.closeIcon}>
         <CloseOutlined />
-      </span>
+      </span> */}
     </div>
   );
   return (
