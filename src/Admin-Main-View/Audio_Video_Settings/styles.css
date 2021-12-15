@@ -11,3 +11,8 @@
 .site-layout-background {
   background: #fff;
 }
+
+div.layouts:hover {
+  border-color: #7de6d0 !important;
+  cursor: pointer !important;
+}

@@ -6,7 +6,7 @@ import {
   AudioOutlined,
   QrcodeOutlined,
 } from "@ant-design/icons";
-import "./index.css";
+import "./styles.css";
 const { Header, Content, Footer, Sider } = Layout;
 
 const Left_Menu = () => {
