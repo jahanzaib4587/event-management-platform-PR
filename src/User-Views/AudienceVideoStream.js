@@ -13,8 +13,8 @@ const AudienceVideoStream = () => {
     "1",
   ];
   return (
-    <Row justify="space-around">
-      <Col xs={12} sm={12} md={6} lg={6}>
+    <Row justify="space-between">
+      <Col xs={22} sm={22} md={6} lg={6}>
         <div
           style={{
             background: "red",
@@ -31,7 +31,7 @@ const AudienceVideoStream = () => {
         <Row>
           {colorTabs.map((value, index) => {
             return (
-              <Col xs={4} sm={4} md={6} lg={6}>
+              <Col xs={8} sm={8} md={6} lg={6}>
                 <div
                   style={{
                     background: "red",

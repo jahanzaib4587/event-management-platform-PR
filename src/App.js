@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MainScreen from "./User-Views/MainScreen";
 import AdminChat from "./Admin-Main-View/AdminChat";
 import AudienceVideoStream from "./User-Views/AudienceVideoStream";
+import VirtualMerchTable from "./User-Views/VirtualMerchTable";
 function App() {
   return (
     // <Router>
@@ -65,11 +66,12 @@ function App() {
         overflowX: "hidden",
       }}
     >
-      <Col md={17} lg={17}>
+      <Col xs={24} sm={24} md={17} lg={17}>
         <MainScreen />
         <AudienceVideoStream />
+        <VirtualMerchTable />
       </Col>
-      <Col md={6} lg={6}>
+      <Col xs={22} sm={22} md={6} lg={6}>
         {/* <AdminChat /> */}
         <TabsComponent />
       </Col>
