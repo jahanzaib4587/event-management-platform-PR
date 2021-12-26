@@ -11,6 +11,7 @@ import ChatSettings from "./Admin-Main-View/Chat_Settings/ChatSettings";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MainScreen from "./User-Views/MainScreen";
 import AdminChat from "./Admin-Main-View/AdminChat";
+import AudienceVideoStream from "./User-Views/AudienceVideoStream";
 function App() {
   return (
     // <Router>
@@ -66,6 +67,7 @@ function App() {
     >
       <Col md={17} lg={17}>
         <MainScreen />
+        <AudienceVideoStream />
       </Col>
       <Col md={6} lg={6}>
         {/* <AdminChat /> */}
