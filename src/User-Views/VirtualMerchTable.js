@@ -7,6 +7,12 @@ import ImageSwiper from "./ImageSwiper/SwiperView";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 const VirtualMerchTable = () => {
+  //   const emojiArray = [
+  //     "./Images/claping.jpeg",
+  //     "./Images/exclamation.png",
+  //     "./Images/heart.png",
+  //     "",
+  //   ];
   const emojiArray = [1, 2, 3, 4];
   return (
     <Row justify="space-between" style={{ marginBottom: "20px" }}>
@@ -55,9 +61,10 @@ const VirtualMerchTable = () => {
       <Col xs={24} sm={24} md={15} lg={15}>
         <ImageSwiper />
       </Col>
-      <Col xs={24} sm={24} md={2} lg={2}>
-        <Row>
+      <Col xs={24} sm={24} md={3} lg={3}>
+        <Row style={{ justifyContent: "center" }}>
           {emojiArray.map((value, index) => {
+            debugger;
             return (
               <div
                 style={{
@@ -65,8 +72,21 @@ const VirtualMerchTable = () => {
                   borderRadius: "50px",
                   height: "50px",
                   width: "50px",
+                  margin: "2px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-              ></div>
+              >
+                <img
+                  src={value}
+                  height={40}
+                  width={40}
+                  style={{
+                    backgroundColor: "transparent",
+                  }}
+                ></img>
+              </div>
             );
           })}
         </Row>

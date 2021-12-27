@@ -13,6 +13,7 @@ import MainScreen from "./User-Views/MainScreen";
 import AdminChat from "./Admin-Main-View/AdminChat";
 import AudienceVideoStream from "./User-Views/AudienceVideoStream";
 import VirtualMerchTable from "./User-Views/VirtualMerchTable";
+import ChatComponent from "./User-Views/Chat Components/Index";
 function App() {
   return (
     // <Router>
@@ -73,7 +74,8 @@ function App() {
       </Col>
       <Col xs={22} sm={22} md={6} lg={6}>
         {/* <AdminChat /> */}
-        <TabsComponent />
+        {/* <TabsComponent /> */}
+        <ChatComponent />
       </Col>
     </Row>
   );
