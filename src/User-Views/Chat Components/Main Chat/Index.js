@@ -44,7 +44,7 @@ const Index = (props) => {
       title="Main Chat"
       style={{
         // width: "100%",
-        height: props.isGroupChat ? "43vh" : "88vh",
+        height: props.isGroupChat ? "43vh" : "98vh",
         border: "none",
         display: "flex",
         justifyContent: "space-between",
