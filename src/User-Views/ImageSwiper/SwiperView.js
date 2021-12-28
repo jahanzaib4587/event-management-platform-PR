@@ -12,23 +12,36 @@ import SwiperCore, { Pagination } from "swiper";
 // install Swiper modules
 SwiperCore.use([Pagination]);
 const sliderData = [
-  "./Videos/video.mp4",
-  "./Videos/video1.mp4",
-  "./Videos/video2.mp4",
-  "./Videos/video3.mp4",
-  "./Videos/video.mp4",
-  "./Videos/video2.mp4",
+  "./Images/image1.jpeg",
+  "./Images/image2.jpeg",
+  "./Images/image3.jpeg",
+  "./Images/image4.jpg",
+  "./Images/image5.jpg",
+  "./Images/image3.jpeg",
+  "./Images/image1.jpeg",
+  "./Images/image2.jpeg",
+  "./Images/image3.jpeg",
+  "./Images/image4.jpg",
+  "./Images/image5.jpg",
 ];
 export default function App() {
   return (
     <div>
-      <Swiper pagination={true} className="mySwiper">
+      <Swiper
+        slidesPerView={4}
+        // centeredSlides={true}
+        spaceBetween={30}
+        grabCursor={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        className="swiperMarketing"
+      >
         {sliderData.map((data, index) => {
           return (
-            <SwiperSlide style={{ height: "100px" }}>
-              {/* <video autoPlay loop muted>
-                <source src={data} type="video/mp4" />
-              </video> */}
+            <SwiperSlide>
+              <img src={data}></img>
             </SwiperSlide>
           );
         })}
@@ -36,3 +49,14 @@ export default function App() {
     </div>
   );
 }
+//  <Swiper pagination={true} className="mySwiper">
+// {sliderData.map((data, index) => {
+//   return (
+//     <SwiperSlide style={{ height: "100px" }}>
+//        <video autoPlay loop muted>
+//         <source src={data} type="video/mp4" />
+//       </video>
+//     </SwiperSlide>
+//   );
+// })}
+// </Swiper>

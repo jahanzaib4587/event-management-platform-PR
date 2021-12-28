@@ -9,68 +9,104 @@ import {
   Modal,
   Input,
   Radio,
+  Button,
   Checkbox,
 } from "antd";
 // import "../../App.css";
 import { componentStyles } from "../../Admin-Main-View/styles";
 import MainChat from "../Chat Components/Main Chat/Index";
-
+import GroupChat from "./Group Chat/Index";
 const Index = () => {
   const { Panel } = Collapse;
+  const [isGroupChat, setIsGroupChat] = useState(false);
   const [activePanel, setActivePanel] = useState(1);
   return (
-    <div>
-      {/* <div>
-        <div style={componentStyles.wd100}>
-          <Collapse
-            accordion
-            style={componentStyles.colorWhite}
-            destroyInactivePanel={true}
-            activeKey={activePanel}
-            ghost={true}
-            onChange={(e) => {
-              setActivePanel(e);
-            }}
-          >
-            <Panel
-              header="Activity Feed"
-              key="1"
-              style={componentStyles.activityFeedPanel}
-            >
-              <ActivityFeed />
-            </Panel>
-          </Collapse>
-        </div>
-      </div> */}
-      <div className="adminChat">
-        {/* style={componentStyles.adminChatContainer} */}
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "Column",
+        backgroundColor: "#4E5054",
+        borderRadius: "20px",
+        paddingBottom: "10px",
+      }}
+    >
+      <div style={componentStyles.wd100}>
         <Collapse
           accordion
           style={componentStyles.colorWhite}
-          // destroyInactivePanel={true}
-          activeKey={activePanel}
+          destroyInactivePanel={true}
+          activeKey={1}
           ghost={true}
           onChange={(e) => {
             setActivePanel(e);
           }}
         >
           <Panel
-            header={
-              <Badge
-                offset={[10, 1]}
-                count={50}
-                style={componentStyles.fontBold}
-              >
-                <span style={componentStyles.adminChatHeading}>Admin Chat</span>
-              </Badge>
-            }
+            // header="Activity Feed"
+            showArrow={false}
             key="1"
-            style={componentStyles.flexColumn}
+            style={componentStyles.activityFeedPanel}
           >
-            <MainChat />
+            <MainChat isGroupChat={isGroupChat} />
           </Panel>
         </Collapse>
       </div>
+      {isGroupChat && (
+        <div className="adminChat">
+          {/* style={componentStyles.adminChatContainer} */}
+          <Collapse
+            accordion
+            style={componentStyles.colorWhite}
+            destroyInactivePanel={true}
+            activeKey={1}
+            ghost={true}
+            onChange={(e) => {
+              setActivePanel(e);
+            }}
+          >
+            <Panel showArrow={false} key="1" style={componentStyles.flexColumn}>
+              <GroupChat />
+            </Panel>
+          </Collapse>
+        </div>
+      )}
+      {!isGroupChat && (
+        <Button
+          onClick={() => setIsGroupChat(true)}
+          style={{
+            textDecoration: "none",
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+            alignSelf: "center",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "transparent",
+              borderRadius: "50px",
+              border: "1px solid #ffff",
+              height: "36px",
+              width: "36px",
+              marginRight: "10px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ color: "white", height: "24px", width: "24px" }}>
+              {" "}
+              +
+            </span>
+          </div>
+          <span style={{ color: "white", fontSize: "18px" }}>
+            Create Group Chat
+          </span>
+        </Button>
+      )}
     </div>
   );
 };

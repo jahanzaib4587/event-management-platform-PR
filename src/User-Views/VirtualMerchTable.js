@@ -1,19 +1,35 @@
 import { Row, Col } from "antd";
 import React from "react";
 import { Avatar, Button } from "antd";
-import { AntDesignOutlined } from "@ant-design/icons";
+import {
+  AntDesignOutlined,
+  HeartFilled,
+  ExclamationOutlined,
+  PlusOutlined,
+} from "@ant-design/icons";
 import ImageSwiper from "./ImageSwiper/SwiperView";
 
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 const VirtualMerchTable = () => {
-  //   const emojiArray = [
-  //     "./Images/claping.jpeg",
-  //     "./Images/exclamation.png",
-  //     "./Images/heart.png",
-  //     "",
-  //   ];
-  const emojiArray = [1, 2, 3, 4];
+  const emojiArray = [
+    {
+      color: "#DD2E44",
+      icon: <HeartFilled />,
+    },
+    {
+      color: "#FFDB5E",
+      icon: <HeartFilled />,
+    },
+    {
+      color: "#DD2E44",
+      icon: <ExclamationOutlined />,
+    },
+    {
+      color: "#fff",
+      icon: <PlusOutlined />,
+    },
+  ];
   return (
     <Row justify="space-between" style={{ marginBottom: "20px" }}>
       <Col xs={12} sm={12} md={6} lg={6}>
@@ -78,14 +94,9 @@ const VirtualMerchTable = () => {
                   justifyContent: "center",
                 }}
               >
-                <img
-                  src={value}
-                  height={40}
-                  width={40}
-                  style={{
-                    backgroundColor: "transparent",
-                  }}
-                ></img>
+                <span style={{ color: value.color, fontSize: "28px" }}>
+                  {value.icon}
+                </span>
               </div>
             );
           })}

@@ -25,7 +25,7 @@ const AudienceVideoStream = () => {
           width={"100%"}
           style={{
             borderRadius: "10px",
-            border: "5px solid #7de6d0",
+            // border: "5px solid #7de6d0",
             height: "280px",
           }}
         >

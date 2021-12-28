@@ -6,7 +6,7 @@ import { SendOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
 import "emoji-mart/css/emoji-mart.css";
 import "../../../App.css";
 import { componentStyles } from "../../../Admin-Main-View/styles";
-const Index = () => {
+const Index = (props) => {
   const [inputValue, setInputValue] = useState("");
   const [form] = Form.useForm();
   const [messagesArray, setMessagesArray] = useState([
@@ -41,12 +41,10 @@ const Index = () => {
   };
   return (
     <div
-      title="Admin Chat"
+      title="Main Chat"
       style={{
         // width: "100%",
-        // height: "45vh",
-        // maxHeight: "39vh",
-
+        height: props.isGroupChat ? "50vh" : "90vh",
         border: "none",
         display: "flex",
         justifyContent: "space-between",
@@ -61,7 +59,7 @@ const Index = () => {
       }}
     >
       <div>
-        <h2 style={componentStyles.adminChatHeadingInner}>Admin Chat</h2>
+        <h2 style={componentStyles.adminChatHeadingInner}>Main Chat</h2>
       </div>
       <div style={componentStyles.adminChatList}>
         {messagesArray.map((e, index) => (
@@ -117,7 +115,7 @@ const Index = () => {
               className="chatInput"
               style={{
                 borderRadius: "50px",
-                border: "none",
+                border: "none ",
                 padding: "10px",
                 paddingInline: "15px",
               }}
@@ -129,28 +127,6 @@ const Index = () => {
             ></Input>
           </div>
         </Form.Item>
-        <div
-          style={{
-            alignSelf: "center",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Button
-            type="primary"
-            style={{
-              backgroundColor: "red",
-              borderRadius: "50px",
-              height: "50px",
-              width: "50px",
-              marginRight: "10px",
-            }}
-          >
-            +
-          </Button>
-          <span>Create Group Chat</span>
-        </div>
       </Form>
     </div>
   );
