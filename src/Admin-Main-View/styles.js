@@ -2,7 +2,7 @@ export const componentStyles = {
   parentRow: {
     backgroundColor: "black",
     // height: "100vh",
-    height: "100%",
+    height: "100vh",
 
     padding: "2%",
     justifyContent: "space-evenly",
