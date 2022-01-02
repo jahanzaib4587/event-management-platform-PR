@@ -39,7 +39,8 @@ export const componentStyles = {
   mainChatContainer: {
     width: "100%",
     border: "none",
-    height: "50vh ",
+    // height: "50vh ",
+    height: "300px",
     display: "flex",
     flexDirection: "column",
     paddingInline: "10px",

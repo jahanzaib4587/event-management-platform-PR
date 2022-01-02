@@ -12,7 +12,7 @@ const Index = () => {
       style={{
         backgroundColor: "black",
         // width: "100%",
-        height: "100vh",
+        height: "100%",
         // display: "flex",
         // padding: "10px",
         padding: "2%",

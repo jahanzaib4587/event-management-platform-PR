@@ -64,7 +64,8 @@ const Index = (props) => {
         <div
           title="Admin Chat"
           style={{
-            height: "30vh",
+            // height: "30vh",
+            height: "300px",
             border: "none",
             display: "flex",
             justifyContent: "space-between",
