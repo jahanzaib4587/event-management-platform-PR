@@ -11,14 +11,11 @@ const Index = () => {
       align="center"
       style={{
         backgroundColor: "black",
-        // width: "100%",
-        height: "100vh",
-        // display: "flex",
-        // padding: "10px",
+        // height: "100vh",
+        height: "100%",
         padding: "2%",
-        // alignItems: "center",
         justifyContent: "space-evenly",
-        overflowY: "auto",
+        // overflowY: "auto",
         overflowX: "hidden",
       }}
     >
