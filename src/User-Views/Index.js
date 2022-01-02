@@ -4,6 +4,7 @@ import MainScreen from "./MainScreen";
 import AudienceVideoStream from "./AudienceVideoStream";
 import VirtualMerchTable from "./VirtualMerchTable";
 import ChatComponent from "./Chat Components/Index";
+import "./index.css";
 const Index = () => {
   return (
     <Row

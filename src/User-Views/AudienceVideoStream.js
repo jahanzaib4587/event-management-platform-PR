@@ -2,21 +2,34 @@ import React from "react";
 import { Collapse, Badge, Avatar, Tabs, Row, Col } from "antd";
 import "./ImageSwiper/styles.css";
 const AudienceVideoStream = () => {
+  // const Data = [
+  //   "./Videos/user2.mp4",
+  //   "./Videos/user1.mp4",
+  //   "./Videos/user2.mp4",
+  //   "./Videos/user3.mp4",
+  //   "./Videos/user1.mp4",
+  //   "./Videos/user2.mp4",
+  //   "./Videos/user3.mp4",
+  //   "./Videos/user2.mp4",
+  //   "./Videos/user1.mp4",
+  //   "./Videos/user2.mp4",
+  //   "./Videos/user3.mp4",
+  //   "./Videos/user1.mp4",
+  // ];
   const Data = [
-    "./Videos/user2.mp4",
-    "./Videos/user1.mp4",
-    "./Videos/user2.mp4",
-    "./Videos/user3.mp4",
-    "./Videos/user1.mp4",
-    "./Videos/user2.mp4",
-    "./Videos/user3.mp4",
-    "./Videos/user2.mp4",
-    "./Videos/user1.mp4",
-    "./Videos/user2.mp4",
-    "./Videos/user3.mp4",
-    "./Videos/user1.mp4",
+    "./Images/user6.jpg",
+    "./Images/user7.jpg",
+    "./Images/user3.jpg",
+    "./Images/user4.jpg",
+    "./Images/user5.jpg",
+    "./Images/user6.jpg",
+    "./Images/user7.jpg",
+    "./Images/user8.jpg",
+    "./Images/user9.jpg",
+    "./Images/user4.jpg",
+    "./Images/user5.jpg",
+    "./Images/user3.jpg",
   ];
-
   return (
     <Row justify="space-between">
       <Col xs={22} sm={22} md={6} lg={6} style={{ padding: "15px" }}>
@@ -36,6 +49,13 @@ const AudienceVideoStream = () => {
         >
           <source src={"./Videos/user2.mp4"} type="video/mp4" />
         </video> */}
+        <img
+          src={"./Images/user7.jpg"}
+          height={"200px"}
+          // width={"155px"}
+          width={"100%"}
+          style={{ borderRadius: "10px", objectFit: "cover" }}
+        ></img>
       </Col>
 
       <Col xs={24} sm={24} md={18} lg={18}>
@@ -65,6 +85,13 @@ const AudienceVideoStream = () => {
                   >
                     <source src={value} type="video/mp4" />
                   </video> */}
+                  <img
+                    src={value}
+                    height={"100%"}
+                    // width={"155px"}
+                    width={"100%"}
+                    style={{ borderRadius: "10px", objectFit: "cover" }}
+                  ></img>
                 </div>
               </Col>
             );

@@ -5,6 +5,7 @@ import {
   UserOutlined,
   PlusOutlined,
 } from "@ant-design/icons";
+import "./index.css";
 
 const MainScreen = () => {
   return (
@@ -16,18 +17,22 @@ const MainScreen = () => {
       }}
     >
       <div>
-        {/* <video
-          width="100%"
+        <video
+          // width={"1250px"}
           // height={"550px"}
           autoPlay
-          loop
+          // loop
           muted
           style={{
             borderRadius: "50px",
+            objectFit: "cover",
+            width: "1250px",
+            height: "550px",
           }}
+          className="mainVideo"
         >
           <source src="./Videos/video3.mp4" type="video/mp4" />
-        </video> */}
+        </video>
       </div>
       <div
         style={{

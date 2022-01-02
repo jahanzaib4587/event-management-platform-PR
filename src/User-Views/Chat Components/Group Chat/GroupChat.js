@@ -64,12 +64,12 @@ const Index = (props) => {
         <div
           title="Admin Chat"
           style={{
-            height: "30vh",
+            height: "310px",
             border: "none",
             display: "flex",
             justifyContent: "space-between",
             flexDirection: "column",
-            paddingInline: "10px",
+
             backgroundColor: "#4E5054",
             borderBottom: "none",
             padding: "10px",

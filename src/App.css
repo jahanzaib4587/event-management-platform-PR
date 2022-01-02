@@ -384,6 +384,7 @@ body {
   .headerIcons {
     font-size: 10px !important;
   }
+
   .liveBtn {
     width: 100% !important;
     height: 30px !important;
@@ -403,10 +404,6 @@ body {
     width: fit-content !important;
     margin: 0px !important;
   }
-}
-/*--cover up mac , mac-book---*/
-
-@media only screen and (min-width: 1024px) and (max-width: 1920px) {
 }
 
 /*--mac book pro , and mac-book retina display screen---*/
