@@ -89,6 +89,7 @@ const Modal_Component = (props) => {
             style={Modal_Styles.textAreaStyle}
             rows={3}
             maxLength={50}
+            className="borderedInput"
           />
           <p style={Modal_Styles.textStyling}>
             How should the audience respond?
@@ -263,18 +264,23 @@ const Modal_Component = (props) => {
             placeholder="option 1"
             style={Modal_Styles.options}
             maxLength={40}
+            className="borderedInput"
           ></Input>
-          <Button style={Modal_Styles.addOptions}>
+          <Button style={Modal_Styles.addOptions} className="borderedBtn">
             <span style={Modal_Styles.addOptionsText}>Add another option</span>
           </Button>
 
-          <Button size={"medium"} style={Modal_Styles.postBtn}>
+          <Button
+            size={"medium"}
+            style={Modal_Styles.postBtn}
+            className="borderedBtn"
+          >
             Post in Chat
           </Button>
           <p style={Modal_Styles.previousQuestion}>Previous Questions:</p>
           <div style={Modal_Styles.panelHeight}>
             <Collapse
-            className="modal_component"
+              className="modal_component"
               accordion
               style={componentStyles.colorWhite}
               destroyInactivePanel={true}
