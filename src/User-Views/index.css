@@ -1,0 +1,12 @@
+/*--cover up mac , mac-book---*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .mainVideo {
+    width: 980px !important;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .mainVideo {
+    width: 690px !important;
+  }
+}
