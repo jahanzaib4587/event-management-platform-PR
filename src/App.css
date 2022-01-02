@@ -204,7 +204,10 @@ body {
   text-align: center !important;
   width: 100% !important;
   height: 58px !important;
-
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
   background: #4e5054 !important;
   border-radius: 15px !important;
 }
