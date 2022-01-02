@@ -87,21 +87,10 @@ const AdminChat = () => {
         onFinish={onFinish}
       >
         <Form.Item>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div style={componentStyles.inputContainer}>
             <Input
               className="chatInput"
-              style={{
-                borderRadius: "50px",
-                border: "none",
-                padding: "10px",
-                paddingInline: "15px",
-              }}
+              style={componentStyles.inputField}
               placeholder="Enter Values Here"
               onChange={(e) => setInputValue(e.target.value)}
               value={inputValue}

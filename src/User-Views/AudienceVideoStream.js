@@ -20,7 +20,7 @@ const AudienceVideoStream = () => {
   return (
     <Row justify="space-between">
       <Col xs={22} sm={22} md={6} lg={6} style={{ padding: "15px" }}>
-        <video
+        {/* <video
           className="attendeesVideo"
           autoPlay
           loop
@@ -35,7 +35,7 @@ const AudienceVideoStream = () => {
           }}
         >
           <source src={"./Videos/user2.mp4"} type="video/mp4" />
-        </video>
+        </video> */}
       </Col>
 
       <Col xs={24} sm={24} md={18} lg={18}>
@@ -55,7 +55,7 @@ const AudienceVideoStream = () => {
                     width: "100%",
                   }}
                 >
-                  <video
+                  {/* <video
                     autoPlay
                     loop
                     muted
@@ -64,7 +64,7 @@ const AudienceVideoStream = () => {
                     style={{ borderRadius: "10px", objectFit: "cover" }}
                   >
                     <source src={value} type="video/mp4" />
-                  </video>
+                  </video> */}
                 </div>
               </Col>
             );

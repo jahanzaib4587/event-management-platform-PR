@@ -1,4 +1,12 @@
 export const componentStyles = {
+  parentRow: {
+    backgroundColor: "black",
+    height: "100vh",
+    padding: "2%",
+    justifyContent: "space-evenly",
+    overflowY: "auto",
+    overflowX: "hidden",
+  },
   graphContainer: {
     width: "90%",
     height: "20%",
@@ -83,6 +91,12 @@ export const componentStyles = {
     marginTop: "10px",
     width: "100%",
   },
+  inputField: {
+    borderRadius: "50px",
+    border: "none",
+    padding: "10px",
+    paddingInline: "15px",
+  },
   fontBold: {
     fontWeight: "bold",
   },
@@ -91,6 +105,11 @@ export const componentStyles = {
     fontSize: "20px",
     alignSelf: "center",
     color: "#fff",
+  },
+  inputContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   flexColumn: {
     display: "flex",

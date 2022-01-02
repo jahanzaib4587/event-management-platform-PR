@@ -5,25 +5,10 @@ import Swiper from "./SwiperComponent";
 import QuickAction from "./QuickActions/QuickActions";
 import ParentComponent from "./Audience Engagement/ParentComponent";
 import TabsComponent from "./ThirdComponent/TabsComponent";
+import { componentStyles } from "./styles";
 const Index = () => {
   return (
-    <Row
-      justify="center"
-      align="center"
-      style={{
-        backgroundColor: "black",
-        // width: "100%",
-        height: "100vh",
-        // display: "flex",
-        // padding: "10px",
-        padding: "2%",
-        // alignItems: "center",
-        justifyContent: "space-evenly",
-        overflowY: "auto",
-        overflowX: "hidden",
-      }}
-    >
-      {/* style={{ width: "35%", height: "90vh", marginRight: "25px" }} */}
+    <Row justify="center" align="center" style={componentStyles.parentRow}>
       <Col sm={20} md={20} lg={8}>
         <Header />
         <Swiper />

@@ -16,7 +16,7 @@ const MainScreen = () => {
       }}
     >
       <div>
-        <video
+        {/* <video
           width="100%"
           // height={"550px"}
           autoPlay
@@ -27,7 +27,7 @@ const MainScreen = () => {
           }}
         >
           <source src="./Videos/video3.mp4" type="video/mp4" />
-        </video>
+        </video> */}
       </div>
       <div
         style={{
