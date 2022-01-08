@@ -7,7 +7,9 @@ import "emoji-mart/css/emoji-mart.css";
 import "../../../App.css";
 import { componentStyles } from "../../../Admin-Main-View/styles";
 const Index = (props) => {
+  const { isGroupChat, setIsGroupChat } = props;
   const [inputValue, setInputValue] = useState("");
+
   const [form] = Form.useForm();
   const [messagesArray, setMessagesArray] = useState([
     "1st message",
@@ -44,7 +46,7 @@ const Index = (props) => {
       title="Main Chat"
       style={{
         // width: "100%",
-        height: props.isGroupChat ? "380px" : "830px",
+        height: props.isGroupChat ? "50vh" : "95vh",
         border: "none",
         display: "flex",
         justifyContent: "space-between",
@@ -128,6 +130,43 @@ const Index = (props) => {
           </div>
         </Form.Item>
       </Form>
+      {!isGroupChat && (
+        <Button
+          onClick={() => setIsGroupChat(true)}
+          style={{
+            textDecoration: "none",
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+            alignSelf: "center",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "transparent",
+              borderRadius: "50px",
+              border: "1px solid #ffff",
+              height: "36px",
+              width: "36px",
+              marginRight: "10px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ color: "white", height: "24px", width: "24px" }}>
+              {" "}
+              +
+            </span>
+          </div>
+          <span style={{ color: "white", fontSize: "18px" }}>
+            Create Group Chat
+          </span>
+        </Button>
+      )}
     </div>
   );
 };

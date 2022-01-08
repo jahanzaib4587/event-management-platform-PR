@@ -51,7 +51,7 @@ const Index = (props) => {
   };
   return (
     <Row justify="space-between">
-      <Col md={2} lg={2}>
+      <Col xs={2} sm={2} md={2} lg={2}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           {avatarArray.map((value, index) => {
             return (
@@ -60,11 +60,11 @@ const Index = (props) => {
           })}
         </div>
       </Col>
-      <Col md={20} lg={20}>
+      <Col xs={18} sm={18} md={20} lg={20}>
         <div
           title="Admin Chat"
           style={{
-            height: "310px",
+            height: "44vh",
             border: "none",
             display: "flex",
             justifyContent: "space-between",

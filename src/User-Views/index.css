@@ -2,11 +2,18 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .mainVideo {
-    width: 980px !important;
+    /* width: px !important; */
   }
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   .mainVideo {
-    width: 690px !important;
+    /* width: 690px !important; */
   }
+}
+.adminChat
+  > .ant-collapse
+  > .ant-collapse-item.ant-collapse-no-arrow
+  > .ant-collapse-header {
+  display: none !important;
+  background-color: red !important;
 }

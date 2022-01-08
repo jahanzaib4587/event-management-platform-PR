@@ -16,6 +16,7 @@ import {
 import { componentStyles } from "../../Admin-Main-View/styles";
 import MainChat from "../Chat Components/Main Chat/Index";
 import GroupChat from "./Group Chat/Index";
+import "../index.css";
 const Index = () => {
   const { Panel } = Collapse;
   const [isGroupChat, setIsGroupChat] = useState(false);
@@ -28,6 +29,7 @@ const Index = () => {
         backgroundColor: "#4E5054",
         borderRadius: "20px",
         paddingBottom: "10px",
+        height: "100vh",
       }}
     >
       <div style={componentStyles.wd100}>
@@ -47,7 +49,10 @@ const Index = () => {
             key="1"
             style={componentStyles.activityFeedPanel}
           >
-            <MainChat isGroupChat={isGroupChat} />
+            <MainChat
+              isGroupChat={isGroupChat}
+              setIsGroupChat={setIsGroupChat}
+            />
           </Panel>
         </Collapse>
       </div>
@@ -69,43 +74,6 @@ const Index = () => {
             </Panel>
           </Collapse>
         </div>
-      )}
-      {!isGroupChat && (
-        <Button
-          onClick={() => setIsGroupChat(true)}
-          style={{
-            textDecoration: "none",
-            background: "transparent",
-            border: "none",
-            cursor: "pointer",
-            alignSelf: "center",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "transparent",
-              borderRadius: "50px",
-              border: "1px solid #ffff",
-              height: "36px",
-              width: "36px",
-              marginRight: "10px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <span style={{ color: "white", height: "24px", width: "24px" }}>
-              {" "}
-              +
-            </span>
-          </div>
-          <span style={{ color: "white", fontSize: "18px" }}>
-            Create Group Chat
-          </span>
-        </Button>
       )}
     </div>
   );
