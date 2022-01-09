@@ -204,7 +204,10 @@ body {
   text-align: center !important;
   width: 100% !important;
   height: 58px !important;
-
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
   background: #4e5054 !important;
   border-radius: 15px !important;
 }
@@ -381,6 +384,7 @@ body {
   .headerIcons {
     font-size: 10px !important;
   }
+
   .liveBtn {
     width: 100% !important;
     height: 30px !important;
@@ -400,10 +404,6 @@ body {
     width: fit-content !important;
     margin: 0px !important;
   }
-}
-/*--cover up mac , mac-book---*/
-
-@media only screen and (min-width: 1024px) and (max-width: 1920px) {
 }
 
 /*--mac book pro , and mac-book retina display screen---*/

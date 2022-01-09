@@ -32,15 +32,15 @@
   background-color: #7de6d0;
   border-color: #7de6d0;
 }
-textarea.ant-input:focus {
+.borderedInput:focus {
   border: 1px solid #7de6d0 !important;
 }
-input.ant-input:focus {
+.borderedInput:focus {
   border: 1px solid #7de6d0 !important;
 }
-.ant-btn:focus .ant-btn:hover {
+.borderedBtn:focus {
   border: 1px solid #7de6d0 !important;
 }
-.ant-btn:hover {
+.borderedBtn:hover {
   border: 1px solid #7de6d0 !important;
 }

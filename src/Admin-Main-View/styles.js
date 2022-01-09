@@ -1,4 +1,14 @@
 export const componentStyles = {
+  parentRow: {
+    backgroundColor: "black",
+    // height: "100vh",
+    height: "100vh",
+
+    padding: "2%",
+    justifyContent: "space-evenly",
+    overflowY: "auto",
+    overflowX: "hidden",
+  },
   graphContainer: {
     width: "90%",
     height: "20%",
@@ -83,6 +93,12 @@ export const componentStyles = {
     marginTop: "10px",
     width: "100%",
   },
+  inputField: {
+    borderRadius: "50px",
+    border: "none",
+    padding: "10px",
+    paddingInline: "15px",
+  },
   fontBold: {
     fontWeight: "bold",
   },
@@ -91,6 +107,11 @@ export const componentStyles = {
     fontSize: "20px",
     alignSelf: "center",
     color: "#fff",
+  },
+  inputContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   flexColumn: {
     display: "flex",
@@ -175,7 +196,9 @@ export const componentStyles = {
   },
   attendeesContainer: {
     // width: "100%",
-    height: "100vh",
+    // height: "100vh",
+    height: "700px",
+    marginBottom: "20px",
     padding: "0px 5px",
     overflowY: "auto",
   },
@@ -220,7 +243,8 @@ export const componentStyles = {
   mainChatContainer: {
     width: "100%",
     border: "none",
-    height: "100vh ",
+    height: "700px ",
+    marginBottom: "20px",
     display: "flex",
     flexDirection: "column",
     paddingInline: "10px",
@@ -298,7 +322,8 @@ export const componentStyles = {
   activityFeedListContainer: {
     marginBottom: "10px",
     // width: "100%",
-    maxHeight: "31vh",
+    // maxHeight: "31vh",
+    maxHeight: "230px",
     overflowY: "scroll",
     backgroundColor: "#3B3C40",
   },
@@ -391,8 +416,9 @@ export const componentStyles = {
   smileIcon: { fontSize: "20px", color: "#fff", marginRight: "10px" },
   adminChatInnerContainer: {
     // width: "100%",
-    // height: "45vh",
-    maxHeight: "39vh",
+
+    // maxHeight: "39vh",
+    maxHeight: "330px",
     border: "none",
     display: "flex",
     justifyContent: "space-between",
@@ -416,7 +442,8 @@ export const componentStyles = {
   },
   adminChatList: {
     overflowX: "auto",
-    height: "50vh",
+    // height: "50vh",
+    // height: "10px",
     height: "100%",
     marginBottom: "10px",
   },

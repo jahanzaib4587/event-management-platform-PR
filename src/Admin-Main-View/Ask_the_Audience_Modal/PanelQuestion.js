@@ -12,68 +12,38 @@ import {
   Button,
 } from "antd";
 import { Modal_Styles } from "./modal_styles";
+import PanelOptions from "./PanelOptions";
 const PanelQuestion = () => {
+  const Data = [
+    {
+      option: "I'm back again",
+      percentage: 40,
+    },
+    {
+      option: "Yes",
+      percentage: 30,
+    },
+    {
+      option: "No",
+      percentage: 30,
+    },
+  ];
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", marginTop: "-10px" }}
-    >
+    <div style={Modal_Styles.parentContainer}>
       <p style={Modal_Styles.timeStamp}>11:12am</p>
       <p style={Modal_Styles.attendeesSummery}>
         1452/2,285 attendess responded (63.6 %)
       </p>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          background: "#3B3C40",
-          marginInline: "40px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            flexDirection: "column",
-            padding: "10px",
-            paddingInline: "20px",
-          }}
-        >
-          <div style={Modal_Styles.optionHolder}>
-            <p style={Modal_Styles.questionOptionsText}>I'm back again!</p>
-            <div style={{ width: 170 }}>
-              <Progress
-                strokeLinecap="square"
-                strokeColor="#63666B"
-                trailColor="transparent"
-                percent={30}
-                size="large"
+      <div style={Modal_Styles.InnerContainer}>
+        <div style={Modal_Styles.questionsContainer}>
+          {Data.map((value, index) => {
+            return (
+              <PanelOptions
+                option={value.option}
+                percentage={value.percentage}
               />
-            </div>
-          </div>
-          <div style={Modal_Styles.optionHolder}>
-            <p style={Modal_Styles.questionOptionsText}>Yes</p>
-            <div style={{ width: 170 }}>
-              <Progress
-                strokeLinecap="square"
-                strokeColor="#63666B"
-                trailColor="transparent"
-                percent={50}
-                size="large"
-              />
-            </div>
-          </div>
-          <div style={Modal_Styles.optionHolder}>
-            <p style={Modal_Styles.questionOptionsText}>No</p>
-            <div style={{ width: 170 }}>
-              <Progress
-                strokeLinecap="square"
-                strokeColor="#63666B"
-                trailColor="transparent"
-                percent={70}
-                size="large"
-              />
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>

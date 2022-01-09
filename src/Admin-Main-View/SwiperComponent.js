@@ -28,7 +28,11 @@ import { componentStyles } from "./styles";
 SwiperCore.use([Navigation, Thumbs]);
 const SwiperComponent = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+  const Data = [
+    "./Videos/video.mp4",
+    "./Videos/video3.mp4",
+    "./Videos/video2.mp4",
+  ];
   return (
     <div style={componentStyles.swiperContainer}>
       <Swiper
@@ -38,21 +42,15 @@ const SwiperComponent = () => {
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper2"
       >
-        <SwiperSlide>
-          <video autoPlay loop muted>
-            <source src="./Videos/video.mp4" type="video/mp4" />
-          </video>
-        </SwiperSlide>
-        <SwiperSlide>
-          <video autoPlay loop muted>
-            <source src="./Videos/video3.mp4" type="video/mp4" />
-          </video>
-        </SwiperSlide>
-        <SwiperSlide>
-          <video autoPlay loop muted>
-            <source src="./Videos/video2.mp4" type="video/mp4" />
-          </video>
-        </SwiperSlide>
+        {Data.map((value, index) => {
+          return (
+            <SwiperSlide>
+              <video autoPlay loop muted>
+                <source src={value} type="video/mp4" />
+              </video>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
@@ -62,21 +60,15 @@ const SwiperComponent = () => {
         watchSlidesProgress={true}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <video>
-            <source src="./Videos/video.mp4" type="video/mp4" />
-          </video>
-        </SwiperSlide>
-        <SwiperSlide>
-          <video>
-            <source src="./Videos/video3.mp4" type="video/mp4" />
-          </video>
-        </SwiperSlide>
-        <SwiperSlide>
-          <video>
-            <source src="./Videos/video2.mp4" type="video/mp4" />
-          </video>
-        </SwiperSlide>
+        {Data.map((value, index) => {
+          return (
+            <SwiperSlide>
+              <video>
+                <source src={value} type="video/mp4" />
+              </video>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

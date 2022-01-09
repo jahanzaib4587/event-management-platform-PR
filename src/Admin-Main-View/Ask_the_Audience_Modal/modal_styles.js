@@ -1,4 +1,23 @@
 export const Modal_Styles = {
+  parentContainer: {
+    display: "flex",
+    flexDirection: "column",
+    marginTop: "-10px",
+  },
+  InnerContainer: {
+    display: "flex",
+    flexDirection: "column",
+    background: "#3B3C40",
+    marginInline: "40px",
+  },
+  questionsContainer: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    flexDirection: "column",
+    padding: "10px",
+    paddingInline: "20px",
+  },
+  w170: { width: 170 },
   pl10: {
     paddingLeft: "10px",
   },
