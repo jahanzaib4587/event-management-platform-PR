@@ -49,14 +49,3 @@ export default function App() {
     </div>
   );
 }
-//  <Swiper pagination={true} className="mySwiper">
-// {sliderData.map((data, index) => {
-//   return (
-//     <SwiperSlide style={{ height: "100px" }}>
-//        <video autoPlay loop muted>
-//         <source src={data} type="video/mp4" />
-//       </video>
-//     </SwiperSlide>
-//   );
-// })}
-// </Swiper>

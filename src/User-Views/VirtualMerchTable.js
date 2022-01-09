@@ -1,6 +1,6 @@
-import { Row, Col } from "antd";
+import { Row, Col, Avatar, Button } from "antd";
 import React from "react";
-import { Avatar, Button } from "antd";
+
 import {
   AntDesignOutlined,
   HeartFilled,
@@ -11,6 +11,7 @@ import ImageSwiper from "./ImageSwiper/SwiperView";
 
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
+import "./index.css";
 const VirtualMerchTable = () => {
   const emojiArray = [
     {
@@ -31,19 +32,23 @@ const VirtualMerchTable = () => {
     },
   ];
   return (
-    <Row justify="space-between" style={{ marginBottom: "20px" }}>
-      <Col xs={12} sm={12} md={6} lg={6}>
-        <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+    <Row justify="space-evenly" style={{ marginBottom: "20px" }}>
+      <Col xs={24} sm={12} md={6} lg={6}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
           <Avatar
-            size={{ xs: 24, sm: 32, md: 40, lg: 55, xl: 80, xxl: 100 }}
+            size={{ xs: 60, sm: 60, md: 40, lg: 55, xl: 80, xxl: 100 }}
             icon={<AntDesignOutlined />}
           />
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              //   marginLeft: "5px",
-              //   justifyContent: "space-around",
               alignSelf: "flex-end",
               alignItems: "flex-start",
             }}
@@ -74,13 +79,12 @@ const VirtualMerchTable = () => {
           </div>
         </div>
       </Col>
-      <Col xs={24} sm={24} md={15} lg={15}>
+      <Col xs={24} sm={24} md={13} lg={13} xl={15} className="ImageSwiper">
         <ImageSwiper />
       </Col>
-      <Col xs={24} sm={24} md={3} lg={3}>
+      <Col xs={24} sm={24} md={5} lg={5} xl={3}>
         <Row style={{ justifyContent: "center" }}>
           {emojiArray.map((value, index) => {
-            debugger;
             return (
               <div
                 style={{
@@ -88,7 +92,7 @@ const VirtualMerchTable = () => {
                   borderRadius: "50px",
                   height: "50px",
                   width: "50px",
-                  margin: "2px",
+                  margin: "5px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",

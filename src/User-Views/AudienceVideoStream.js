@@ -1,6 +1,7 @@
 import React from "react";
 import { Collapse, Badge, Avatar, Tabs, Row, Col } from "antd";
 import "./ImageSwiper/styles.css";
+import "./index.css";
 const AudienceVideoStream = () => {
   // const Data = [
   //   "./Videos/user2.mp4",
@@ -55,6 +56,7 @@ const AudienceVideoStream = () => {
           // width={"155px"}
           width={"100%"}
           style={{ borderRadius: "10px", objectFit: "cover" }}
+          className="userView"
         ></img>
       </Col>
 

@@ -4,36 +4,34 @@ import {
   ExpandOutlined,
   UserOutlined,
   PlusOutlined,
+  CompressOutlined,
 } from "@ant-design/icons";
 import "./index.css";
-
-const MainScreen = () => {
+import { Button, Col } from "antd";
+import "./index.css";
+const MainScreen = (props) => {
+  const { isFullScreen, setIsFullScreen } = props;
+  console.log(isFullScreen);
   return (
-    // <div style={{ display: "flex", flexDirection: "column" }}>
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "stretch",
-      }}
-    >
-      <div>
+    <div style={{ display: "flex" }}>
+      <Col md={24} lg={24}>
         <video
-          // width={"1250px"}
-          // height={"550px"}
+          width={"100%"}
           autoPlay
           // loop
           muted
           style={{
             borderRadius: "50px",
             objectFit: "cover",
-            width: "1250px",
-            height: "550px",
+            // minHeight: "500px",
+            // width: "1250px",
+            // height: "550px",
           }}
-          className="mainVideo"
+          // className="mainVideo"
         >
-          <source src="./Videos/video3.mp4" type="video/mp4" />
+          <source src="./Videos/user1.mp4" type="video/mp4" />
         </video>
-      </div>
+      </Col>
       <div
         style={{
           color: "#fff",
@@ -54,11 +52,13 @@ const MainScreen = () => {
             width: "242px",
             alignItems: "center",
             // padding: "10px",
-            height: "46px",
+            // height: "46px",
             borderRadius: "15px",
           }}
+          className="liveContainer"
         >
           <div
+            className="liveRedDot"
             style={{
               borderRadius: "50px",
               background: "#DD4B4E",
@@ -68,11 +68,14 @@ const MainScreen = () => {
           ></div>
           <span
             style={{ fontSize: "22px", fontWeight: "600", color: "#000000" }}
+            className="liveText"
           >
             LIVE
           </span>
-          <span style={{ fontSize: "22px", color: "#000000" }}>
-            {" "}
+          <span
+            style={{ fontSize: "22px", color: "#000000" }}
+            className="liveTime"
+          >
             01 : 23 : 56
           </span>
         </div>
@@ -82,11 +85,23 @@ const MainScreen = () => {
             justifyContent: "space-evenly",
             width: "100px",
           }}
+          className="iconContainer"
         >
-          <span style={{ fontSize: "28px" }}>
+          <span style={{ fontSize: "28px" }} className="settingsIcon">
             <SettingOutlined />
           </span>
-          <span style={{ fontSize: "28px" }}>
+          <span
+            style={{
+              fontSize: "28px",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+            }}
+            className="expandIcon"
+            onClick={() => {
+              setIsFullScreen(false);
+            }}
+          >
             <ExpandOutlined />
           </span>
         </div>
@@ -104,7 +119,10 @@ const MainScreen = () => {
           justifyContent: "flex-end",
         }}
       >
-        <span style={{ fontSize: "18px", fontWeight: "600", color: "#fff" }}>
+        <span
+          style={{ fontSize: "18px", fontWeight: "600", color: "#fff" }}
+          className="viewerCount"
+        >
           2378 Watching
         </span>
       </div>

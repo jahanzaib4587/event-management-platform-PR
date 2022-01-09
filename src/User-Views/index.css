@@ -2,11 +2,56 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .mainVideo {
-    width: 980px !important;
+    /* width: px !important; */
   }
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   .mainVideo {
-    width: 690px !important;
+    /* width: 690px !important; */
   }
+}
+@media only screen and (max-width: 600px) {
+  .mainVideo {
+    object-fit: contain !important;
+  }
+  .viewerCount {
+    font-size: 8px !important;
+  }
+  .liveText {
+    font-size: 8px !important;
+  }
+  .liveTime {
+    font-size: 8px !important;
+  }
+  .liveRedDot {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .liveContainer {
+    width: 80px !important;
+    height: 15px !important;
+  }
+  .settingsIcon {
+    font-size: 10px !important;
+  }
+  .expandIcon {
+    font-size: 10px !important;
+  }
+  .iconContainer {
+    width: 50px !important;
+  }
+  .ImageSwiper {
+    margin-top: 10px !important;
+  }
+  .userView {
+    height: 100px !important;
+    align-self: center !important;
+  }
+}
+.adminChat
+  > .ant-collapse
+  > .ant-collapse-item.ant-collapse-no-arrow
+  > .ant-collapse-header {
+  display: none !important;
+  background-color: red !important;
 }
