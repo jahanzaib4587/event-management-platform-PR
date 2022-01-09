@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "antd";
-import Header from "./Header/HeaderComponent";
+import Header from "./Header/Header";
 import Swiper from "./SwiperComponent";
 import QuickAction from "./QuickActions/QuickActions";
 import ParentComponent from "./Audience Engagement/ParentComponent";

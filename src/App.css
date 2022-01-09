@@ -400,12 +400,33 @@ body {
     font-size: 14px !important;
   }
   .headerParentContainer {
-    padding: 6px !important;
+    padding-inline: 30px !important;
     width: fit-content !important;
     margin: 0px !important;
   }
 }
 
+@media only screen and (max-width: 1042px) {
+  .headerParentContainer {
+    padding-inline: 8px !important;
+    width: fit-content !important;
+    margin: 0px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .headerParentContainer {
+    padding-inline: 35px !important;
+    width: fit-content !important;
+    margin: 0px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .headerParentContainer {
+    padding-inline: 5px !important;
+    width: fit-content !important;
+    margin: 0px !important;
+  }
+}
 /*--mac book pro , and mac-book retina display screen---*/
 
 @media only screen and (min-width: 1920px) and (max-width: 2560px) {
