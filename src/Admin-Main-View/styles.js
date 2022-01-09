@@ -119,21 +119,23 @@ export const componentStyles = {
   },
   headerContainer: {
     padding: "5px",
+    paddingInline: "10px",
     borderRadius: "20px",
     background: "#4E5054",
     marginBottom: "15px",
     display: "flex",
     justifyContent: "space-evenly",
     flexWrap: "nowrap",
+
     alignItems: "center",
   },
   headerParentContainer: {
     // padding: "8px",
     marginTop: "5px",
     marginBottom: "5px",
-    width: "100%",
+    width: "100% !important",
     height: "33px",
-    margin: "10px",
+    // margin: "10px",
     background: "#3B3C40",
     borderRadius: "15px",
     display: "flex",
@@ -161,8 +163,6 @@ export const componentStyles = {
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    marginLeft: "5px",
-    // width: "100px",
   },
   headerText: {
     color: "#fff",
@@ -173,10 +173,10 @@ export const componentStyles = {
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: "10px",
-    lineHeight: "22px",
+    // lineHeight: "22px",
     /* identical to box height */
     color: "#FFFFFF",
-    marginLeft: "10px",
+    marginLeft: "5px",
   },
   popoverContentContainer: {
     display: "flex",
