@@ -6,6 +6,7 @@ import { SendOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
 import "emoji-mart/css/emoji-mart.css";
 import "../../../App.css";
 import { componentStyles } from "../../../Admin-Main-View/styles";
+import { innerStyles } from "./styles";
 const Index = (props) => {
   const { isGroupChat, setIsGroupChat } = props;
   const [inputValue, setInputValue] = useState("");
@@ -106,21 +107,10 @@ const Index = (props) => {
         onFinish={onFinish}
       >
         <Form.Item>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div style={innerStyles.flexContainer}>
             <Input
               className="chatInput"
-              style={{
-                borderRadius: "50px",
-                border: "none ",
-                padding: "10px",
-                paddingInline: "15px",
-              }}
+              style={innerStyles.chatInput}
               placeholder="Enter Values Here"
               onChange={(e) => setInputValue(e.target.value)}
               value={inputValue}
@@ -133,38 +123,12 @@ const Index = (props) => {
       {!isGroupChat && (
         <Button
           onClick={() => setIsGroupChat(true)}
-          style={{
-            textDecoration: "none",
-            background: "transparent",
-            border: "none",
-            cursor: "pointer",
-            alignSelf: "center",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          style={innerStyles.addChat}
         >
-          <div
-            style={{
-              backgroundColor: "transparent",
-              borderRadius: "50px",
-              border: "1px solid #ffff",
-              height: "36px",
-              width: "36px",
-              marginRight: "10px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <span style={{ color: "white", height: "24px", width: "24px" }}>
-              {" "}
-              +
-            </span>
+          <div style={innerStyles.addIconHolder}>
+            <span style={innerStyles.iconStyle}> +</span>
           </div>
-          <span style={{ color: "white", fontSize: "18px" }}>
-            Create Group Chat
-          </span>
+          <span style={innerStyles.createChatText}>Create Group Chat</span>
         </Button>
       )}
     </div>

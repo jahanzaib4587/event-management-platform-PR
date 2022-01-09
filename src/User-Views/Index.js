@@ -6,21 +6,11 @@ import VirtualMerchTable from "./VirtualMerchTable";
 import ChatComponent from "./Chat Components/Index";
 import "./index.css";
 import FullScreen from "./View_Full_Screen/Index";
+import { userStyles } from "./styles";
 const Index = () => {
   const [isFullScreen, setIsFullScreen] = useState(true);
   return isFullScreen ? (
-    <Row
-      justify="space-evenly"
-      align="center"
-      style={{
-        backgroundColor: "black",
-        maxHeight: "100vh",
-        padding: "2%",
-        justifyContent: "space-evenly",
-        overflowY: "auto",
-        overflowX: "hidden",
-      }}
-    >
+    <Row justify="space-evenly" align="center" style={userStyles.usersParent}>
       <Col xs={24} sm={24} md={24} lg={17}>
         <MainScreen
           isFullScreen={isFullScreen}
@@ -30,8 +20,6 @@ const Index = () => {
         <VirtualMerchTable />
       </Col>
       <Col xs={22} sm={22} md={20} lg={6}>
-        {/* <AdminChat /> */}
-        {/* <TabsComponent /> */}
         <ChatComponent />
       </Col>
     </Row>

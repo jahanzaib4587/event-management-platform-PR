@@ -2,6 +2,7 @@ import React from "react";
 import { Collapse, Badge, Avatar, Tabs, Row, Col } from "antd";
 import "./ImageSwiper/styles.css";
 import "./index.css";
+import { userStyles } from "./styles";
 const AudienceVideoStream = () => {
   // const Data = [
   //   "./Videos/user2.mp4",
@@ -33,7 +34,7 @@ const AudienceVideoStream = () => {
   ];
   return (
     <Row justify="space-between">
-      <Col xs={22} sm={22} md={6} lg={6} style={{ padding: "15px" }}>
+      <Col xs={22} sm={22} md={6} lg={6} style={userStyles.p15}>
         {/* <video
           className="attendeesVideo"
           autoPlay
@@ -53,9 +54,8 @@ const AudienceVideoStream = () => {
         <img
           src={"./Images/user7.jpg"}
           height={"200px"}
-          // width={"155px"}
           width={"100%"}
-          style={{ borderRadius: "10px", objectFit: "cover" }}
+          style={userStyles.imageStyles}
           className="userView"
         ></img>
       </Col>
@@ -67,15 +67,7 @@ const AudienceVideoStream = () => {
               <Col xs={8} sm={8} md={4} lg={4}>
                 <div
                   className="attendeesVideo"
-                  style={{
-                    // background: { backgroundVideo },
-                    border: "5px solid black",
-                    margin: "10px",
-                    // width: "155px",
-                    borderRadius: "10px",
-                    height: "89px",
-                    width: "100%",
-                  }}
+                  style={userStyles.attendeesVideo}
                 >
                   {/* <video
                     autoPlay
@@ -92,7 +84,7 @@ const AudienceVideoStream = () => {
                     height={"100%"}
                     // width={"155px"}
                     width={"100%"}
-                    style={{ borderRadius: "10px", objectFit: "cover" }}
+                    style={userStyles.usersImages}
                   ></img>
                 </div>
               </Col>

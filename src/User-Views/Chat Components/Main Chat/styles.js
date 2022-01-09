@@ -1,0 +1,36 @@
+export const innerStyles = {
+  addChat: {
+    textDecoration: "none",
+    background: "transparent",
+    border: "none",
+    cursor: "pointer",
+    alignSelf: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  addIconHolder: {
+    backgroundColor: "transparent",
+    borderRadius: "50px",
+    border: "1px solid #ffff",
+    height: "36px",
+    width: "36px",
+    marginRight: "10px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  iconStyle: { color: "white", height: "24px", width: "24px" },
+  createChatText: { color: "white", fontSize: "18px" },
+  chatInput: {
+    borderRadius: "50px",
+    border: "none ",
+    padding: "10px",
+    paddingInline: "15px",
+  },
+  flexContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+};

@@ -9,94 +9,49 @@ import {
 import "./index.css";
 import { Button, Col } from "antd";
 import "./index.css";
+import { userStyles } from "./styles";
 const MainScreen = (props) => {
   const { isFullScreen, setIsFullScreen } = props;
   console.log(isFullScreen);
   return (
-    <div style={{ display: "flex" }}>
+    <div style={userStyles.mainScreen}>
       <Col md={24} lg={24}>
         <video
           width={"100%"}
           autoPlay
           // loop
           muted
-          style={{
-            borderRadius: "50px",
-            objectFit: "cover",
-            // minHeight: "500px",
-            // width: "1250px",
-            // height: "550px",
-          }}
+          style={userStyles.mainScreenVideo}
           // className="mainVideo"
         >
           <source src="./Videos/user1.mp4" type="video/mp4" />
         </video>
       </Col>
-      <div
-        style={{
-          color: "#fff",
-          position: "absolute",
-          zIndex: "2",
-          paddingInline: "20px",
-          padding: "30px",
-          width: "-webkit-fill-available",
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
+      <div style={userStyles.mainScreenTopRow}>
         <div
-          style={{
-            background: "#fff",
-            display: "flex",
-            justifyContent: "space-evenly",
-            width: "242px",
-            alignItems: "center",
-            // padding: "10px",
-            // height: "46px",
-            borderRadius: "15px",
-          }}
+          style={userStyles.mainScreenLiveContainer}
           className="liveContainer"
         >
           <div
             className="liveRedDot"
-            style={{
-              borderRadius: "50px",
-              background: "#DD4B4E",
-              width: "30px",
-              height: "30px",
-            }}
+            style={userStyles.mainScreenLiveDot}
           ></div>
-          <span
-            style={{ fontSize: "22px", fontWeight: "600", color: "#000000" }}
-            className="liveText"
-          >
+          <span style={userStyles.mainScreenLiveText} className="liveText">
             LIVE
           </span>
-          <span
-            style={{ fontSize: "22px", color: "#000000" }}
-            className="liveTime"
-          >
+          <span style={userStyles.mainScreenLiveTime} className="liveTime">
             01 : 23 : 56
           </span>
         </div>
         <div
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            width: "100px",
-          }}
+          style={userStyles.mainScreenIconContainer}
           className="iconContainer"
         >
-          <span style={{ fontSize: "28px" }} className="settingsIcon">
+          <span style={userStyles.settingsIcon} className="settingsIcon">
             <SettingOutlined />
           </span>
           <span
-            style={{
-              fontSize: "28px",
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-            }}
+            style={userStyles.expandIcon}
             className="expandIcon"
             onClick={() => {
               setIsFullScreen(false);
@@ -106,23 +61,8 @@ const MainScreen = (props) => {
           </span>
         </div>
       </div>
-      <div
-        style={{
-          alignSelf: "flex-end",
-          color: "#fff",
-          position: "absolute",
-          zIndex: "2",
-          paddingInline: "20px",
-          padding: "30px",
-          width: "-webkit-fill-available",
-          display: "flex",
-          justifyContent: "flex-end",
-        }}
-      >
-        <span
-          style={{ fontSize: "18px", fontWeight: "600", color: "#fff" }}
-          className="viewerCount"
-        >
+      <div style={userStyles.bottomRow}>
+        <span style={userStyles.viewerCount} className="viewerCount">
           2378 Watching
         </span>
       </div>

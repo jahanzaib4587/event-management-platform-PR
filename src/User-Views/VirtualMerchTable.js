@@ -12,6 +12,7 @@ import ImageSwiper from "./ImageSwiper/SwiperView";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "./index.css";
+import { userStyles } from "./styles";
 const VirtualMerchTable = () => {
   const emojiArray = [
     {
@@ -32,7 +33,7 @@ const VirtualMerchTable = () => {
     },
   ];
   return (
-    <Row justify="space-evenly" style={{ marginBottom: "20px" }}>
+    <Row justify="space-evenly" style={userStyles.mb20}>
       <Col xs={24} sm={12} md={6} lg={6}>
         <div
           style={{
@@ -45,35 +46,10 @@ const VirtualMerchTable = () => {
             size={{ xs: 60, sm: 60, md: 40, lg: 55, xl: 80, xxl: 100 }}
             icon={<AntDesignOutlined />}
           />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignSelf: "flex-end",
-              alignItems: "flex-start",
-            }}
-          >
-            <span
-              style={{ color: "#fff", fontSize: "16px", fontWeight: "bold" }}
-            >
-              {" "}
-              Brand Name
-            </span>
-            <span style={{ color: "#fff", fontSize: "16px" }}>
-              San Fransico,CA
-            </span>
-            <Button
-              type="primary"
-              style={{
-                borderRadius: "10px",
-                width: "92px",
-                height: "22px",
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+          <div style={userStyles.flexStart}>
+            <span style={userStyles.brandName}> Brand Name</span>
+            <span style={userStyles.cityName}>San Fransico,CA</span>
+            <Button type="primary" style={userStyles.followBtn}>
               FOLLOW
             </Button>
           </div>
@@ -86,18 +62,7 @@ const VirtualMerchTable = () => {
         <Row style={{ justifyContent: "center" }}>
           {emojiArray.map((value, index) => {
             return (
-              <div
-                style={{
-                  backgroundColor: "#3B3C40",
-                  borderRadius: "50px",
-                  height: "50px",
-                  width: "50px",
-                  margin: "5px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <div style={userStyles.emojiContainer}>
                 <span style={{ color: value.color, fontSize: "28px" }}>
                   {value.icon}
                 </span>
