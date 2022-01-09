@@ -7,6 +7,7 @@ import {
   PlusOutlined,
 } from "@ant-design/icons";
 import { Button } from "antd";
+import "../index.css";
 const VideoBackground = (props) => {
   const { isFullScreen, setIsFullScreen } = props.props;
   return (
@@ -34,7 +35,7 @@ const VideoBackground = (props) => {
             }}
             className="mainVideo"
           >
-            <source src="./Videos/video3.mp4" type="video/mp4" />
+            <source src="./Videos/video1.mp4" type="video/mp4" />
           </video>
         </div>
         <div
@@ -56,10 +57,12 @@ const VideoBackground = (props) => {
               justifyContent: "space-evenly",
               width: "242px",
               alignItems: "center",
+
               // padding: "10px",
               height: "46px",
               borderRadius: "15px",
             }}
+            className="liveContainer"
           >
             <div
               style={{
@@ -68,13 +71,18 @@ const VideoBackground = (props) => {
                 width: "30px",
                 height: "30px",
               }}
+              className="liveRedDot"
             ></div>
             <span
               style={{ fontSize: "22px", fontWeight: "600", color: "#000000" }}
+              className="liveText"
             >
               LIVE
             </span>
-            <span style={{ fontSize: "22px", color: "#000000" }}>
+            <span
+              style={{ fontSize: "22px", color: "#000000" }}
+              className="liveTime"
+            >
               {" "}
               01 : 23 : 56
             </span>
@@ -85,8 +93,9 @@ const VideoBackground = (props) => {
               justifyContent: "space-evenly",
               width: "100px",
             }}
+            className="iconContainer"
           >
-            <span style={{ fontSize: "28px" }}>
+            <span style={{ fontSize: "28px" }} className="settingsIcon">
               <SettingOutlined />
             </span>
             <span
@@ -96,6 +105,7 @@ const VideoBackground = (props) => {
                 border: "none",
                 cursor: "pointer",
               }}
+              className="expandIcon"
               onClick={() => {
                 setIsFullScreen(true);
               }}
@@ -117,7 +127,10 @@ const VideoBackground = (props) => {
             justifyContent: "flex-end",
           }}
         >
-          <span style={{ fontSize: "18px", fontWeight: "600", color: "#fff" }}>
+          <span
+            style={{ fontSize: "18px", fontWeight: "600", color: "#fff" }}
+            className="viewerCount"
+          >
             2378 Watching
           </span>
         </div>

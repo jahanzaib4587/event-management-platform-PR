@@ -19,7 +19,7 @@ const Index = () => {
     <Row
       justify="space-between"
       align="center"
-      style={{ height: "150px", overflowX: "hidden" }}
+      style={{ height: "150px", overflowX: "hidden", paddingInline: "20px" }}
     >
       <FollowPage />
       <Reactions />

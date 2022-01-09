@@ -9,7 +9,7 @@ import {
 const FollowPage = () => {
   return (
     <>
-      <Col xs={24} sm={24} md={7} lg={4}>
+      <Col xs={24} sm={24} md={7} lg={5}>
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>
           <Avatar
             size={{ xs: 80, sm: 80, md: 80, lg: 55, xl: 80, xxl: 100 }}
@@ -19,10 +19,6 @@ const FollowPage = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              //   marginLeft: "5px",
-              //   justifyContent: "space-around",
-              alignSelf: "flex-end",
-              alignItems: "flex-start",
             }}
           >
             <span

@@ -11,6 +11,7 @@ import ImageSwiper from "./ImageSwiper/SwiperView";
 
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
+import "./index.css";
 const VirtualMerchTable = () => {
   const emojiArray = [
     {
@@ -32,7 +33,7 @@ const VirtualMerchTable = () => {
   ];
   return (
     <Row justify="space-evenly" style={{ marginBottom: "20px" }}>
-      <Col xs={12} sm={12} md={6} lg={6}>
+      <Col xs={24} sm={12} md={6} lg={6}>
         <div
           style={{
             display: "flex",
@@ -41,15 +42,13 @@ const VirtualMerchTable = () => {
           }}
         >
           <Avatar
-            size={{ xs: 24, sm: 60, md: 40, lg: 55, xl: 80, xxl: 100 }}
+            size={{ xs: 60, sm: 60, md: 40, lg: 55, xl: 80, xxl: 100 }}
             icon={<AntDesignOutlined />}
           />
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              //   marginLeft: "5px",
-              //   justifyContent: "space-around",
               alignSelf: "flex-end",
               alignItems: "flex-start",
             }}
@@ -80,13 +79,12 @@ const VirtualMerchTable = () => {
           </div>
         </div>
       </Col>
-      <Col xs={24} sm={24} md={13} lg={13} xl={15}>
+      <Col xs={24} sm={24} md={13} lg={13} xl={15} className="ImageSwiper">
         <ImageSwiper />
       </Col>
       <Col xs={24} sm={24} md={5} lg={5} xl={3}>
         <Row style={{ justifyContent: "center" }}>
           {emojiArray.map((value, index) => {
-            debugger;
             return (
               <div
                 style={{

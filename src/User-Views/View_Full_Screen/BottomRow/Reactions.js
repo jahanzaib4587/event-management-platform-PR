@@ -27,7 +27,7 @@ const Reactions = () => {
   ];
   return (
     <>
-      <Col xs={24} sm={24} md={5} lg={5}>
+      <Col xs={24} sm={24} md={5} lg={6}>
         <Row style={{ justifyContent: "center" }}>
           {emojiArray.map((value, index) => {
             debugger;

@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import "./index.css";
 import { Button, Col } from "antd";
+import "./index.css";
 const MainScreen = (props) => {
   const { isFullScreen, setIsFullScreen } = props;
   console.log(isFullScreen);
@@ -54,8 +55,10 @@ const MainScreen = (props) => {
             // height: "46px",
             borderRadius: "15px",
           }}
+          className="liveContainer"
         >
           <div
+            className="liveRedDot"
             style={{
               borderRadius: "50px",
               background: "#DD4B4E",
@@ -65,11 +68,14 @@ const MainScreen = (props) => {
           ></div>
           <span
             style={{ fontSize: "22px", fontWeight: "600", color: "#000000" }}
+            className="liveText"
           >
             LIVE
           </span>
-          <span style={{ fontSize: "22px", color: "#000000" }}>
-            {" "}
+          <span
+            style={{ fontSize: "22px", color: "#000000" }}
+            className="liveTime"
+          >
             01 : 23 : 56
           </span>
         </div>
@@ -79,8 +85,9 @@ const MainScreen = (props) => {
             justifyContent: "space-evenly",
             width: "100px",
           }}
+          className="iconContainer"
         >
-          <span style={{ fontSize: "28px" }}>
+          <span style={{ fontSize: "28px" }} className="settingsIcon">
             <SettingOutlined />
           </span>
           <span
@@ -90,6 +97,7 @@ const MainScreen = (props) => {
               border: "none",
               cursor: "pointer",
             }}
+            className="expandIcon"
             onClick={() => {
               setIsFullScreen(false);
             }}
@@ -111,7 +119,10 @@ const MainScreen = (props) => {
           justifyContent: "flex-end",
         }}
       >
-        <span style={{ fontSize: "18px", fontWeight: "600", color: "#fff" }}>
+        <span
+          style={{ fontSize: "18px", fontWeight: "600", color: "#fff" }}
+          className="viewerCount"
+        >
           2378 Watching
         </span>
       </div>
