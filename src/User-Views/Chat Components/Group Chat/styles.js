@@ -1,4 +1,4 @@
-export const componentStyles = {
+export const groupChatStyles = {
   tabsHolder: {
     width: "100%",
     // display: "flex",
@@ -83,6 +83,35 @@ export const componentStyles = {
   mainChatMessageInput: {
     borderRadius: "50px",
     border: "none",
+    padding: "10px",
+    paddingInline: "15px",
+  },
+  flexColumn: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  m10: { margin: "10px" },
+  adminChat: {
+    height: "44vh",
+    border: "none",
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    borderLeft: " 1px solid #3B3C40",
+
+    backgroundColor: "#4E5054",
+    borderBottom: "none",
+    padding: "10px",
+    paddingInline: "20px",
+  },
+  flexCenter: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  chatInput: {
+    borderRadius: "50px",
+    border: "none ",
     padding: "10px",
     paddingInline: "15px",
   },

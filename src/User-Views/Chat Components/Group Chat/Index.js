@@ -4,7 +4,7 @@ import { Tabs } from "antd";
 import Attendees from "../../../Admin-Main-View/ThirdComponent/Attendees";
 import "../../../App.css";
 import { SettingOutlined } from "@ant-design/icons";
-import { componentStyles } from "./styles";
+import { groupChatStyles } from "./styles";
 import GroupChat from "./GroupChat";
 // import ChatSettings from "../Chat_Settings/ChatSettings";
 const TabsComponent = () => {
@@ -12,9 +12,9 @@ const TabsComponent = () => {
 
   const { TabPane } = Tabs;
   return (
-    <div style={componentStyles.tabsHolder}>
-      <Tabs defaultActiveKey="1" style={componentStyles.tabPaneHolder}>
-        <TabPane tab="Group Chat" key="1" style={componentStyles.h100}>
+    <div style={groupChatStyles.tabsHolder}>
+      <Tabs defaultActiveKey="1" style={groupChatStyles.tabPaneHolder}>
+        <TabPane tab="Group Chat" key="1" style={groupChatStyles.h100}>
           <GroupChat />
         </TabPane>
         <TabPane tab="Cool Guys" key="2">

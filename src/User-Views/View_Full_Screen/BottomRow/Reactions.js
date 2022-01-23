@@ -1,11 +1,11 @@
 import React from "react";
 import { Col, Row } from "antd";
 import {
-  AntDesignOutlined,
   HeartFilled,
   ExclamationOutlined,
   PlusOutlined,
 } from "@ant-design/icons";
+import { bottomStyles } from "./styles";
 const Reactions = () => {
   const emojiArray = [
     {
@@ -30,20 +30,8 @@ const Reactions = () => {
       <Col xs={24} sm={24} md={5} lg={6}>
         <Row style={{ justifyContent: "center" }}>
           {emojiArray.map((value, index) => {
-            debugger;
             return (
-              <div
-                style={{
-                  backgroundColor: "#3B3C40",
-                  borderRadius: "50px",
-                  height: "50px",
-                  width: "50px",
-                  margin: "2px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <div style={bottomStyles.iconContainer}>
                 <span style={{ color: value.color, fontSize: "28px" }}>
                   {value.icon}
                 </span>
