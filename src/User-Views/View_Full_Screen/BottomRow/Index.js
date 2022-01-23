@@ -23,7 +23,6 @@ const Index = () => {
       <Col xs={24} sm={24} md={3} lg={3}>
         <Row style={{ justifyContent: "center" }}>
           {emojiArray.map((value, index) => {
-            debugger;
             return (
               <div style={bottomStyles.rightIcons}>
                 <span style={{ color: value.color, fontSize: "28px" }}>
