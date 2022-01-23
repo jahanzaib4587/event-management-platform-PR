@@ -7,9 +7,7 @@ import { SettingOutlined } from "@ant-design/icons";
 import { groupChatStyles } from "./styles";
 import GroupChat from "./GroupChat";
 // import ChatSettings from "../Chat_Settings/ChatSettings";
-const TabsComponent = () => {
-  const [openModal, setOpenModal] = useState(false);
-
+const TabsComponent = (props) => {
   const { TabPane } = Tabs;
   return (
     <div style={groupChatStyles.tabsHolder}>
@@ -18,7 +16,7 @@ const TabsComponent = () => {
           <GroupChat />
         </TabPane>
         <TabPane tab="Cool Guys" key="2">
-          <GroupChat />
+          <GroupChat setIsGroupChat={props.setIsGroupChat} />
         </TabPane>
       </Tabs>
     </div>

@@ -8,7 +8,7 @@ import "../../../App.css";
 import { componentStyles } from "../../../Admin-Main-View/styles";
 import { innerStyles } from "./styles";
 const Index = (props) => {
-  const { isGroupChat, setIsGroupChat } = props;
+  const { isGroupChat, setIsGroupChat, groupExists } = props;
   const [inputValue, setInputValue] = useState("");
 
   const [form] = Form.useForm();
@@ -47,7 +47,7 @@ const Index = (props) => {
       title="Main Chat"
       style={{
         // width: "100%",
-        height: props.isGroupChat ? "50vh" : "95vh",
+        height: props.isGroupChat ? "50vh" : "100vh",
         border: "none",
         display: "flex",
         justifyContent: "space-between",
@@ -120,7 +120,7 @@ const Index = (props) => {
           </div>
         </Form.Item>
       </Form>
-      {!isGroupChat && (
+      {!isGroupChat && !groupExists && (
         <Button
           onClick={() => setIsGroupChat(true)}
           style={innerStyles.addChat}

@@ -21,6 +21,7 @@ import { innerStyles } from "./Main Chat/styles";
 const Index = () => {
   const { Panel } = Collapse;
   const [isGroupChat, setIsGroupChat] = useState(false);
+  const [groupExists, setGroupExists] = useState(false);
   const [activePanel, setActivePanel] = useState(1);
   return (
     <div style={innerStyles.chatParent}>
@@ -28,15 +29,13 @@ const Index = () => {
         <Collapse
           accordion
           style={componentStyles.colorWhite}
-          destroyInactivePanel={true}
-          activeKey={1}
+          defaultActiveKey={1}
           ghost={true}
           onChange={(e) => {
             setActivePanel(e);
           }}
         >
           <Panel
-            // header="Activity Feed"
             showArrow={false}
             key="1"
             style={componentStyles.activityFeedPanel}
@@ -44,28 +43,27 @@ const Index = () => {
             <MainChat
               isGroupChat={isGroupChat}
               setIsGroupChat={setIsGroupChat}
+              groupExists={groupExists}
             />
           </Panel>
         </Collapse>
       </div>
-      {isGroupChat && (
+      {(isGroupChat || groupExists) && (
         <div className="adminChat">
           {/* style={componentStyles.adminChatContainer} */}
           <Collapse
             accordion
             style={componentStyles.colorWhite}
-            destroyInactivePanel={true}
+            // destroyInactivePanel={true}
             activeKey={activePanel}
             ghost={true}
             onChange={(e) => {
               setActivePanel(e);
+              setIsGroupChat(!isGroupChat);
+              setGroupExists(true);
             }}
           >
-            <Panel
-              key="2"
-              header={"Group Chats"}
-              style={componentStyles.flexColumn}
-            >
+            <Panel key="1" header={"Groups"} style={componentStyles.flexColumn}>
               <GroupChat />
             </Panel>
           </Collapse>

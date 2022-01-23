@@ -92,7 +92,7 @@ export const groupChatStyles = {
   },
   m10: { margin: "10px" },
   adminChat: {
-    height: "44vh",
+    height: "38vh",
     border: "none",
     display: "flex",
     justifyContent: "space-between",
