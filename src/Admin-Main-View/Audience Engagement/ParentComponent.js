@@ -21,14 +21,12 @@ const ParentComponent = () => {
   const { Panel } = Collapse;
   const [activePanel, setActivePanel] = useState(1);
   const [openModal, setOpenModal] = useState(false);
-  const [openModal1, setOpenModal1] = useState(false);
 
   return (
     <div
       style={componentStyles.secondColumnContainer}
       className={activePanel == 2 && "displayNone"}
     >
-      <Settings_Modal openModal={openModal1} setOpenModal={setOpenModal1} />
       <Modal_Component modalValue={openModal} setOpenModal={setOpenModal} />
       <div style={componentStyles.activityFeedsContainer}>
         <h1
@@ -45,10 +43,7 @@ const ParentComponent = () => {
           >
             <p style={componentStyles.askTheAudienceText}>Ask the Audience!</p>
           </div>
-          <div
-            style={componentStyles.imageHolder}
-            onClick={() => setOpenModal1(true)}
-          ></div>
+          <div style={componentStyles.imageHolder}></div>
         </div>
         <div style={componentStyles.wd100}>
           <Collapse

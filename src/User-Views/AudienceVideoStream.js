@@ -19,18 +19,12 @@ const AudienceVideoStream = () => {
   //   "./Videos/user1.mp4",
   // ];
   const Data = [
-    "./Images/user6.jpg",
-    "./Images/user7.jpg",
-    "./Images/user3.jpg",
-    "./Images/user4.jpg",
-    "./Images/user5.jpg",
-    "./Images/user6.jpg",
-    "./Images/user7.jpg",
     "./Images/user8.jpg",
-    "./Images/user9.jpg",
+    "./Images/user6.jpg",
+    "./Images/user7.jpg",
+    "./Images/user3.jpg",
     "./Images/user4.jpg",
     "./Images/user5.jpg",
-    "./Images/user3.jpg",
   ];
   return (
     <Row justify="space-between">
@@ -64,7 +58,7 @@ const AudienceVideoStream = () => {
         <Row>
           {Data.map((value, index) => {
             return (
-              <Col xs={8} sm={8} md={4} lg={4}>
+              <Col xs={8} sm={8} md={8} lg={8}>
                 <div
                   className="attendeesVideo"
                   style={userStyles.attendeesVideo}

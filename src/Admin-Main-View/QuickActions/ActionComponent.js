@@ -7,13 +7,16 @@ const ActionComponent = (props) => {
 
   return (
     <div
-      onClick={() => setIsBorder(true)}
+      onClick={() => {
+        return setIsBorder(true), props.isModal && props.setOpenModal(true);
+      }}
       className="quickActionChild"
       style={{
         width: "30%",
         height: "120px",
         border: "5px solid transparent",
         borderColor: switchValue ? "#7de6d0" : "transparent",
+        cursor: "pointer",
       }}
     >
       <Switch

@@ -3,6 +3,7 @@ import FollowPage from "./FollowPage";
 import Reactions from "./Reactions";
 import { Row, Col, Avatar, Button } from "antd";
 import { WechatOutlined, ShoppingOutlined } from "@ant-design/icons";
+import { bottomStyles } from "./styles";
 
 const Index = () => {
   const emojiArray = [
@@ -16,11 +17,7 @@ const Index = () => {
     },
   ];
   return (
-    <Row
-      justify="space-between"
-      align="center"
-      style={{ height: "150px", overflowX: "hidden", paddingInline: "20px" }}
-    >
+    <Row justify="space-between" align="center" style={bottomStyles.indexRow}>
       <FollowPage />
       <Reactions />
       <Col xs={24} sm={24} md={3} lg={3}>
@@ -28,18 +25,7 @@ const Index = () => {
           {emojiArray.map((value, index) => {
             debugger;
             return (
-              <div
-                style={{
-                  backgroundColor: "#3B3C40",
-                  borderRadius: "50px",
-                  height: "50px",
-                  width: "50px",
-                  margin: "2px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <div style={bottomStyles.rightIcons}>
                 <span style={{ color: value.color, fontSize: "28px" }}>
                   {value.icon}
                 </span>

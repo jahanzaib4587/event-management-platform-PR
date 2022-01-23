@@ -1,110 +1,42 @@
 import React from "react";
-import MainScreen from "../MainScreen";
-import {
-  SettingOutlined,
-  CompressOutlined,
-  UserOutlined,
-  PlusOutlined,
-} from "@ant-design/icons";
-import { Button } from "antd";
+import { SettingOutlined, CompressOutlined } from "@ant-design/icons";
 import "../index.css";
+import { fullScreenStyles } from "./styles";
+
 const VideoBackground = (props) => {
-  const { isFullScreen, setIsFullScreen } = props.props;
+  const { setIsFullScreen, videoLink } = props.props;
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "stretch",
-          //   objectFit: "fill",
-        }}
-      >
+      <div style={fullScreenStyles.flexStretch}>
         <div>
           <video
-            // width={"100vw"}
-            // height={"550px"}
             autoPlay
-            // loop
             muted
-            style={{
-              //   position: "absolute",
-              //   borderRadius: "50px",
-              objectFit: "cover",
-              width: "100vw",
-              height: "85vh",
-            }}
+            style={fullScreenStyles.mainVideo}
             className="mainVideo"
           >
-            <source src="./Videos/video1.mp4" type="video/mp4" />
+            <source src={videoLink} type="video/mp4" />
           </video>
         </div>
-        <div
-          style={{
-            color: "#fff",
-            position: "absolute",
-            zIndex: "2",
-            paddingInline: "20px",
-            padding: "30px",
-            width: "-webkit-fill-available",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <div
-            style={{
-              background: "#fff",
-              display: "flex",
-              justifyContent: "space-evenly",
-              width: "242px",
-              alignItems: "center",
-
-              // padding: "10px",
-              height: "46px",
-              borderRadius: "15px",
-            }}
-            className="liveContainer"
-          >
+        <div style={fullScreenStyles.videoOverlay}>
+          <div style={fullScreenStyles.liveContainer} className="liveContainer">
             <div
-              style={{
-                borderRadius: "50px",
-                background: "#DD4B4E",
-                width: "30px",
-                height: "30px",
-              }}
+              style={fullScreenStyles.liveRedDot}
               className="liveRedDot"
             ></div>
-            <span
-              style={{ fontSize: "22px", fontWeight: "600", color: "#000000" }}
-              className="liveText"
-            >
+            <span style={fullScreenStyles.liveText} className="liveText">
               LIVE
             </span>
-            <span
-              style={{ fontSize: "22px", color: "#000000" }}
-              className="liveTime"
-            >
-              {" "}
+            <span style={fullScreenStyles.liveTime} className="liveTime">
               01 : 23 : 56
             </span>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-              width: "100px",
-            }}
-            className="iconContainer"
-          >
-            <span style={{ fontSize: "28px" }} className="settingsIcon">
+          <div style={fullScreenStyles.iconContainer} className="iconContainer">
+            <span style={fullScreenStyles.f18} className="settingsIcon">
               <SettingOutlined />
             </span>
             <span
-              style={{
-                fontSize: "28px",
-                background: "transparent",
-                border: "none",
-                cursor: "pointer",
-              }}
+              style={fullScreenStyles.expandIcon}
               className="expandIcon"
               onClick={() => {
                 setIsFullScreen(true);
@@ -114,23 +46,8 @@ const VideoBackground = (props) => {
             </span>
           </div>
         </div>
-        <div
-          style={{
-            alignSelf: "flex-end",
-            color: "#fff",
-            position: "absolute",
-            zIndex: "2",
-            paddingInline: "20px",
-            padding: "30px",
-            width: "-webkit-fill-available",
-            display: "flex",
-            justifyContent: "flex-end",
-          }}
-        >
-          <span
-            style={{ fontSize: "18px", fontWeight: "600", color: "#fff" }}
-            className="viewerCount"
-          >
+        <div style={fullScreenStyles.viewerCountDiv}>
+          <span style={fullScreenStyles.viewerCount} className="viewerCount">
             2378 Watching
           </span>
         </div>

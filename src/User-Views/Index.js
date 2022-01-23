@@ -9,12 +9,15 @@ import FullScreen from "./View_Full_Screen/Index";
 import { userStyles } from "./styles";
 const Index = () => {
   const [isFullScreen, setIsFullScreen] = useState(true);
+  const [videoLink, setVideoLink] = useState("");
+
   return isFullScreen ? (
     <Row justify="space-evenly" align="center" style={userStyles.usersParent}>
       <Col xs={24} sm={24} md={24} lg={17}>
         <MainScreen
           isFullScreen={isFullScreen}
           setIsFullScreen={setIsFullScreen}
+          setVideoLink={setVideoLink}
         />
         <AudienceVideoStream />
         <VirtualMerchTable />
@@ -24,7 +27,11 @@ const Index = () => {
       </Col>
     </Row>
   ) : (
-    <FullScreen isFullScreen={isFullScreen} setIsFullScreen={setIsFullScreen} />
+    <FullScreen
+      isFullScreen={isFullScreen}
+      setIsFullScreen={setIsFullScreen}
+      videoLink={videoLink}
+    />
   );
 };
 

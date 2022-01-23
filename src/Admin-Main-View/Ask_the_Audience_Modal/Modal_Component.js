@@ -1,16 +1,5 @@
 import React, { useState } from "react";
-import {
-  Collapse,
-  Badge,
-  Avatar,
-  Image,
-  Modal,
-  Input,
-  Radio,
-  Progress,
-  Checkbox,
-  Button,
-} from "antd";
+import { Collapse, Modal, Input, Radio, Checkbox, Button } from "antd";
 import { componentStyles } from "../styles";
 import { Modal_Styles } from "./modal_styles";
 import PanelQuestion from "./PanelQuestion";

@@ -11,14 +11,24 @@ import {
 import "emoji-mart/css/emoji-mart.css";
 import "../../../App.css";
 import { componentStyles } from "../../../Admin-Main-View/styles";
+import { groupChatStyles } from "./styles";
+
 const Index = (props) => {
   const [inputValue, setInputValue] = useState("");
   const [form] = Form.useForm();
   const [messagesArray, setMessagesArray] = useState([
-    "1st message",
-    "2nd message",
-    "3rd message",
-    "4th message",
+    {
+      message: "1st message",
+      sender: "Elon",
+    },
+    {
+      message: "2nd message",
+      sender: "Bill",
+    },
+    {
+      message: "3rd message",
+      sender: "Majid",
+    },
   ]);
   const onFinish = (value) => {
     if (inputValue) {
@@ -52,30 +62,21 @@ const Index = (props) => {
   return (
     <Row justify="space-between">
       <Col xs={2} sm={2} md={2} lg={2}>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={groupChatStyles.flexColumn}>
           {avatarArray.map((value, index) => {
             return (
-              <Avatar size="large" icon={value} style={{ margin: "10px" }} />
+              <Avatar
+                size={{ xs: 20, sm: 30, md: 40, lg: 20, xl: 30, xxl: 40 }}
+                icon={value}
+                style={groupChatStyles.m10}
+              />
             );
           })}
         </div>
       </Col>
-      <Col xs={18} sm={18} md={20} lg={20}>
-        <div
-          title="Admin Chat"
-          style={{
-            height: "44vh",
-            border: "none",
-            display: "flex",
-            justifyContent: "space-between",
-            flexDirection: "column",
 
-            backgroundColor: "#4E5054",
-            borderBottom: "none",
-            padding: "10px",
-            paddingInline: "20px",
-          }}
-        >
+      <Col xs={20} sm={21} md={20} lg={20}>
+        <div title="Admin Chat" style={groupChatStyles.adminChat}>
           <div style={componentStyles.adminChatList}>
             {messagesArray.map((e, index) => (
               <div
@@ -86,7 +87,7 @@ const Index = (props) => {
                 }
               >
                 <Avatar
-                  size="large"
+                  size={{ xs: 25, sm: 30, md: 30, lg: 20, xl: 25, xxl: 40 }}
                   icon={<UserOutlined />}
                   style={
                     index % 2 == 0 ? componentStyles.m10 : componentStyles.mr10
@@ -98,7 +99,7 @@ const Index = (props) => {
                       index % 2 == 0 ? "messageUiMainChat" : "messageUi"
                     }
                   >
-                    <span style={componentStyles.messageText}>{e}</span>
+                    <span style={componentStyles.messageText}>{e.message}</span>
                   </div>
                   <p
                     style={
@@ -107,7 +108,7 @@ const Index = (props) => {
                         : componentStyles.senderName
                     }
                   >
-                    Teddy Tereson
+                    {e.sender}
                   </p>
                 </div>
               </div>
@@ -123,21 +124,10 @@ const Index = (props) => {
           onFinish={onFinish}
         >
           <Form.Item>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+            <div style={groupChatStyles.flexCenter}>
               <Input
                 className="chatInput"
-                style={{
-                  borderRadius: "50px",
-                  border: "none ",
-                  padding: "10px",
-                  paddingInline: "15px",
-                }}
+                style={groupChatStyles.chatInput}
                 placeholder="Enter Values Here"
                 onChange={(e) => setInputValue(e.target.value)}
                 value={inputValue}

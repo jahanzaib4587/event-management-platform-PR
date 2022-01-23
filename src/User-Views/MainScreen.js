@@ -1,30 +1,27 @@
-import React from "react";
-import {
-  SettingOutlined,
-  ExpandOutlined,
-  UserOutlined,
-  PlusOutlined,
-  CompressOutlined,
-} from "@ant-design/icons";
+import React, { useEffect, useState } from "react";
+import { SettingOutlined, ExpandOutlined } from "@ant-design/icons";
 import "./index.css";
-import { Button, Col } from "antd";
+import { Col } from "antd";
 import "./index.css";
 import { userStyles } from "./styles";
 const MainScreen = (props) => {
-  const { isFullScreen, setIsFullScreen } = props;
-  console.log(isFullScreen);
+  const { setIsFullScreen, setVideoLink } = props;
+  const [currVideo, setCurrVideo] = useState("./Videos/user1.mp4");
+  useEffect(() => {
+    setVideoLink(currVideo);
+  }, []);
+
   return (
     <div style={userStyles.mainScreen}>
       <Col md={24} lg={24}>
         <video
           width={"100%"}
           autoPlay
-          // loop
           muted
           style={userStyles.mainScreenVideo}
           // className="mainVideo"
         >
-          <source src="./Videos/user1.mp4" type="video/mp4" />
+          <source src={currVideo} type="video/mp4" />
         </video>
       </Col>
       <div style={userStyles.mainScreenTopRow}>

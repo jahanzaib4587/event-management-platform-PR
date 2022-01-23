@@ -1,4 +1,12 @@
 export const innerStyles = {
+  chatParent: {
+    display: "flex",
+    flexDirection: "Column",
+    backgroundColor: "#4E5054",
+    borderRadius: "20px",
+    paddingBottom: "10px",
+    height: "100vh",
+  },
   addChat: {
     textDecoration: "none",
     background: "transparent",
