@@ -17,14 +17,20 @@ const TabsComponent = () => {
         setOpenModal={setOpenModal}
       ></ChatSettings>
       <Tabs defaultActiveKey="1" style={componentStyles.tabPaneHolder}>
-        <TabPane tab="Main Chat" key="1" style={componentStyles.h100}>
+        <TabPane
+          tab="Main Chat"
+          key="1"
+          style={componentStyles.h100}
+          className="tab1"
+        >
           <MainChat />
         </TabPane>
-        <TabPane tab="Attendees" key="2">
+        <TabPane tab="Attendees" key="2" className="tab2">
           <Attendees />
         </TabPane>
       </Tabs>
       <span
+        className="settingsIcon"
         style={{
           position: "relative",
           alignSelf: "flex-end",

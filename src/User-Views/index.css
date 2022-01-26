@@ -4,6 +4,49 @@
   .mainVideo {
     /* width: px !important; */
   }
+  .quickActionChild {
+    height: 70px !important;
+  }
+
+  .checkBoxActions {
+    size: small !important;
+  }
+  .actionComponentText {
+    font-size: 10px !important;
+  }
+  .audienceEngagementHeading {
+    font-size: 20px !important;
+  }
+  .graphLine {
+    height: 4rem !important;
+  }
+  .adminChatMainScreen {
+    max-height: 300px !important;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    font-size: 17px !important;
+  }
+  .ant-tabs-tab .ant-tabs-tab-btn {
+    font-size: 15px !important;
+  }
+  .settingsIcon {
+    font-size: 20px !important  ;
+  }
+  .mySwiper2 {
+    height: 16rem !important;
+  }
+  .askTheAudienceText {
+    font-size: small !important;
+  }
+  .viewCount {
+    font-size: small !important;
+  }
+  .mainChatCont {
+    height: 83vh !important;
+  }
+  .attendeesHeight {
+    height: 83vh !important;
+  }
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   .mainVideo {
