@@ -5,7 +5,7 @@
     /* width: px !important; */
   }
   .quickActionChild {
-    height: 70px !important;
+    height: 90px !important;
   }
 
   .checkBoxActions {
@@ -45,10 +45,10 @@
     font-size: small !important;
   }
   .mainChatCont {
-    height: 630px !important;
+    height: 600px !important;
   }
   .attendeesHeight {
-    height: 630px !important;
+    height: 600px !important;
   }
   .checkBoxActions {
     height: 16px !important;
