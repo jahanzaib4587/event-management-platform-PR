@@ -30,7 +30,7 @@ const ActionComponent = (props) => {
         }}
         // type="checkbox"
         className="checkBoxActions"
-        size="small"
+        size="large"
       />
 
       <p

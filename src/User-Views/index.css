@@ -47,6 +47,14 @@
   .attendeesHeight {
     height: 83vh !important;
   }
+  .checkBoxActions {
+    height: 16px !important;
+    width: 10px !important;
+  }
+  .checkBoxActions .ant-switch-handle {
+    height: 12px !important;
+    width: 12px !important;
+  }
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   .mainVideo {
