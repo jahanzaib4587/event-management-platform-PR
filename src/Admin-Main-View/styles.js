@@ -197,7 +197,7 @@ export const componentStyles = {
   attendeesContainer: {
     // width: "100%",
     // height: "100vh",
-    height: "700px",
+    height: "770px",
     marginBottom: "20px",
     padding: "0px 5px",
     overflowY: "auto",
@@ -243,7 +243,7 @@ export const componentStyles = {
   mainChatContainer: {
     width: "100%",
     border: "none",
-    height: "700px ",
+    height: "770px ",
     marginBottom: "20px",
     display: "flex",
     flexDirection: "column",
@@ -323,7 +323,7 @@ export const componentStyles = {
     marginBottom: "10px",
     // width: "100%",
     // maxHeight: "31vh",
-    maxHeight: "230px",
+    maxHeight: "320px",
     overflowY: "scroll",
     backgroundColor: "#3B3C40",
   },
@@ -418,7 +418,7 @@ export const componentStyles = {
     // width: "100%",
 
     // maxHeight: "39vh",
-    maxHeight: "330px",
+    maxHeight: "370px",
     border: "none",
     display: "flex",
     justifyContent: "space-between",
