@@ -20,6 +20,9 @@
   .graphLine {
     height: 4rem !important;
   }
+  .activityFeedCss {
+    height: 230px;
+  }
   .adminChatMainScreen {
     max-height: 300px !important;
   }
