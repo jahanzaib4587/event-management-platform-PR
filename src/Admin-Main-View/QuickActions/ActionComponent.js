@@ -28,8 +28,9 @@ const ActionComponent = (props) => {
           alignSelf: "flex-end",
           visibility: !props.isSwitch && "hidden",
         }}
-        size="large"
         // type="checkbox"
+        className="checkBoxActions"
+        size="large"
       />
 
       <p

@@ -19,7 +19,10 @@ const ActivityFeed = () => {
   ];
 
   return (
-    <div style={componentStyles.activityFeedListContainer}>
+    <div
+      style={componentStyles.activityFeedListContainer}
+      className="activityFeedCss"
+    >
       <List
         size="small"
         dataSource={data}

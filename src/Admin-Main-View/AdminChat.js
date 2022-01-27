@@ -40,7 +40,11 @@ const AdminChat = () => {
     setShowPicker(false);
   };
   return (
-    <div title="Admin Chat" style={componentStyles.adminChatInnerContainer}>
+    <div
+      title="Admin Chat"
+      style={componentStyles.adminChatInnerContainer}
+      className="adminChatMainScreen"
+    >
       <div>
         <h2 style={componentStyles.adminChatHeadingInner}>Admin Chat</h2>
       </div>

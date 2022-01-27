@@ -34,7 +34,7 @@ const VirtualMerchTable = () => {
   ];
   return (
     <Row justify="space-evenly" style={userStyles.mb20}>
-      <Col xs={24} sm={12} md={6} lg={6}>
+      <Col xs={24} sm={12} md={6} lg={5}>
         <div
           style={{
             display: "flex",
@@ -43,7 +43,7 @@ const VirtualMerchTable = () => {
           }}
         >
           <Avatar
-            size={{ xs: 60, sm: 60, md: 40, lg: 55, xl: 80, xxl: 100 }}
+            size={{ xs: 60, sm: 60, md: 40, lg: 55, xl: 70, xxl: 100 }}
             icon={<AntDesignOutlined />}
           />
           <div style={userStyles.flexStart}>
@@ -55,10 +55,10 @@ const VirtualMerchTable = () => {
           </div>
         </div>
       </Col>
-      <Col xs={24} sm={24} md={13} lg={13} xl={15} className="ImageSwiper">
+      <Col xs={24} sm={24} md={13} lg={8} xl={15} className="ImageSwiper">
         <ImageSwiper />
       </Col>
-      <Col xs={24} sm={24} md={5} lg={5} xl={3}>
+      <Col xs={24} sm={24} md={5} lg={4} xl={3}>
         <Row style={{ justifyContent: "center" }}>
           {emojiArray.map((value, index) => {
             return (
