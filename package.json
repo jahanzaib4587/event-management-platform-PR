@@ -2,9 +2,6 @@
   "name": "event-managment-platform",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "12.14.1"
-  },
   "dependencies": {
     "@ant-design/charts": "^1.3.1",
     "@testing-library/jest-dom": "^5.11.4",
